@@ -1,0 +1,23 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block stylesheets %}
+    <link href="{{ asset ('css/check_email.css') }}" rel='stylesheet' type='text/css' />
+{% endblock %}
+
+{% block fos_user_content %}
+    <div class="container-fluid" id="check_email_container">
+        <div class="row">
+            <div class="col-lg-offset-9 col-lg-3">
+                <a href="{{ path('fos_user_security_login') }}">Retourner vers la page de connexion</a>
+            </div>
+        </div>
+        <div class="row">
+            <h3 id="check_email_title">RE-INITIALISATION DU MOT DE PASSE</h3><hr style="border: 1px solid darkgray; margin-left: 25px; margin-right: 25px ">
+        </div>
+        <div class="row" id="message_check_email">
+            {{ 'resetting.check_email'|trans({'%tokenLifetime%': tokenLifetime})|nl2br }}
+        </div>
+    </div>
+{% endblock %}

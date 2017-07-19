@@ -1,0 +1,7 @@
+ma_lrm_accueil:
+    path:     /accueil
+    defaults:  { _controller: MALrmBundle:Index:index }
+
+ma_lrm_register:
+    path:     /register
+    defaults:  { _controller: MAUserBundle:Registration:register }

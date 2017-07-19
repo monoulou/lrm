@@ -1,0 +1,28 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block stylesheets %}
+<link href="{{ asset ('css/confirmed.css') }}" rel='stylesheet' type='text/css' />
+{% endblock %}
+
+{% block fos_user_content %}
+    <div class="container-fluid" id="confirmed_container">
+        <div class="row">
+            <div class="col-lg-offset-10 col-lg-2">
+                <p><a href="{{ path('fos_user_security_logout') }}">Déconnecter l'utilisateur</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <h3 style="margin-left: 15px">CONFIRMATION DE CREATION DE COMPTE</h3><hr style="border: 1px solid darkgray; margin-left: 25px; margin-right: 25px ">
+        </div>
+        <div class="row">
+            <div class="col-lg-5" id="confirmed_message">
+            <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+            {% if targetUrl %}
+                <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock fos_user_content %}

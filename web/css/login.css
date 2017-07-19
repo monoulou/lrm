@@ -1,0 +1,31 @@
+#form_box
+{
+    background-color: white;
+    height: 300px;
+}
+#error
+{
+    margin-top: 90px;
+}
+#message_error
+{
+    text-align: center;
+}
+#row_connexion
+{
+    margin-top: 120px;
+}
+#form_field
+{
+    margin-top: 15px;
+}
+#input_form
+{
+   text-align: center;
+}
+#button_connexion
+{
+    width: 150px;
+    background-color: #66afe9;
+    border: none;
+}

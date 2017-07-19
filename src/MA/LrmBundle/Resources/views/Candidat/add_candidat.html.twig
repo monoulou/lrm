@@ -1,0 +1,42 @@
+{% extends "::base.html.twig" %}
+
+ {% block stylesheets %}
+     <link href="{{ asset ('css/index.css') }}" rel='stylesheet' type='text/css' />
+ {% endblock %}
+
+{% block body %}
+
+<div class="container-fluid" id="main_container">
+    <div class="row">
+            <div class="col-lg-offset-9">
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    Connecté en tant que {{ app.user.username }}--<a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+                {% else %}
+                    <a href="{{ path('fos_user_security_login') }}">Connexion</a>
+                {% endif %}
+            </div>
+
+    </div>
+    <!-- START TOP NAVBAR-->
+    {% include 'navbar.html.twig' %}
+    <!-- END TOP NAVBAR -->
+    <!-- START SIDEBAR-->
+    {% include 'sidebar.html.twig' %}
+    <!-- END SIDEBAR-->
+
+    <div class="col-lg-9" style="margin-left: 10px;">
+        <div class="row">
+            <h5>AJOUTER UN CANDIDAT:</h5>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+{% endblock %}
+
+
+{% block javascripts %}
+{% endblock %}

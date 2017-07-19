@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Clients list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Denomination</th>
+                <th>Adresse</th>
+                <th>Telephone</th>
+                <th>Nomcontact</th>
+                <th>Fonctioncontact</th>
+                <th>Etat</th>
+                <th>Commentaire</th>
+                <th>Createdate</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for client in clients %}
+            <tr>
+                <td><a href="{{ path('admin_client_show', { 'id': client.id }) }}">{{ client.id }}</a></td>
+                <td>{{ client.denomination }}</td>
+                <td>{{ client.adresse }}</td>
+                <td>{{ client.telephone }}</td>
+                <td>{{ client.nomContact }}</td>
+                <td>{{ client.fonctionContact }}</td>
+                <td>{{ client.etat }}</td>
+                <td>{{ client.commentaire }}</td>
+                <td>{{ client.createDate }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('admin_client_show', { 'id': client.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_client_edit', { 'id': client.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_client_new') }}">Create a new client</a>
+        </li>
+    </ul>
+{% endblock %}

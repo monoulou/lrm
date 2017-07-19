@@ -1,0 +1,5 @@
+ma_lrm_client:
+    resource: "@MALrmBundle/Resources/config/routing/client.yml"
+    prefix:   /client
+
+

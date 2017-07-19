@@ -1,0 +1,27 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block stylesheets %}
+    <link href="{{ asset ('css/profile_content.css') }}" rel='stylesheet' type='text/css' />
+{% endblock %}
+
+<div class="container-fluid" id="profile_container">
+    <div class="row">
+        <div class="col-lg-offset-8 col-lg-2"> <a href="{{ path('ma_lrm_accueil') }}"> Retour vers l'accueil</a></div>
+    </div>
+
+    <div class="row">
+        <h3 id="profile_title">CONFIRMATION DU CHANGEMENT DE MOT DE PASSE</h3><hr style="border: 1px solid darkgray; margin-left: 25px; margin-right: 25px ">
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <p>Le mot de passe de l'utilisateur {{ user.username }} a correctement été modifié</p>
+            <!--<p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>-->
+            <!--<p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>-->
+        </div>
+
+    </div>
+
+
+</div>
+

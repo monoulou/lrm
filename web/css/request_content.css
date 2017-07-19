@@ -1,0 +1,14 @@
+#request_container
+{
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 500px;
+}
+
+#form_request
+{
+    margin-top: 10px;
+    margin-left: 10px;
+}

@@ -1,0 +1,23 @@
+#reset_container
+{
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 500px;
+}
+
+#reset_title
+{
+    margin-left: 20px;
+}
+
+#form_box_reset
+{
+    border: 1px solid black;
+    margin-left: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}

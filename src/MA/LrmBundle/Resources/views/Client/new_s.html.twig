@@ -1,0 +1,168 @@
+{% extends "::base.html.twig" %}
+
+ {% block stylesheets %}
+     <link href="{{ asset ('css/client.css') }}" rel='stylesheet' type='text/css' />
+ {% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid" id="header_container">
+        <div class="row">
+            <div class="col-lg-offset-9">
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    Connecté en tant que {{ app.user.username }}--<a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+                {% else %}
+                    <a href="{{ path('fos_user_security_login') }}">Connexion</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="main_container">
+        <!-- START TOP NAVBAR-->
+        {% include 'navbar.html.twig' %}
+        <!-- END TOP NAVBAR -->
+        <!-- START SIDEBAR-->
+        {% include 'sidebar.html.twig' %}
+        <!-- END SIDEBAR-->
+
+        <div class="col-lg-9" style="margin-left: 10px;">
+            <div class="row">
+                <h3>AJOUTER UNE ENTREPRISE</h3><hr style="border: 1px solid darkgray;">
+            </div>
+            <div class="row" id="head_row">
+                <h5>INTERFACE DE CREATION D'UNE NOUVELLE ENTREPRISE:</h5>
+            </div>
+            <!-- BEGIN FORM -->
+            <div class="row" id="form_row">
+                <!-- BEGIN FORM-->
+                {{ form_start(form, {'class': 'horizontal-form'}) }}
+                <div class="form-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-6" style="margin: 0;padding: 0 10px 0 0;">
+                                <div class="form-group">
+                                    <label class="control-label">Client</label>
+                                    {{ form_errors(form.denomination)}}
+                                    {{ form_widget(form.denomination, { 'attr': {'class': 'form-control'}} ) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9" style="margin: 0;padding: 0 0 0 10px;">
+                            <div class="form-group">
+                                <label class="control-label">Adresse</label>
+                                {{ form_errors(form.adresse)}}
+                                {{ form_widget(form.adresse, { 'attr': {'class': 'form-control'}} ) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--/span-->
+                        <div class="col-md-6">
+                            <div class="col-md-6" style="margin: 0;padding: 0 10px 0 0;">
+                                <div class="form-group">
+                                    <label class="control-label">Ville</label>
+                                    {{ form_errors(form.ville)}}
+                                    {{ form_widget(form.ville, { 'attr': {'class': 'form-control'}} ) }}
+                                </div>
+                            </div>
+                            <div class="col-md-6" style="margin: 0;padding: 0 0 0 10px;">
+                                <div class="form-group">
+                                    <label class="control-label">Département</label>
+                                    {{ form_errors(form.departement)}}
+                                    {{ form_widget(form.departement, { 'attr': {'class': 'form-control js-datepicker'}} ) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-6" style="margin: 0; padding: 0 0 0 10px;">
+                                <div class="form-group">
+                                    <label class="control-label">Pays</label>
+                                    {{ form_errors(form.pays)}}
+                                    {{ form_widget(form.pays, { 'attr': {'class': 'form-control'}} ) }}
+                                </div>
+                            </div>
+                        </div>
+                        <!--/span-->
+                    </div>
+                    <!--/row-->
+                    <div class="row">
+                        <!--/span-->
+                        <div class="col-md-6">
+                            <div class="col-md-6" style="margin: 0;padding: 0 10px 0 0;">
+                                <div class="form-group">
+                                    <label class="control-label">Nom du contact</label>
+                                    {{ form_errors(form.nomContact)}}
+                                    {{ form_widget(form.nomContact, { 'attr': {'class': 'form-control'}} ) }}
+                                </div>
+                            </div>
+                            <div class="col-md-6" style="margin: 0;padding: 0 0 0 10px;">
+                                <div class="form-group">
+                                    <label class="control-label">Fonction du contact</label>
+                                    {{ form_errors(form.fonctionContact)}}
+                                    {{ form_widget(form.fonctionContact, { 'attr': {'class': 'form-control js-datepicker'}} ) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-6" style="margin: 0; padding: 0 0 0 10px;">
+                                <div class="form-group">
+                                    <label class="control-label">Téléphone</label>
+                                    {{ form_errors(form.telephone)}}
+                                    {{ form_widget(form.telephone, { 'attr': {'class': 'form-control'}} ) }}
+                                </div>
+                            </div>
+                        </div>
+                        <!--/span-->
+                    </div>
+                    <!--/row-->
+                    <div class="row">
+                        <!--/span-->
+                        <div class="col-md-6">
+                            <div class="col-md-6" style="margin: 0;padding: 0 10px 0 0;">
+                                <div class="form-group">
+                                    <label class="control-label">Charge RH</label>
+                                    {{ form_errors(form.chargeRecrutement)}}
+                                    {{ form_widget(form.chargeRecrutement, { 'attr': {'class': 'form-control'}} ) }}
+                                </div>
+                            </div>
+                            <div class="col-md-6" style="margin: 0;padding: 0 0 0 10px;">
+                                <div class="form-group">
+                                    <label class="control-label">Etat</label>
+                                    {{ form_errors(form.etat)}}
+                                    {{ form_widget(form.etat, { 'attr': {'class': 'form-control js-datepicker'}} ) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-6" style="margin: 0; padding: 0 0 0 10px;">
+                                <div class="form-group">
+                                    <label class="control-label">Profil</label>
+                                    {{ form_errors(form.typeClient)}}
+                                    {{ form_widget(form.typeClient, { 'attr': {'class': 'form-control'}} ) }}
+                                </div>
+                            </div>
+                        </div>
+                        <!--/span-->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <label class="control-label">Commentaires</label>
+                                {{ form_errors(form.commentaire)}}
+                                {{ form_widget(form.commentaire, { 'attr': {'class': 'form-control'}} ) }}
+                            </div>
+                        </div>
+                    </div>
+                {{ form_end(form) }}
+            </div>
+                <!-- END FORM-->
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block javascripts %}
+{% endblock %}

@@ -1,0 +1,75 @@
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block stylesheets %}
+    <link href="{{ asset ('css/login.css') }}" rel='stylesheet' type='text/css' />
+
+{% endblock %}
+
+{% block fos_user_content %}
+
+
+    <div class="container">
+
+        <div class="row" id="row_connexion">
+            {# S'il y a une erreur, on l'affiche dans un joli cadre #}
+            {% if error %}
+                <div class="row">
+                    <div class="col-lg-offset-4 col-lg-4">
+                        <div class="alert alert-danger" id="message_error">
+                        <i class="icon icon-times-circle icon-lg"></i>
+                        <strong>Erreur !</strong> IDENTIFIANTS INCCORECTS
+                    </div>
+                    </div>
+                    <!--<div class="alert alert-danger">{{ error.message }}</div>-->
+                </div>
+            {% endif %}
+            <div class="col-lg-offset-4 col-lg-4" id="form_box">
+                <form class="form-horizontal" action="{{ path('fos_user_security_check') }}" method="POST">
+                    <div id="form_field">
+                        <fieldset>
+                            <legend class="">Connexion</legend>
+                            <div id="input_form">
+                                <div class="control-group">
+                                    <!-- Username -->
+                                    <label class="control-label"  for="username">Utilisateur</label>
+                                    <div class="controls">
+                                        <input type="text" id="username" name="_username" value="{{ last_username }}" class="input-xlarge">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <!-- Password-->
+                                    <label class="control-label" for="password">Mot de passe</label>
+                                    <div class="controls">
+                                        <input type="password" id="password" name="_password" class="input-xlarge">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="control-group">
+                                    <!-- Remenber me-->
+                                    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+                                        <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                                </div>
+                                <div><a href="{{ path('fos_user_resetting_request') }}">Mot de passe oublié ?</a></div>
+                                <div class="control-group">
+                                    <!-- Button -->
+                                    <div class="controls">
+                                        <button type="submit" value="Connexion" class="btn btn-success" id="button_connexion">Valider</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock fos_user_content%}
+
+{% block javascripts %}
+{% endblock %}
+
+
+
+

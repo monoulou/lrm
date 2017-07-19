@@ -1,0 +1,4 @@
+services:
+#    ma_lrm.example:
+#        class: MA\LrmBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

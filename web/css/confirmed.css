@@ -1,0 +1,13 @@
+#confirmed_container
+{
+    background-color: white;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 500px;
+}
+
+#confirmed_message
+{
+    margin-top: 10px;
+}

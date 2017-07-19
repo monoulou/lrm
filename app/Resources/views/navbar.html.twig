@@ -1,0 +1,37 @@
+<nav class="navbar navbar-default" style="margin-top: 5px" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex2-collapse">
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <a class="navbar-brand" href="#">LRM</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ path('ma_lrm_accueil') }}">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Candidats <b class="caret"></b></a>
+                    <ul class="dropdown-menu dropdown-menu-default">
+                        <li><a href="{{ path('ma_lrm_candidat_new') }}">Ajouter un candidat</a></li>
+                        <li><a href="#">Prévoir un entretien</a></li>
+                        <li><a href="#">Liste des candidats</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clients <b class="caret"></b></a>
+                    <ul class="dropdown-menu dropdown-menu-default">
+                        <li><a href="{{ path('ma_lrm_client_new') }}">Ajouter un client</a></li>
+                        <li><a href="{{ path('ma_lrm_client_index') }}">Liste des clients</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Emploi <b class="caret"></b></a>
+                    <ul class="dropdown-menu dropdown-menu-default">
+                        <li><a href="{{ path('ma_lrm_emploi_new') }}">Ajouter une offre</a></li>
+                        <li><a href="{{ path('ma_lrm_emploi_index') }}">Liste des offres</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

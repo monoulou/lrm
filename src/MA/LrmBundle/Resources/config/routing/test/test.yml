@@ -1,0 +1,4 @@
+ma_lrm_test:
+    path:     /
+    defaults: { _controller: "MALrmBundle:Test:index" }
+    methods:  GET

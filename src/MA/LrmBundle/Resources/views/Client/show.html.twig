@@ -1,0 +1,111 @@
+{% extends "::base.html.twig" %}
+
+ {% block stylesheets %}
+     <link href="{{ asset ('css/client.css') }}" rel='stylesheet' type='text/css' />
+ {% endblock %}
+{% block javascripts %}
+{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid" id="header_container">
+        <div class="row">
+            <div class="col-lg-offset-9">
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    Connecté en tant que {{ app.user.username }}--<a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+                {% else %}
+                    <a href="{{ path('fos_user_security_login') }}">Connexion</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+<div class="container-fluid" id="main_container">
+    <!-- START TOP NAVBAR-->
+    {% include 'navbar.html.twig' %}
+    <!-- END TOP NAVBAR -->
+    <!-- START SIDEBAR-->
+    {% include 'sidebar.html.twig' %}
+    <!-- END SIDEBAR-->
+
+    <div class="col-lg-9" style="margin-left: 10px;">
+        <div class="row">
+            <h3>PROFIL CLIENT</h3><hr style="border: 1px solid darkgray;">
+        </div>
+        <div class="row" id="head_row">
+            <h5>INTERFACE DE VISUALISATION D'UN CLIENT:</h5>
+        </div>
+    <div class="row">
+        <div class=" col-lg-5"><h1>{{ client.denomination|upper }}</h1></div>
+
+        <div class="col-lg-offset-4 col-lg-3" id="edit">
+            <a href="{{ path('ma_lrm_client_edit', { 'id': client.id }) }}" >METTRE A JOUR</a>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <table class="table table-striped" id="show_client">
+            <tbody>
+            <tr>
+                <th>Numéro de client</th>
+                <td>{{ client.id }}</td>
+            </tr>
+            <tr>
+                <th>Denomination</th>
+                <td>{{ client.denomination }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ client.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ client.villeCodePostal }} - {{ client.ville }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ client.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Nom contact</th>
+                <td>{{ client.civilite }} {{ client.nomContact }}</td>
+            </tr>
+            <tr>
+                <th>Prénom contact</th>
+                <td>{{ client.prenomContact }}</td>
+            </tr>
+            <tr>
+                <th>Fonction du contact</th>
+                <td>{{ client.fonctionContact }}</td>
+            </tr>
+            <tr>
+                <th>Profil</th>
+                <td>{{ client.typeClient }}</td>
+            </tr>
+            <tr>
+                <th>Etat</th>
+                <td>{{ client.etat }}</td>
+            </tr>
+            <tr>
+                <th>Commentaires</th>
+                <td>{{ client.commentaire }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    {#<div class="row">#}
+        {#<div class="col-lg-2">Commentaires</div>#}
+        {#<div class="row">#}
+            {#<div class="col-lg-4">{{ client.commentaire }}</div>#}
+        {#</div>#}
+    {#</div>#}
+    <div class="row">
+       <div class="col-lg-offset-10 col-lg-2">
+           {{ form_start(delete_form) }}
+           <button id="delete_button" type="submit" class="btn  btn-default" name="delete_client" data-dismiss="modal" onclick="return confirm('Souhaitez-vous vraiment supprimer ce client ?');">Supprimer</button>
+           {{ form_end(delete_form) }}
+       </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,19 @@
+#check_email_container
+{
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 500px;
+}
+
+#message_check_email
+{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#check_email_title
+{
+    margin-left: 20px;
+}

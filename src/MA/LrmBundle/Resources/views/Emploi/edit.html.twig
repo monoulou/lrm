@@ -1,0 +1,127 @@
+{% extends "::base.html.twig" %}
+
+ {% block stylesheets %}
+     <link href="{{ asset ('css/client.css') }}" rel='stylesheet' type='text/css' />
+ {% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('js/ville.js') }}" type="text/javascript"></script>
+{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid" id="header_container">
+        <div class="row">
+            <div class="col-lg-offset-9">
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    Connecté en tant que {{ app.user.username }}--<a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+                {% else %}
+                    <a href="{{ path('fos_user_security_login') }}">Connexion</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="main_container">
+    <!-- START TOP NAVBAR-->
+    {% include 'navbar.html.twig' %}
+    <!-- END TOP NAVBAR -->
+    <!-- START SIDEBAR-->
+    {% include 'sidebar.html.twig' %}
+    <!-- END SIDEBAR-->
+
+    <div class="col-lg-9" style="margin-left: 10px;">
+    <div class="row">
+        <h3>MISE A JOUR CLIENT</h3><hr style="border: 1px solid darkgray;">
+    </div>
+    <div class="row" id="head_row">
+        <h5>INTERFACE DE MISE A JOUR D'UN PROFIL CLIENT:</h5>
+    </div>
+
+    <!-- BEGIN FORM -->
+    <div class="row" id="form_edit_row">
+        <h1>{{ emploi.intitule|upper }}</h1>
+    </div>
+
+    <!-- BEGIN FORM -->
+    <div class="row" id="form_row">
+        {{ form_start(edit_form, {'class': 'horizontal-form'}) }}
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label">Entreprise:</label>
+                    {{ form_errors(edit_form.client)}}
+                    {{ form_widget(edit_form.client) }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="control-label">Intitulé du poste:</label>
+                    {{ form_errors(edit_form.intitule) }}
+                    {{ form_widget(edit_form.intitule) }}
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <label class="control-label">Type de contrat:</label>
+                    {{ form_errors(edit_form.contrat)}}
+                    {{ form_widget(edit_form.contrat)}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <label class="control-label">Lieu d'activité:</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    {#<label class="control-label">Code postal</label>#}
+                    {{ form_errors(edit_form.villeCodePostal) }}
+                    {{ form_widget(edit_form.villeCodePostal) }}
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    {#<label class="control-label">Ville</label>#}
+                    {{ form_errors(edit_form.villeActivite) }}
+                    {{ form_widget(edit_form.villeActivite) }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label">Nombre de postes:</label>
+                    {{ form_errors(edit_form.nombrePoste)}}
+                    {{ form_widget(edit_form.nombrePoste)}}
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label">Site de parution:</label>
+                    {{ form_errors(edit_form.siteParution)}}
+                    {{ form_widget(edit_form.siteParution)}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="form-group">
+                    <label class="control-label">Description du poste:</label>
+                    {{ form_errors(edit_form.description)}}
+                    {{ form_widget(edit_form.description) }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-offset-5">
+                <button type="submit" class="btn  btn-default"><i class="fa fa-check"></i>Enregistrer</button>
+            </div>
+        </div>
+        {{ form_end(edit_form) }}
+    </div>
+
+
+{% endblock %}

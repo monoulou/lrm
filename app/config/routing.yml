@@ -1,0 +1,48 @@
+
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile
+
+ma_lrm_accueil:
+    resource: "@MALrmBundle/Resources/config/routing/accueil/accueil.yml"
+    prefix: /admin
+
+ma_lrm_register:
+    resource: "@MALrmBundle/Resources/config/routing/accueil/accueil.yml"
+    prefix: /admin
+
+ma_lrm_client:
+    resource: "@MALrmBundle/Resources/config/routing/client/client.yml"
+    prefix: /admin/client
+
+ma_lrm_emploi:
+    resource: "@MALrmBundle/Resources/config/routing/emploi/emploi.yml"
+    prefix: /admin/emploi
+
+ma_lrm_candidat:
+    resource: "@MALrmBundle/Resources/config/routing/candidat/candidat.yml"
+    prefix: /admin/candidat
+
+ma_lrm_test:
+    resource: "@MALrmBundle/Resources/config/routing/test/test.yml"
+    prefix: /admin/test
+
+
+
+
+

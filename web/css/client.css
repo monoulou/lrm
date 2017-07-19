@@ -1,0 +1,40 @@
+#head_row {
+    border: 1px solid #e7e7e7;
+    background-color: #e7e7e7;
+}
+
+#form_row{
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#form_edit_row{
+
+    padding: 10px;
+}
+
+#edit_button
+{
+    background-color: #e7e7e7;
+    text-decoration: none;
+}
+
+#delete_button
+{
+    background-color: #e7e7e7;
+}
+
+#edit
+{
+    margin-top: 45px;
+    padding-left: 90px;
+}
+
+#flash_message
+{
+    margin-top: 10px;
+}
+#show_client
+{
+    overflow-wrap: break-word;
+}

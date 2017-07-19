@@ -1,0 +1,29 @@
+ma_lrm_candidat_index:
+    path:     /
+    defaults: { _controller: "MALrmBundle:Candidat:index" }
+    methods:  GET
+
+ma_lrm_candidat_show:
+    path:     /{id}/show
+    defaults: { _controller: "MALrmBundle:Candidat:show" }
+    methods:  GET
+
+ma_lrm_candidat_new:
+    path:     /new
+    defaults: { _controller: "MALrmBundle:Candidat:new" }
+    methods:  [GET, POST]
+
+ma_lrm_candidat_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MALrmBundle:Candidat:edit" }
+    methods:  [GET, POST]
+
+ma_lrm_candidat_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MALrmBundle:Candidat:delete" }
+    methods:  [GET, POST, DELETE]
+
+ma_lrm_candidat_ville:
+    path:     /new/ville/{cp}
+    defaults: { _controller: "MALrmBundle:Candidat:ville" }
+    methods:  [GET, POST]

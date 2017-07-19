@@ -1,0 +1,56 @@
+{% extends "::base.html.twig" %}
+
+ {% block stylesheets %}
+  <link href="{{ asset ('css/index.css') }}" rel='stylesheet' type='text/css' />
+ {% endblock %}
+
+{% block body %}
+
+ <div class="container-fluid" id="header_container">
+  <div class="row">
+    {% if register == true %}
+     <div class="col-lg-offset-6">
+      {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+       Connecté en tant que {{ app.user.username }}--<a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+      {% else %}
+       <a href="{{ path('fos_user_security_login') }}">Connexion</a>
+      {% endif %}
+      -- Créer un nouvel utilisateur --<a href="{{ path('ma_lrm_register') }}"> Créer un compte </a>
+     </div>
+    {% else %}
+     <div class="col-lg-offset-9">
+      {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+       Connecté en tant que {{ app.user.username }}--<a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+      {% else %}
+       <a href="{{ path('fos_user_security_login') }}">Connexion</a>
+      {% endif %}
+     </div>
+    {% endif %}
+  </div>
+ </div>
+ <div class="container-fluid" id="main_container">
+  <!-- START TOP NAVBAR-->
+  {% include 'navbar.html.twig' %}
+  <!-- END TOP NAVBAR -->
+  <!-- START SIDEBAR-->
+  {% include 'sidebar.html.twig' %}
+  <!-- END SIDEBAR-->
+
+  <div class="col-lg-9" style="margin-left: 10px;">
+   <div class="row">
+    <h3>TABLEAU DE BORD</h3><hr style="border: 1px solid darkgray;">
+   </div>
+   <div class="row">
+    <h5>LES RELANCES CANDIDATS:</h5>
+   </div>
+  </div>
+
+</div>
+
+
+
+{% endblock %}
+
+
+{% block javascripts %}
+{% endblock %}
