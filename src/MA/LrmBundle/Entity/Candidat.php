@@ -46,6 +46,20 @@ class Candidat
     /**
      * @var string
      *
+     * @ORM\Column(name="date_anniversaire", type="string", length=50)
+     */
+    private $dateAnniversaire;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="age", type="string", length=50)
+     */
+    private $age;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="adresse", type="string", length=255)
      * @Assert\NotBlank()
      */
@@ -476,5 +490,53 @@ class Candidat
     public function getCommentaire()
     {
         return $this->commentaire;
+    }
+
+    /**
+     * Set dateAnniversaire
+     *
+     * @param string $dateAnniversaire
+     *
+     * @return Candidat
+     */
+    public function setDateAnniversaire($dateAnniversaire)
+    {
+        $this->dateAnniversaire = $dateAnniversaire;
+
+        return $this;
+    }
+
+    /**
+     * Get dateAnniversaire
+     *
+     * @return string
+     */
+    public function getDateAnniversaire()
+    {
+        return $this->dateAnniversaire;
+    }
+
+    /**
+     * Set age
+     *
+     * @param string $age
+     *
+     * @return Candidat
+     */
+    public function setAge($age)
+    {
+        $this->age = $age;
+
+        return $this;
+    }
+
+    /**
+     * Get age
+     *
+     * @return string
+     */
+    public function getAge()
+    {
+        return $this->age;
     }
 }

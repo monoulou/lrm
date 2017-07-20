@@ -134,6 +134,7 @@ class CandidatController extends Controller
         $wrapCommentaire = wordwrap($candidat->getCommentaire(), 100, "\n", true);
         $candidat->setCommentaire($wrapCommentaire);
 
+        dump($candidat);die();
         return $this->render('MALrmBundle:Candidat:show.html.twig', array(
             'candidat' => $candidat,
             'delete_form' => $deleteForm->createView(),

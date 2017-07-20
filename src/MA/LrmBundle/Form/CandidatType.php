@@ -30,6 +30,12 @@ class CandidatType extends AbstractType
 
             ->add('prenom', TextType::class)
 
+            ->add('dateAnniversaire', TextType::class, array(
+                'attr' => array('class'=> 'dateNaissance')))
+            
+            ->add('age', TextType::class, array(
+                'attr' => array('class'=> 'inputAge')))
+
             ->add('adresse', TextType::class)
 
             ->add('ville', TextType::class, array(

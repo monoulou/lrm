@@ -5,6 +5,7 @@
  {% endblock %}
 {% block javascripts %}
     <script src="{{ asset('js/ville.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/datepicker.js') }}" type="text/javascript"></script>
 {% endblock %}
 
 
@@ -64,7 +65,9 @@
                         {{ form_widget(form.civilite) }}
                     </div>
                 </div>
-                <div class="col-lg-2">
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
                     <div class="form-group">
                         <label class="control-label">Nom</label>
                         {{ form_errors(form.nom) }}
@@ -80,13 +83,31 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-2">
+                    <div class="form-group">
+                        <label class="control-label">Date de naissance:</label>
+                        {{ form_errors(form.dateAnniversaire) }}
+                        {{ form_widget(form.dateAnniversaire) }}
+                    </div>
+                </div>
+                <div class="col-lg-1">
+                    <div class="form-group">
+                        <label class="control-label">Age:</label>
+                        {{ form_errors(form.age) }}
+                        {{ form_widget(form.age) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5">
                     <div class="form-group">
                         <label class="control-label">Adresse</label>
                         {{ form_errors(form.adresse) }}
                         {{ form_widget(form.adresse) }}
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-2">
                     <div class="form-group">
                         <label class="control-label">Code Postal</label>
@@ -94,8 +115,6 @@
                         {{ form_widget(form.villeCodePostal) }}
                     </div>
                 </div>
-            </div>
-            <div class="row">
                 <div class="col-lg-3">
                     <div class="form-group">
                         <label class="control-label">Ville</label>
@@ -103,6 +122,8 @@
                         {{ form_widget(form.ville) }}
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-3">
                     <div class="form-group">
                         <label class="control-label">Département</label>
@@ -119,7 +140,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-2">
                     <div class="form-group">
                         <label class="control-label">Téléphone</label>
                         {{ form_errors(form.telephone)}}
@@ -135,7 +156,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-11">
+                <div class="col-lg-6">
                     <div class="form-group">
                         <label class="control-label">Commentaires</label>
                         {{ form_errors(form.commentaire)}}
