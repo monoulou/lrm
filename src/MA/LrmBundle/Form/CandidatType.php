@@ -11,6 +11,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
@@ -22,6 +23,7 @@ class CandidatType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $civilite = array('Mme.'=>'Madame', 'M.'=>'Monsieur');
+        $testPerso = array('Oui'=>'Oui', 'Non'=>'Non');
 
         $builder
             ->add('civilite',  ChoiceType::class, array('choices' => $civilite))
@@ -31,10 +33,18 @@ class CandidatType extends AbstractType
             ->add('prenom', TextType::class)
 
             ->add('dateAnniversaire', TextType::class, array(
-                'attr' => array('class'=> 'dateNaissance')))
-            
-            ->add('age', TextType::class, array(
-                'attr' => array('class'=> 'inputAge')))
+                'attr'=> array(
+                    'class' => 'datepicker',
+                    'placeholder' => 'jj/mm/aaaa')))
+
+            ->add('dateRelance', TextType::class, array(
+                'attr'=> array(
+                    'class' => 'datepicker',
+                    'placeholder' => 'jj/mm/aaaa')))
+
+            ->add('age', TextType::class)
+
+            ->add('testPersonnalite', ChoiceType::class, array('choices' => $testPerso))
 
             ->add('adresse', TextType::class)
 
@@ -54,6 +64,8 @@ class CandidatType extends AbstractType
             ->add('telephone', TextType::class)
 
             ->add('email', EmailType::class)
+
+            ->add('cvCandidat', FileType::class, array('label' => 'cv (PDF, .doc)'))
 
             ->add('commentaire', TextareaType::class)
 

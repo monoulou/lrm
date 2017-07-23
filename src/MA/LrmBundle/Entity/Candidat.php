@@ -60,6 +60,20 @@ class Candidat
     /**
      * @var string
      *
+     * @ORM\Column(name="test_perso", type="string", length=50)
+     */
+    private $testPersonnalite;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="date_relance", type="string", length=50)
+     */
+    private $dateRelance;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="adresse", type="string", length=255)
      * @Assert\NotBlank()
      */
@@ -123,6 +137,16 @@ class Candidat
      * @Assert\NotBlank()
      */
     private $emploi;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cv_candidat", type="string", length = 255)
+     * @Assert\NotBlank(message="Insérer un cv au format PDF ou .doc .")
+     * @Assert\File(mimeTypes={ "application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document" })
+     */
+    private $cvCandidat;
+
 
     /**
      * @var string
@@ -538,5 +562,77 @@ class Candidat
     public function getAge()
     {
         return $this->age;
+    }
+
+    /**
+     * Set testPersonnalite
+     *
+     * @param string $testPersonnalite
+     *
+     * @return Candidat
+     */
+    public function setTestPersonnalite($testPersonnalite)
+    {
+        $this->testPersonnalite = $testPersonnalite;
+
+        return $this;
+    }
+
+    /**
+     * Get testPersonnalite
+     *
+     * @return string
+     */
+    public function getTestPersonnalite()
+    {
+        return $this->testPersonnalite;
+    }
+
+    /**
+     * Set dateRelance
+     *
+     * @param string $dateRelance
+     *
+     * @return Candidat
+     */
+    public function setDateRelance($dateRelance)
+    {
+        $this->dateRelance = $dateRelance;
+
+        return $this;
+    }
+
+    /**
+     * Get dateRelance
+     *
+     * @return string
+     */
+    public function getDateRelance()
+    {
+        return $this->dateRelance;
+    }
+
+    /**
+     * Set cvCandidat
+     *
+     * @param string $cvCandidat
+     *
+     * @return Candidat
+     */
+    public function setCvCandidat($cvCandidat)
+    {
+        $this->cvCandidat = $cvCandidat;
+
+        return $this;
+    }
+
+    /**
+     * Get cvCandidat
+     *
+     * @return string
+     */
+    public function getCvCandidat()
+    {
+        return $this->cvCandidat;
     }
 }

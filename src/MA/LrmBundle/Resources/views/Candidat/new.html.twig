@@ -83,25 +83,9 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-2">
-                    <div class="form-group">
-                        <label class="control-label">Date de naissance:</label>
-                        {{ form_errors(form.dateAnniversaire) }}
-                        {{ form_widget(form.dateAnniversaire) }}
-                    </div>
-                </div>
-                <div class="col-lg-1">
-                    <div class="form-group">
-                        <label class="control-label">Age:</label>
-                        {{ form_errors(form.age) }}
-                        {{ form_widget(form.age) }}
-                    </div>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-lg-5">
                     <div class="form-group">
-                        <label class="control-label">Adresse</label>
+                        <label class="control-label">Adresse:</label>
                         {{ form_errors(form.adresse) }}
                         {{ form_widget(form.adresse) }}
                     </div>
@@ -142,6 +126,24 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="form-group">
+                        <label class="control-label">Date de naissance:</label>
+                        {#<input  class="form-control" type="text" name="ma_lrmbundle_candidat[dateAnniversaire]" id="ma_lrmbundle_candidat_dateAnniversaire" />#}
+                        {{ form_errors(form.dateAnniversaire) }}
+                        {{ form_widget(form.dateAnniversaire) }}
+                    </div>
+                </div>
+                <div class="col-lg-1">
+                    <div class="form-group">
+                        <label class="control-label">Age:</label>
+                        {#<input  class="form-control" type="text" name="ma_lrmbundle_candidat[age]" id="ma_lrmbundle_candidat_age" />#}
+                        {{ form_errors(form.age) }}
+                        {{ form_widget(form.age) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="form-group">
                         <label class="control-label">Téléphone</label>
                         {{ form_errors(form.telephone)}}
                         {{ form_widget(form.telephone) }}
@@ -156,6 +158,31 @@
                 </div>
             </div>
             <div class="row">
+                <div class="col-lg-2">
+                    <div class="form-group">
+                        <label class="control-label">Test de personnalité:</label>
+                        {{ form_errors(form.testPersonnalite) }}
+                        {{ form_widget(form.testPersonnalite) }}
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="form-group">
+                        <label class="control-label">Date de relance:</label>
+                        {{ form_errors(form.dateRelance) }}
+                        {{ form_widget(form.dateRelance) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label class="control-label">cv:</label>
+                        {{ form_errors(form.cvCandidat) }}
+                        {{ form_widget(form.cvCandidat) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label class="control-label">Commentaires</label>
@@ -165,7 +192,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-offset-10">
+                <div class="col-lg-offset-5">
                     <button type="submit" class="btn  btn-default"><i class="fa fa-check"></i>Enregister</button>
                 </div>
             </div>

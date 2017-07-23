@@ -10,3 +10,4 @@ parameters:
     mailer_user: mohamedabdelmoumen@gmail.com
     mailer_password: mohlou1005
     secret: ThisTokenIsNotSoSecretChangeIt
+    cv_directory: '/web/uploads/cvtheque'

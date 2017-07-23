@@ -108,6 +108,17 @@ class CandidatController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $file = $candidat->getCvCandidat();
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+
+            $file->move(
+                $this->getParameter('cv_directory'),
+                $fileName
+            );
+            $candidat->setCvCandidat($fileName);
+
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($candidat);
             $em->flush();
