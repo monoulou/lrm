@@ -5,8 +5,11 @@ namespace MA\LrmBundle\Controller;
 
 use MA\LrmBundle\Entity\Candidat;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Imagick;
 use Symfony\Component\HttpFoundation\Response;
 use MA\LrmBundle\MALrmBundle;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -92,8 +95,20 @@ class CandidatController extends Controller
         $em = $this->getDoctrine()->getManager();
         $candidats = $em->getRepository('MALrmBundle:Candidat')->findAll();
 
+        /** Construction d'un tableau pour recuperer la liste des entreprises clientes */
+        $nomClient = array();
+
+           foreach ($candidats as $cle => $candidat)
+            {
+                $emploi = $em->getRepository('MALrmBundle:Emploi')->findOneBy(array('id'=>$candidat->getEmploi()->getId()));
+                $client = $em->getRepository('MALrmBundle:Client')->findOneBy(array('id'=>$emploi->getClient()->getId()));
+
+                $nomClient[$emploi->getId()] = $client->getDenomination();
+            }
+
         return $this->render('MALrmBundle:Candidat:index.html.twig', array(
             'candidats' => $candidats,
+            'nomClient' => $nomClient,
         ));
     }
 
@@ -110,19 +125,24 @@ class CandidatController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
 
             $file = $candidat->getCvCandidat();
+            /** encodage du nom du fichier uploadé */
             $fileName = md5(uniqid()).'.'.$file->guessExtension();
 
+            /** Ré-ecriture du nom du cv du candidat */
+            $fileName = $candidat->getNom().'_'.$candidat->getPrenom().'_cv.'.explode('.',$fileName)[1];
+            $candidat->setCvCandidat($fileName);
+
+            //$uploadDirectory = $_SERVER['DOCUMENT_ROOT'].$path->serveurPath().'/web/uploads/declaratifs/';
             $file->move(
                 $this->getParameter('cv_directory'),
                 $fileName
             );
-            $candidat->setCvCandidat($fileName);
-
-
             $em = $this->getDoctrine()->getManager();
             $em->persist($candidat);
             $em->flush();
 
+            //$img = new Imagick('cv_directory'.'/'.$fileName);
+            //dump($file);die();
 
             return $this->redirectToRoute('ma_lrm_candidat_show', array('id' => $candidat->getId()));
         }
@@ -145,7 +165,6 @@ class CandidatController extends Controller
         $wrapCommentaire = wordwrap($candidat->getCommentaire(), 100, "\n", true);
         $candidat->setCommentaire($wrapCommentaire);
 
-        dump($candidat);die();
         return $this->render('MALrmBundle:Candidat:show.html.twig', array(
             'candidat' => $candidat,
             'delete_form' => $deleteForm->createView(),
@@ -158,11 +177,29 @@ class CandidatController extends Controller
      */
     public function editAction(Request $request, Candidat $candidat)
     {
+        $candidat->setCvCandidat(
+            new File($this->getParameter('cv_directory').'/'.$candidat->getCvCandidat())
+        );
         $deleteForm = $this->createDeleteForm($candidat);
-        $editForm = $this->createForm('MA\LrmBundle\Form\ClientType', $candidat);
+        $editForm = $this->createForm('MA\LrmBundle\Form\CandidatType', $candidat);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+
+            $file = $candidat->getCvCandidat();
+            /** encodage du nom du fichier uploadé */
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+
+            /** Ré-ecriture du nom du cv du candidat */
+            $fileName = $candidat->getNom().'_'.$candidat->getPrenom().'_cv.'.explode('.',$fileName)[1];
+            $candidat->setCvCandidat($fileName);
+
+            //$uploadDirectory = $_SERVER['DOCUMENT_ROOT'].$path->serveurPath().'/web/uploads/declaratifs/';
+            $file->move(
+                $this->getParameter('cv_directory'),
+                $fileName
+            );
+
             $this->getDoctrine()->getManager()->flush();
 
             //Message flash.
@@ -193,25 +230,25 @@ class CandidatController extends Controller
         }
 
         //Message flash.
-        $this->addFlash('notice', 'Le client a correctement été supprimé');
+        $this->addFlash('notice', 'Le candidat a correctement été supprimé');
 
         return $this->redirectToRoute('ma_lrm_candidat_index');
     }
 
     /**
-     * Creates a form to delete a client entity.
+     * Creates a form to delete a candidat entity.
      *
-     * @param Client $client The client entity
+     * @param Candidat $candidat The candidat entity
      *
      * @return \Symfony\Component\Form\Form The form
      */
     private function createDeleteForm(Candidat $candidat)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('ma_lrm_client_delete', array('id' => $candidat->getId())))
+            ->setAction($this->generateUrl('ma_lrm_candidat_delete', array('id' => $candidat->getId())))
             ->setMethod('DELETE')
             ->getForm()
             ;
     }
-
+    
 }

@@ -36,27 +36,26 @@
     $(".partenaire").hide();
 
 
-        /* Autocomplete les villes*/
-
-         $(".nomVille").keyup(function () {
-             if($(this).val != null){
-                 $.ajax({
-                     type: 'get',
-                     url:'http://localhost/ligne_rh/web/app_dev.php/admin/emploi/new/ville/' + $(this).val(),
-                     beforeSend: function () {
-                     },
-                     success: function (data) {
-                         for(var i in data) {
-                             console.log(data[i]);
-                             $(".nomVille").val(data[i]);
-                         }
-
-                     }
-                 });
-             }else{
-
-             }
-         });
+        // /* Autocomplete les villes*/
+        // $(".nomVille").keyup(function () {
+        //     if($(this).val != null){
+        //         $.ajax({
+        //             type: 'get',
+        //             url:'http://localhost/ligne_rh/web/app_dev.php/admin/emploi/new/ville/' + $(this).val(),
+        //             beforeSend: function () {
+        //             },
+        //             success: function (data) {
+        //                 for(var i in data) {
+        //                     console.log(data[i]);
+        //                     $(".nomVille").val(data[i]);
+        //                 }
+        //
+        //             }
+        //          });
+        //      }else{
+        //
+        //      }
+        //  });
 
         //$(".nomVille").chosen({disable_search_threshold: 10})
 
