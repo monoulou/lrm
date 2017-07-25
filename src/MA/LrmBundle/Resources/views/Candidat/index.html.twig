@@ -77,8 +77,7 @@
                                 <td> {{ client }}</td>
                             {% endif %}
                         {% endfor %}
-                        <td><a href="{{ path ('ma_lrm_candidat_edit', { 'id': candidat.id }) }}">Modifier</a></td>
-                            {#<a href="{{ path ('ma_lrm_candidat_delete', { 'id': candidat.id }) }}" onclick="return confirm('Souhaitez-vous confirmer la suppression de ce candidat ?')";>Supprimer</a>#}
+                        <td><a href="{{ path ('ma_lrm_candidat_edit', { 'id': candidat.id }) }}">Modifier</a>/<a href="{{ path ('ma_lrm_candidat_delete', { 'id': candidat.id }) }}" onclick="return confirm('Souhaitez-vous confirmer la suppression de ce candidat ?')";>Supprimer</a></td>
                     </tr>
                 {% endfor %}
                 </tbody>

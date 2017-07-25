@@ -165,6 +165,9 @@ class CandidatController extends Controller
         $wrapCommentaire = wordwrap($candidat->getCommentaire(), 100, "\n", true);
         $candidat->setCommentaire($wrapCommentaire);
 
+//        $img = new \ Imagick($candidat->getCvCandidat());
+//        dump($img);die();
+
         return $this->render('MALrmBundle:Candidat:show.html.twig', array(
             'candidat' => $candidat,
             'delete_form' => $deleteForm->createView(),
@@ -221,13 +224,23 @@ class CandidatController extends Controller
      */
     public function deleteAction(Request $request, Candidat $candidat)
     {
-        $form = $this->createDeleteForm($candidat);
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($candidat);
-            $em->flush();
-        }
+//        $form = $this->createDeleteForm($candidat);
+//        $form->handleRequest($request);
+//        if ($form->isSubmitted() && $form->isValid()) {
+//            $em = $this->getDoctrine()->getManager();
+//            $em->remove($candidat);
+//            $em->flush();
+//        }
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($candidat);
+        $em->flush();
+
+//        try {
+//            $em->flush();
+//        } catch (\Exception $e) {
+//            $errorMessage = $e->getMessage();
+//            $this->addFlash('notice', 'Suppression non valide. Supprimer préalablement les candididats pour ce poste.');
+//        }
 
         //Message flash.
         $this->addFlash('notice', 'Le candidat a correctement été supprimé');

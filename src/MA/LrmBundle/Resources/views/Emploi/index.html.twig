@@ -85,7 +85,7 @@
                                 <td>{{ site }}</td>
                             {% endif %}
                         {% endfor %}
-                        <td><a href="{{ path ('ma_lrm_emploi_edit', { 'id': emploi.id }) }}">Modifier</a></td>
+                        <td><a href="{{ path ('ma_lrm_emploi_edit', { 'id': emploi.id }) }}">Modifier</a>/<a href="{{ path ('ma_lrm_emploi_delete', { 'id': emploi.id }) }}" onclick="return confirm('Souhaitez-vous confirmer la suppression de cette offre ?')";>Supprimer</a></td>
                     </tr>
                 {% endfor %}
                 </tbody>

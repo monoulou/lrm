@@ -78,13 +78,16 @@ class CandidatType extends AbstractType
                 'expanded' => false,
                 'multiple' => false
             ))
+            
             ->add('emploi', EntityType::class, array(
                 'class' => 'MALrmBundle:Emploi',
-                'placeholder' => 'offre d\'emploi',
+                'placeholder' => 'Offre d\'emploi',
                 'choice_label' => 'intitule',
                 'expanded' => false,
                 'multiple' => false
             ));
+        
+        
     }
     
     /**

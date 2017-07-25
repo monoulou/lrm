@@ -187,13 +187,16 @@ class EmploiController extends Controller
      */
     public function deleteAction(Request $request, Emploi $emploi)
     {
-        $form = $this->createDeleteForm($emploi);
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($emploi);
-            $em->flush();
-        }
+//        $form = $this->createDeleteForm($emploi);
+//        $form->handleRequest($request);
+//        if ($form->isSubmitted() && $form->isValid()) {
+//            $em = $this->getDoctrine()->getManager();
+//            $em->remove($emploi);
+//            $em->flush();
+//        }
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($emploi);
+        $em->flush();
 
         //Message flash.
         $this->addFlash('notice', 'Cette offre d\'emploi a correctement été supprimé');

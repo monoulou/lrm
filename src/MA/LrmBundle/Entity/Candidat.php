@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Client
+ * Candidat
  *
  * @ORM\Table(name="candidat")
  * @ORM\Entity(repositoryClass="MA\LrmBundle\Repository\CandidatRepository")
@@ -137,7 +137,7 @@ class Candidat
      * @Assert\NotBlank()
      */
     private $emploi;
-
+    
     /**
      * @var string
      *

@@ -92,7 +92,7 @@
                             <td>{{ client.partenaire }}</td>
                         {% endif %}
                         <td>{{ client.etat }}</td>
-                        <td><a href="{{ path ('ma_lrm_client_edit', { 'id': client.id }) }}">Modifier</a></td>
+                        <td><a href="{{ path ('ma_lrm_client_edit', { 'id': client.id }) }}">Modifier</a>/<a href="{{ path ('ma_lrm_client_delete', { 'id': client.id }) }}" onclick="return confirm('Souhaitez-vous confirmer la suppression de ce client ?')";>Supprimer</a></td>
                     </tr>
                 {% endfor %}
 
