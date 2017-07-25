@@ -134,7 +134,6 @@ class Candidat
     /**
      * @ORM\ManyToOne(targetEntity="MA\LrmBundle\Entity\Emploi", cascade={"persist"})
      * @ORM\JoinColumn(nullable=true)
-     * @Assert\NotBlank()
      */
     private $emploi;
     

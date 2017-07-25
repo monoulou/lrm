@@ -79,23 +79,25 @@
                 </tfoot>
                 <tbody>
                 {% for client in clients %}
-                    <tr>
-                        <td><a href="{{ path('ma_lrm_client_show', { 'id': client.id }) }}">{{ client.denomination }}</a></td>
-                        <td>{{ client.adresse }}-{{ client.villeCodePostal }} {{ client.ville }}</td>
-                        <td>{{ client.nomContact }}</td>
-                        <td>{{ client.fonctionContact }}</td>
-                        <td>{{ client.telephone }}</td>
-                        <td>{{ client.typeClient }}</td>
-                        {% if client.partenaire is empty %}
-                            <td> -- </td>
-                        {% else %}
-                            <td>{{ client.partenaire }}</td>
-                        {% endif %}
-                        <td>{{ client.etat }}</td>
-                        <td><a href="{{ path ('ma_lrm_client_edit', { 'id': client.id }) }}">Modifier</a>/<a href="{{ path ('ma_lrm_client_delete', { 'id': client.id }) }}" onclick="return confirm('Souhaitez-vous confirmer la suppression de ce client ?')";>Supprimer</a></td>
-                    </tr>
-                {% endfor %}
+                    {% if client.id != '13' %}
+                        <tr>
+                            <td><a href="{{ path('ma_lrm_client_show', { 'id': client.id }) }}">{{ client.denomination }}</a></td>
+                            <td>{{ client.adresse }}-{{ client.villeCodePostal }} {{ client.ville }}</td>
+                            <td>{{ client.nomContact }}</td>
+                            <td>{{ client.fonctionContact }}</td>
+                            <td>{{ client.telephone }}</td>
+                            <td>{{ client.typeClient }}</td>
+                            {% if client.partenaire is empty %}
+                                <td> -- </td>
+                            {% else %}
+                                <td>{{ client.partenaire }}</td>
+                            {% endif %}
+                            <td>{{ client.etat }}</td>
+                            <td><a href="{{ path ('ma_lrm_client_edit', { 'id': client.id }) }}">Modifier</a>/<a href="{{ path ('ma_lrm_client_delete', { 'id': client.id }) }}" onclick="return confirm('Souhaitez-vous confirmer la suppression de ce client ?')";>Supprimer</a></td>
+                        </tr>
 
+                    {% endif %}
+                {% endfor %}
                 </tbody>
             </table>
         </div>

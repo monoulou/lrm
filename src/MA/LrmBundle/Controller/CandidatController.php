@@ -197,13 +197,17 @@ class CandidatController extends Controller
             $fileName = $candidat->getNom().'_'.$candidat->getPrenom().'_cv.'.explode('.',$fileName)[1];
             $candidat->setCvCandidat($fileName);
 
+            //dump($candidat,$file);die();
             //$uploadDirectory = $_SERVER['DOCUMENT_ROOT'].$path->serveurPath().'/web/uploads/declaratifs/';
             $file->move(
                 $this->getParameter('cv_directory'),
                 $fileName
             );
 
-            $this->getDoctrine()->getManager()->flush();
+            //$this->getDoctrine()->getManager()->flush();
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($candidat);
+            $em->flush();
 
             //Message flash.
             $this->addFlash('notice', 'La modification a correctement été effectué');
@@ -224,24 +228,11 @@ class CandidatController extends Controller
      */
     public function deleteAction(Request $request, Candidat $candidat)
     {
-//        $form = $this->createDeleteForm($candidat);
-//        $form->handleRequest($request);
-//        if ($form->isSubmitted() && $form->isValid()) {
-//            $em = $this->getDoctrine()->getManager();
-//            $em->remove($candidat);
-//            $em->flush();
-//        }
+
         $em = $this->getDoctrine()->getManager();
         $em->remove($candidat);
         $em->flush();
-
-//        try {
-//            $em->flush();
-//        } catch (\Exception $e) {
-//            $errorMessage = $e->getMessage();
-//            $this->addFlash('notice', 'Suppression non valide. Supprimer préalablement les candididats pour ce poste.');
-//        }
-
+        
         //Message flash.
         $this->addFlash('notice', 'Le candidat a correctement été supprimé');
 

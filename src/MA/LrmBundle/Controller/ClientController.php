@@ -171,14 +171,7 @@ class ClientController extends Controller
      */
     public function deleteAction(Request $request, Client $client)
     {
-//        $form = $this->createDeleteForm($client);
-//        $form->handleRequest($request);
-//        if ($form->isSubmitted() && $form->isValid()) {
-//            $em = $this->getDoctrine()->getManager();
-//            $em->remove($client);
-//            $em->flush();
-//        }
-        /** Suppression des offres liées aux clients */
+        /** ***************Suppression des offres liées aux clients***************************** */
         $em = $this->getDoctrine()->getManager();
         $emplois = $em->getRepository('MALrmBundle:Emploi')->findBy(array('client'=>$client->getId()));
 
@@ -188,13 +181,12 @@ class ClientController extends Controller
             $em->remove($emploi);
             $em->flush();
         }
-        /** ************************************** */
+        /** ********************************************************************************** */
 
-        /** *******Suppression du client ******** */
         $em = $this->getDoctrine()->getManager();
         $em->remove($client);
         $em->flush();
-        /** ************************************ */
+   
 
         //Message flash.
         $this->addFlash('notice', 'Le client a correctement été supprimé');

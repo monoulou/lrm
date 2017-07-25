@@ -187,13 +187,28 @@ class EmploiController extends Controller
      */
     public function deleteAction(Request $request, Emploi $emploi)
     {
-//        $form = $this->createDeleteForm($emploi);
-//        $form->handleRequest($request);
-//        if ($form->isSubmitted() && $form->isValid()) {
-//            $em = $this->getDoctrine()->getManager();
-//            $em->remove($emploi);
-//            $em->flush();
-//        }
+        /** Permet la suppression d'un emploi en conservant les candidatures qui lui sont liées */
+        
+        $em = $this->getDoctrine()->getManager();
+        $candidats = $em->getRepository('MALrmBundle:Candidat')->findBy(array('emploi'=>$emploi->getId()));
+        $emplois = $em->getRepository('MALrmBundle:Emploi')->findAll();
+        
+        foreach ($candidats as $index => $candidat)
+        {
+            foreach ($emplois as $index => $emploi)
+            {
+                if ($emploi->getId()== 16)
+                {
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($candidat->setEmploi($emploi));
+                    $em->flush();
+                }
+            }
+
+        }
+        
+        /** *********************************************************************************** */
+
         $em = $this->getDoctrine()->getManager();
         $em->remove($emploi);
         $em->flush();

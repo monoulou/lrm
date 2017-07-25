@@ -23,29 +23,29 @@ class __TwigTemplate_c1722603f36a1ff6973274dbc2c48798298625e4d69ea82a5893744fe27
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4ec4f08b710cdd4d5aa649d35017ccb820aeacc8e27904359d36e036b7637887 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_4ec4f08b710cdd4d5aa649d35017ccb820aeacc8e27904359d36e036b7637887->enter($__internal_4ec4f08b710cdd4d5aa649d35017ccb820aeacc8e27904359d36e036b7637887_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MALrmBundle:Client:index.html.twig"));
+        $__internal_af545a4074066540605eb8bff63e8b2a1332252b8fde68bd7a88ea77d99f2ffe = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_af545a4074066540605eb8bff63e8b2a1332252b8fde68bd7a88ea77d99f2ffe->enter($__internal_af545a4074066540605eb8bff63e8b2a1332252b8fde68bd7a88ea77d99f2ffe_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MALrmBundle:Client:index.html.twig"));
 
-        $__internal_600f33b7610636a2e207592d19f6c79006a0fc26b8c715528ae07a0c84564926 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_600f33b7610636a2e207592d19f6c79006a0fc26b8c715528ae07a0c84564926->enter($__internal_600f33b7610636a2e207592d19f6c79006a0fc26b8c715528ae07a0c84564926_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MALrmBundle:Client:index.html.twig"));
+        $__internal_d9ed92c08353190f6f5ea6556070e4aea2480e58bd67f41d3b318626ff92c712 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d9ed92c08353190f6f5ea6556070e4aea2480e58bd67f41d3b318626ff92c712->enter($__internal_d9ed92c08353190f6f5ea6556070e4aea2480e58bd67f41d3b318626ff92c712_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MALrmBundle:Client:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4ec4f08b710cdd4d5aa649d35017ccb820aeacc8e27904359d36e036b7637887->leave($__internal_4ec4f08b710cdd4d5aa649d35017ccb820aeacc8e27904359d36e036b7637887_prof);
+        $__internal_af545a4074066540605eb8bff63e8b2a1332252b8fde68bd7a88ea77d99f2ffe->leave($__internal_af545a4074066540605eb8bff63e8b2a1332252b8fde68bd7a88ea77d99f2ffe_prof);
 
         
-        $__internal_600f33b7610636a2e207592d19f6c79006a0fc26b8c715528ae07a0c84564926->leave($__internal_600f33b7610636a2e207592d19f6c79006a0fc26b8c715528ae07a0c84564926_prof);
+        $__internal_d9ed92c08353190f6f5ea6556070e4aea2480e58bd67f41d3b318626ff92c712->leave($__internal_d9ed92c08353190f6f5ea6556070e4aea2480e58bd67f41d3b318626ff92c712_prof);
 
     }
 
     // line 3
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_e2a6e219799b3f4937992cb1e70e795be7f3d1326b1f4e8bb307e6d50700e6bc = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_e2a6e219799b3f4937992cb1e70e795be7f3d1326b1f4e8bb307e6d50700e6bc->enter($__internal_e2a6e219799b3f4937992cb1e70e795be7f3d1326b1f4e8bb307e6d50700e6bc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_884ddf6e473629f10a212a613e530072dab8d7ca18599c85cf680ca41a4e0367 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_884ddf6e473629f10a212a613e530072dab8d7ca18599c85cf680ca41a4e0367->enter($__internal_884ddf6e473629f10a212a613e530072dab8d7ca18599c85cf680ca41a4e0367_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        $__internal_1817bec8c932eaaab57fd7810afe12c480c26e3df306d10f3e0419e9615b916e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1817bec8c932eaaab57fd7810afe12c480c26e3df306d10f3e0419e9615b916e->enter($__internal_1817bec8c932eaaab57fd7810afe12c480c26e3df306d10f3e0419e9615b916e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_65e596c1b9b4c60ac4285009306c00750f9185284ba373e35b191cf752d91b53 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_65e596c1b9b4c60ac4285009306c00750f9185284ba373e35b191cf752d91b53->enter($__internal_65e596c1b9b4c60ac4285009306c00750f9185284ba373e35b191cf752d91b53_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
         echo "     <link href=\"";
@@ -57,21 +57,21 @@ class __TwigTemplate_c1722603f36a1ff6973274dbc2c48798298625e4d69ea82a5893744fe27
         echo "\" rel='stylesheet' type='text/css' />
  ";
         
-        $__internal_1817bec8c932eaaab57fd7810afe12c480c26e3df306d10f3e0419e9615b916e->leave($__internal_1817bec8c932eaaab57fd7810afe12c480c26e3df306d10f3e0419e9615b916e_prof);
+        $__internal_65e596c1b9b4c60ac4285009306c00750f9185284ba373e35b191cf752d91b53->leave($__internal_65e596c1b9b4c60ac4285009306c00750f9185284ba373e35b191cf752d91b53_prof);
 
         
-        $__internal_e2a6e219799b3f4937992cb1e70e795be7f3d1326b1f4e8bb307e6d50700e6bc->leave($__internal_e2a6e219799b3f4937992cb1e70e795be7f3d1326b1f4e8bb307e6d50700e6bc_prof);
+        $__internal_884ddf6e473629f10a212a613e530072dab8d7ca18599c85cf680ca41a4e0367->leave($__internal_884ddf6e473629f10a212a613e530072dab8d7ca18599c85cf680ca41a4e0367_prof);
 
     }
 
     // line 9
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_4bea73c67542eeeb222a0f6e6dd84d2e19898728d48d27553efddf678ae679ff = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_4bea73c67542eeeb222a0f6e6dd84d2e19898728d48d27553efddf678ae679ff->enter($__internal_4bea73c67542eeeb222a0f6e6dd84d2e19898728d48d27553efddf678ae679ff_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_137fb7a602d602fe57c56f0b51926e9599a00f10fa1f2eb3153d19761f0e7374 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_137fb7a602d602fe57c56f0b51926e9599a00f10fa1f2eb3153d19761f0e7374->enter($__internal_137fb7a602d602fe57c56f0b51926e9599a00f10fa1f2eb3153d19761f0e7374_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_63b560824607817de299a46ee28f174c3a21408d1124f648e5b666c4a1a582e1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_63b560824607817de299a46ee28f174c3a21408d1124f648e5b666c4a1a582e1->enter($__internal_63b560824607817de299a46ee28f174c3a21408d1124f648e5b666c4a1a582e1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_62a120b435a5e13160510baf8863ae984021094fa711d3b81681890d7fb57380 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_62a120b435a5e13160510baf8863ae984021094fa711d3b81681890d7fb57380->enter($__internal_62a120b435a5e13160510baf8863ae984021094fa711d3b81681890d7fb57380_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 10
         echo "        <script src =\"";
@@ -83,21 +83,21 @@ class __TwigTemplate_c1722603f36a1ff6973274dbc2c48798298625e4d69ea82a5893744fe27
         echo "\" type=\"text/javascript\"></script>
     ";
         
-        $__internal_63b560824607817de299a46ee28f174c3a21408d1124f648e5b666c4a1a582e1->leave($__internal_63b560824607817de299a46ee28f174c3a21408d1124f648e5b666c4a1a582e1_prof);
+        $__internal_62a120b435a5e13160510baf8863ae984021094fa711d3b81681890d7fb57380->leave($__internal_62a120b435a5e13160510baf8863ae984021094fa711d3b81681890d7fb57380_prof);
 
         
-        $__internal_4bea73c67542eeeb222a0f6e6dd84d2e19898728d48d27553efddf678ae679ff->leave($__internal_4bea73c67542eeeb222a0f6e6dd84d2e19898728d48d27553efddf678ae679ff_prof);
+        $__internal_137fb7a602d602fe57c56f0b51926e9599a00f10fa1f2eb3153d19761f0e7374->leave($__internal_137fb7a602d602fe57c56f0b51926e9599a00f10fa1f2eb3153d19761f0e7374_prof);
 
     }
 
     // line 16
     public function block_body($context, array $blocks = array())
     {
-        $__internal_747add50026a4e7263b6e61287706eed581c1d41f2ab8f216df15ff51070110b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_747add50026a4e7263b6e61287706eed581c1d41f2ab8f216df15ff51070110b->enter($__internal_747add50026a4e7263b6e61287706eed581c1d41f2ab8f216df15ff51070110b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_df8516b1eb0897d684637f728c2ec4458432b70fe86de51ee67a393cffbc9106 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_df8516b1eb0897d684637f728c2ec4458432b70fe86de51ee67a393cffbc9106->enter($__internal_df8516b1eb0897d684637f728c2ec4458432b70fe86de51ee67a393cffbc9106_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_2a4f2073c0b5a823cfc01413d94b400ebbf82c4c2438ff0b298ea665ee8a5a13 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2a4f2073c0b5a823cfc01413d94b400ebbf82c4c2438ff0b298ea665ee8a5a13->enter($__internal_2a4f2073c0b5a823cfc01413d94b400ebbf82c4c2438ff0b298ea665ee8a5a13_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_5c15238923fc103f14bf675527a8795e20c1466ba043003c446cdb2c5d93e66f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5c15238923fc103f14bf675527a8795e20c1466ba043003c446cdb2c5d93e66f->enter($__internal_5c15238923fc103f14bf675527a8795e20c1466ba043003c446cdb2c5d93e66f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 17
         echo "
@@ -202,69 +202,75 @@ class __TwigTemplate_c1722603f36a1ff6973274dbc2c48798298625e4d69ea82a5893744fe27
         $context['_seq'] = twig_ensure_traversable((isset($context["clients"]) ? $context["clients"] : $this->getContext($context, "clients")));
         foreach ($context['_seq'] as $context["_key"] => $context["client"]) {
             // line 82
-            echo "                    <tr>
-                        <td><a href=\"";
-            // line 83
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_client_show", array("id" => $this->getAttribute($context["client"], "id", array()))), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["client"], "denomination", array()), "html", null, true);
-            echo "</a></td>
-                        <td>";
-            // line 84
-            echo twig_escape_filter($this->env, $this->getAttribute($context["client"], "adresse", array()), "html", null, true);
-            echo "-";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["client"], "villeCodePostal", array()), "html", null, true);
-            echo " ";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["client"], "ville", array()), "html", null, true);
-            echo "</td>
-                        <td>";
-            // line 85
-            echo twig_escape_filter($this->env, $this->getAttribute($context["client"], "nomContact", array()), "html", null, true);
-            echo "</td>
-                        <td>";
-            // line 86
-            echo twig_escape_filter($this->env, $this->getAttribute($context["client"], "fonctionContact", array()), "html", null, true);
-            echo "</td>
-                        <td>";
-            // line 87
-            echo twig_escape_filter($this->env, $this->getAttribute($context["client"], "telephone", array()), "html", null, true);
-            echo "</td>
-                        <td>";
-            // line 88
-            echo twig_escape_filter($this->env, $this->getAttribute($context["client"], "typeClient", array()), "html", null, true);
-            echo "</td>
-                        ";
-            // line 89
-            if (twig_test_empty($this->getAttribute($context["client"], "partenaire", array()))) {
-                // line 90
-                echo "                            <td> -- </td>
-                        ";
-            } else {
-                // line 92
-                echo "                            <td>";
-                echo twig_escape_filter($this->env, $this->getAttribute($context["client"], "partenaire", array()), "html", null, true);
+            echo "                    ";
+            if (($this->getAttribute($context["client"], "id", array()) != "13")) {
+                // line 83
+                echo "                        <tr>
+                            <td><a href=\"";
+                // line 84
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_client_show", array("id" => $this->getAttribute($context["client"], "id", array()))), "html", null, true);
+                echo "\">";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["client"], "denomination", array()), "html", null, true);
+                echo "</a></td>
+                            <td>";
+                // line 85
+                echo twig_escape_filter($this->env, $this->getAttribute($context["client"], "adresse", array()), "html", null, true);
+                echo "-";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["client"], "villeCodePostal", array()), "html", null, true);
+                echo " ";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["client"], "ville", array()), "html", null, true);
                 echo "</td>
-                        ";
+                            <td>";
+                // line 86
+                echo twig_escape_filter($this->env, $this->getAttribute($context["client"], "nomContact", array()), "html", null, true);
+                echo "</td>
+                            <td>";
+                // line 87
+                echo twig_escape_filter($this->env, $this->getAttribute($context["client"], "fonctionContact", array()), "html", null, true);
+                echo "</td>
+                            <td>";
+                // line 88
+                echo twig_escape_filter($this->env, $this->getAttribute($context["client"], "telephone", array()), "html", null, true);
+                echo "</td>
+                            <td>";
+                // line 89
+                echo twig_escape_filter($this->env, $this->getAttribute($context["client"], "typeClient", array()), "html", null, true);
+                echo "</td>
+                            ";
+                // line 90
+                if (twig_test_empty($this->getAttribute($context["client"], "partenaire", array()))) {
+                    // line 91
+                    echo "                                <td> -- </td>
+                            ";
+                } else {
+                    // line 93
+                    echo "                                <td>";
+                    echo twig_escape_filter($this->env, $this->getAttribute($context["client"], "partenaire", array()), "html", null, true);
+                    echo "</td>
+                            ";
+                }
+                // line 95
+                echo "                            <td>";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["client"], "etat", array()), "html", null, true);
+                echo "</td>
+                            <td><a href=\"";
+                // line 96
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_client_edit", array("id" => $this->getAttribute($context["client"], "id", array()))), "html", null, true);
+                echo "\">Modifier</a>/<a href=\"";
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_client_delete", array("id" => $this->getAttribute($context["client"], "id", array()))), "html", null, true);
+                echo "\" onclick=\"return confirm('Souhaitez-vous confirmer la suppression de ce client ?')\";>Supprimer</a></td>
+                        </tr>
+
+                    ";
             }
-            // line 94
-            echo "                        <td>";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["client"], "etat", array()), "html", null, true);
-            echo "</td>
-                        <td><a href=\"";
-            // line 95
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_client_edit", array("id" => $this->getAttribute($context["client"], "id", array()))), "html", null, true);
-            echo "\">Modifier</a>/<a href=\"";
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_client_delete", array("id" => $this->getAttribute($context["client"], "id", array()))), "html", null, true);
-            echo "\" onclick=\"return confirm('Souhaitez-vous confirmer la suppression de ce client ?')\";>Supprimer</a></td>
-                    </tr>
-                ";
+            // line 100
+            echo "                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['client'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 98
-        echo "
-                </tbody>
+        // line 101
+        echo "                </tbody>
             </table>
         </div>
     </div>
@@ -272,10 +278,10 @@ class __TwigTemplate_c1722603f36a1ff6973274dbc2c48798298625e4d69ea82a5893744fe27
 
 ";
         
-        $__internal_2a4f2073c0b5a823cfc01413d94b400ebbf82c4c2438ff0b298ea665ee8a5a13->leave($__internal_2a4f2073c0b5a823cfc01413d94b400ebbf82c4c2438ff0b298ea665ee8a5a13_prof);
+        $__internal_5c15238923fc103f14bf675527a8795e20c1466ba043003c446cdb2c5d93e66f->leave($__internal_5c15238923fc103f14bf675527a8795e20c1466ba043003c446cdb2c5d93e66f_prof);
 
         
-        $__internal_747add50026a4e7263b6e61287706eed581c1d41f2ab8f216df15ff51070110b->leave($__internal_747add50026a4e7263b6e61287706eed581c1d41f2ab8f216df15ff51070110b_prof);
+        $__internal_df8516b1eb0897d684637f728c2ec4458432b70fe86de51ee67a393cffbc9106->leave($__internal_df8516b1eb0897d684637f728c2ec4458432b70fe86de51ee67a393cffbc9106_prof);
 
     }
 
@@ -291,7 +297,7 @@ class __TwigTemplate_c1722603f36a1ff6973274dbc2c48798298625e4d69ea82a5893744fe27
 
     public function getDebugInfo()
     {
-        return array (  266 => 98,  255 => 95,  250 => 94,  244 => 92,  240 => 90,  238 => 89,  234 => 88,  230 => 87,  226 => 86,  222 => 85,  214 => 84,  208 => 83,  205 => 82,  201 => 81,  169 => 51,  160 => 48,  156 => 46,  152 => 45,  140 => 35,  138 => 34,  134 => 32,  132 => 31,  125 => 26,  119 => 24,  111 => 22,  109 => 21,  103 => 17,  94 => 16,  82 => 11,  77 => 10,  68 => 9,  56 => 5,  51 => 4,  42 => 3,  11 => 1,);
+        return array (  273 => 101,  267 => 100,  258 => 96,  253 => 95,  247 => 93,  243 => 91,  241 => 90,  237 => 89,  233 => 88,  229 => 87,  225 => 86,  217 => 85,  211 => 84,  208 => 83,  205 => 82,  201 => 81,  169 => 51,  160 => 48,  156 => 46,  152 => 45,  140 => 35,  138 => 34,  134 => 32,  132 => 31,  125 => 26,  119 => 24,  111 => 22,  109 => 21,  103 => 17,  94 => 16,  82 => 11,  77 => 10,  68 => 9,  56 => 5,  51 => 4,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -385,23 +391,25 @@ class __TwigTemplate_c1722603f36a1ff6973274dbc2c48798298625e4d69ea82a5893744fe27
                 </tfoot>
                 <tbody>
                 {% for client in clients %}
-                    <tr>
-                        <td><a href=\"{{ path('ma_lrm_client_show', { 'id': client.id }) }}\">{{ client.denomination }}</a></td>
-                        <td>{{ client.adresse }}-{{ client.villeCodePostal }} {{ client.ville }}</td>
-                        <td>{{ client.nomContact }}</td>
-                        <td>{{ client.fonctionContact }}</td>
-                        <td>{{ client.telephone }}</td>
-                        <td>{{ client.typeClient }}</td>
-                        {% if client.partenaire is empty %}
-                            <td> -- </td>
-                        {% else %}
-                            <td>{{ client.partenaire }}</td>
-                        {% endif %}
-                        <td>{{ client.etat }}</td>
-                        <td><a href=\"{{ path ('ma_lrm_client_edit', { 'id': client.id }) }}\">Modifier</a>/<a href=\"{{ path ('ma_lrm_client_delete', { 'id': client.id }) }}\" onclick=\"return confirm('Souhaitez-vous confirmer la suppression de ce client ?')\";>Supprimer</a></td>
-                    </tr>
-                {% endfor %}
+                    {% if client.id != '13' %}
+                        <tr>
+                            <td><a href=\"{{ path('ma_lrm_client_show', { 'id': client.id }) }}\">{{ client.denomination }}</a></td>
+                            <td>{{ client.adresse }}-{{ client.villeCodePostal }} {{ client.ville }}</td>
+                            <td>{{ client.nomContact }}</td>
+                            <td>{{ client.fonctionContact }}</td>
+                            <td>{{ client.telephone }}</td>
+                            <td>{{ client.typeClient }}</td>
+                            {% if client.partenaire is empty %}
+                                <td> -- </td>
+                            {% else %}
+                                <td>{{ client.partenaire }}</td>
+                            {% endif %}
+                            <td>{{ client.etat }}</td>
+                            <td><a href=\"{{ path ('ma_lrm_client_edit', { 'id': client.id }) }}\">Modifier</a>/<a href=\"{{ path ('ma_lrm_client_delete', { 'id': client.id }) }}\" onclick=\"return confirm('Souhaitez-vous confirmer la suppression de ce client ?')\";>Supprimer</a></td>
+                        </tr>
 
+                    {% endif %}
+                {% endfor %}
                 </tbody>
             </table>
         </div>
