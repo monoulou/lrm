@@ -23,36 +23,46 @@ class GestionController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $gestions = $em->getRepository('MALrmBundle:Gestion')->findAll();
+        $clients = $em->getRepository('MALrmBundle:Client')->findAll();
 
         $suiviOffre = array();
         $tmp = array();
         $compteur = 0;
 
-        foreach ($gestions as $index => $gestion)
+        foreach ($clients as $cle => $client )
         {
-            $idGestion = $gestion->getId();
-            $idEmploi = $gestion->getEmploi()->getId();
-            $emplois = $em->getRepository('MALrmBundle:Emploi')->findBy(array('id'=>$idEmploi));
-
-            foreach ($emplois as $key => $emploi)
+            foreach ($gestions as $index => $gestion)
             {
-                $nbrPoste = $emploi->getNombrePoste();
-                $client = $em->getRepository('MALrmBundle:Client')->findOneBy(array('id'=>$emploi->getClient()->getId()));
-                $idClient = $client->getId();
+                $idEmploi = $gestion->getEmploi()->getId();
+                $emploi = $em->getRepository('MALrmBundle:Emploi')->findOneBy(array('id'=>$idEmploi));
 
-                if ($gestion->getId() == $idGestion && $emploi->getClient()->getId() == $idClient )
-                {
-                    $compteur++;
-                }
+
+                    $nbrPoste = $emploi->getNombrePoste();
+                    $getClient = $em->getRepository('MALrmBundle:Client')->findOneBy(array('id'=>$emploi->getClient()->getId()));
+
+
+
+                    if ( $getClient->getId() == $client->getId() )
+                    {
+                        //$compteur++;
+                        array_push($tmp,$gestion->getId());
+                        //dump(count($tmp));die();
+
+                    }
+
+                $suiviOffre[$gestion->getEmploi()->getId().':'.$gestion->getId()] = array('1'=>$emploi->getIntitule(),
+                    '2'=>$getClient->getDenomination(),
+                    '3'=>$nbrPoste,
+                    '4'=>$nbrPoste - count($tmp));
+
+
+
+
 
             }
 
-            $suiviOffre[$emploi->getId().':'.$gestion->getId()] = array('1'=>$emploi->getIntitule(),
-                '2'=>$client->getDenomination(),
-                '3'=>$nbrPoste,
-                '4'=>$nbrPoste - $compteur);
-
         }
+
         dump($suiviOffre);die();
 
 
