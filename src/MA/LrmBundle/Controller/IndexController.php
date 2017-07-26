@@ -21,5 +21,6 @@ class IndexController extends Controller
         return $this->render('MALrmBundle:Accueil:index.html.twig',
             array('register'=>$register
             ));
+
     }
 }

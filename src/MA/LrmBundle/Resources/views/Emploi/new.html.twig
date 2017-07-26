@@ -12,9 +12,11 @@
 
     <div class="container-fluid" id="header_container">
         <div class="row">
-            <div class="col-lg-offset-9">
+            <div class="col-lg-offset-10">
                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                    Connecté en tant que {{ app.user.username }}--<a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+                    <div class="row">
+                        <i class="material-icons">person</i> Bonjour, {{ app.user.username }}--<a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+                    </div>
                 {% else %}
                     <a href="{{ path('fos_user_security_login') }}">Connexion</a>
                 {% endif %}
@@ -103,7 +105,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-7">
+                <div class="col-lg-6">
                     <div class="form-group">
                         <label class="control-label">Description du poste:</label>
                         {{ form_errors(form.description)}}
@@ -113,7 +115,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-offset-5">
-                    <button type="submit" class="btn  btn-default"><i class="fa fa-check"></i>Enregistrer</button>
+                    <button type="submit" class="btn  btn-default"><i class="fa fa-check" ></i>Enregistrer</button>
                 </div>
             </div>
             {{ form_end(form) }}

@@ -38,6 +38,10 @@ ma_lrm_candidat:
     resource: "@MALrmBundle/Resources/config/routing/candidat/candidat.yml"
     prefix: /admin/candidat
 
+ma_lrm_gestion:
+    resource: "@MALrmBundle/Resources/config/routing/gestion/gestion.yml"
+    prefix: /admin/gestion
+
 ma_lrm_test:
     resource: "@MALrmBundle/Resources/config/routing/test/test.yml"
     prefix: /admin/test

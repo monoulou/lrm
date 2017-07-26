@@ -1,0 +1,29 @@
+ma_lrm_gestion_index:
+    path:     /
+    defaults: { _controller: "MALrmBundle:Gestion:index" }
+    methods:  GET
+
+ma_lrm_gestion_show:
+    path:     /{id}/show
+    defaults: { _controller: "MALrmBundle:Gestion:show" }
+    methods:  GET
+
+ma_lrm_gestion_new:
+    path:     /new
+    defaults: { _controller: "MALrmBundle:Gestion:new" }
+    methods:  [GET, POST]
+
+ma_lrm_gestion_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MALrmBundle:Gesion:edit" }
+    methods:  [GET, POST]
+
+ma_lrm_gestion_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MALrmBundle:Gestion:delete" }
+    methods:  [GET, POST, DELETE]
+
+#ma_lrm_client_ville:
+#    path:     /new/ville/{cp}
+#    defaults: { _controller: "MALrmBundle:Client:ville" }
+#    methods:  [GET, POST]

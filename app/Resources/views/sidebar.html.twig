@@ -1,28 +1,25 @@
 <link href="{{ asset ('css/index.css') }}" rel='stylesheet' type='text/css' />
 
-<div class="col-lg-2" style="border: 1px solid black; height: 750px; margin-bottom: 10px">
+
+
+<div class="col-lg-2" style="border: 1px solid black; height: 100%; margin-bottom: 10px">
     <div class="row" style="margin-top: 550px; margin-left: 5px">
-        <h5>ACCES RAPIDE</h5>
+        <i class="material-icons">keyboard_tab</i><h5 style="float: right; margin-right: 55px;">ACCES RAPIDE</h5>
     </div>
-
-
+    <div class="row" style="padding: 5px">
+        <div class="btn-group btn-group-justified">
+            <a class="btn btn-default" href="{{ path('ma_lrm_client_index') }}" style="background-color: #e7e7e7">LISTE DES CLIENTS</a>
+        </div>
+    </div>
+    <div class="row" style="padding: 5px">
+        <div class="btn-group btn-group-justified">
+            <a class="btn btn-default" href="{{ path('ma_lrm_emploi_index') }}" style="background-color: #e7e7e7">LISTE DES OFFRES</a>
+        </div>
+    </div>
     <div class="row" style="padding: 5px;">
         <div class="btn-group btn-group-justified">
-            <a class="btn btn-default" href="{{ path('ma_lrm_candidat_new') }}" style="background-color: #e7e7e7">AJOUTER UN CANDIDAT</a>
+            <a class="btn btn-default" href="{{ path('ma_lrm_candidat_index') }}" style="background-color: #e7e7e7">LISTE DES CANDIDATS</a>
         </div>
     </div>
-    <div class="row" style="padding: 5px">
-        <div class="btn-group btn-group-justified">
-            <a class="btn btn-default" href="{{ path('ma_lrm_client_new') }}" style="background-color: #e7e7e7">AJOUTER UN CLIENT</a>
-        </div>
-    </div>
-    <div class="row" style="padding: 5px">
-        <div class="btn-group btn-group-justified">
-            <a class="btn btn-default" href="#" style="background-color: #e7e7e7">AJOUTER UNE OFFRE</a>
-        </div>
-    </div>
-
-
-
 </div>
 

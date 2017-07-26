@@ -17,9 +17,9 @@
 
     <div class="container-fluid" id="header_container">
         <div class="row">
-            <div class="col-lg-offset-9">
+            <div class="col-lg-offset-10">
                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                    Connecté en tant que {{ app.user.username }}--<a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+                    <i class="material-icons">person</i> Bonjour, {{ app.user.username }}--<a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
                 {% else %}
                     <a href="{{ path('fos_user_security_login') }}">Connexion</a>
                 {% endif %}
@@ -87,10 +87,10 @@
                             <td>{{ client.fonctionContact }}</td>
                             <td>{{ client.telephone }}</td>
                             <td>{{ client.typeClient }}</td>
-                            {% if client.partenaire is empty %}
+                            {% if client.typeClient == 'Prospect' %}
                                 <td> -- </td>
-                            {% else %}
-                                <td>{{ client.partenaire }}</td>
+                                {% else %}
+                                    <td>{{ client.partenaire }}</td>
                             {% endif %}
                             <td>{{ client.etat }}</td>
                             <td><a href="{{ path ('ma_lrm_client_edit', { 'id': client.id }) }}">Modifier</a>/<a href="{{ path ('ma_lrm_client_delete', { 'id': client.id }) }}" onclick="return confirm('Souhaitez-vous confirmer la suppression de ce client ?')";>Supprimer</a></td>

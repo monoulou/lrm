@@ -1,0 +1,25 @@
+<div class="row">
+    {% if register == true %}
+    <div class="col-lg-offset-10">
+        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+        <i class="material-icons">person</i> Bonjour, {{ app.user.username }}--<a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+    </div>
+    <div class=" row">
+        <div class="col-lg-offset-10">
+            <i class="material-icons">person_add</i><a href="{{ path('ma_lrm_register') }}"> Créer un compte </a>
+        </div>
+    </div>
+{% else %}
+    <a href="{{ path('fos_user_security_login') }}">Connexion</a>
+    {% endif %}
+</div>
+{% else %}
+    <div class="col-lg-offset-10">
+        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            <i class="material-icons">person</i>Bonjour, {{ app.user.username }}--<a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+        {% else %}
+            <a href="{{ path('fos_user_security_login') }}">Connexion</a>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>

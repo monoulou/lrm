@@ -516,6 +516,68 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
             }
 
+            if (0 === strpos($pathinfo, '/admin/gestion')) {
+                // ma_lrm_gestion_index
+                if (rtrim($pathinfo, '/') === '/admin/gestion') {
+                    if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                        $allow = array_merge($allow, array('GET', 'HEAD'));
+                        goto not_ma_lrm_gestion_index;
+                    }
+
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'ma_lrm_gestion_index');
+                    }
+
+                    return array (  '_controller' => 'MA\\LrmBundle\\Controller\\GestionController::indexAction',  '_route' => 'ma_lrm_gestion_index',);
+                }
+                not_ma_lrm_gestion_index:
+
+                // ma_lrm_gestion_show
+                if (preg_match('#^/admin/gestion/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                        $allow = array_merge($allow, array('GET', 'HEAD'));
+                        goto not_ma_lrm_gestion_show;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ma_lrm_gestion_show')), array (  '_controller' => 'MA\\LrmBundle\\Controller\\GestionController::showAction',));
+                }
+                not_ma_lrm_gestion_show:
+
+                // ma_lrm_gestion_new
+                if ($pathinfo === '/admin/gestion/new') {
+                    if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                        $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                        goto not_ma_lrm_gestion_new;
+                    }
+
+                    return array (  '_controller' => 'MA\\LrmBundle\\Controller\\GestionController::newAction',  '_route' => 'ma_lrm_gestion_new',);
+                }
+                not_ma_lrm_gestion_new:
+
+                // ma_lrm_gestion_edit
+                if (preg_match('#^/admin/gestion/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                        $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                        goto not_ma_lrm_gestion_edit;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ma_lrm_gestion_edit')), array (  '_controller' => 'MALrmBundle:Gesion:edit',));
+                }
+                not_ma_lrm_gestion_edit:
+
+                // ma_lrm_gestion_delete
+                if (preg_match('#^/admin/gestion/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('GET', 'POST', 'DELETE', 'HEAD'))) {
+                        $allow = array_merge($allow, array('GET', 'POST', 'DELETE', 'HEAD'));
+                        goto not_ma_lrm_gestion_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ma_lrm_gestion_delete')), array (  '_controller' => 'MA\\LrmBundle\\Controller\\GestionController::deleteAction',));
+                }
+                not_ma_lrm_gestion_delete:
+
+            }
+
             // ma_lrm_test
             if (rtrim($pathinfo, '/') === '/admin/test') {
                 if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {

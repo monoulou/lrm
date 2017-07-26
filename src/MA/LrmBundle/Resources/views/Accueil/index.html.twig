@@ -7,27 +7,9 @@
 {% block body %}
 
  <div class="container-fluid" id="header_container">
-  <div class="row">
-    {% if register == true %}
-     <div class="col-lg-offset-6">
-      {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-       Connecté en tant que {{ app.user.username }}--<a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
-      {% else %}
-       <a href="{{ path('fos_user_security_login') }}">Connexion</a>
-      {% endif %}
-      -- Créer un nouvel utilisateur --<a href="{{ path('ma_lrm_register') }}"> Créer un compte </a>
-     </div>
-    {% else %}
-     <div class="col-lg-offset-9">
-      {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-       Connecté en tant que {{ app.user.username }}--<a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
-      {% else %}
-       <a href="{{ path('fos_user_security_login') }}">Connexion</a>
-      {% endif %}
-     </div>
-    {% endif %}
-  </div>
- </div>
+  <!-- START CONNECT BAR-->
+  {% include 'connexion.html.twig' %}
+  <!-- END CONNECT BAR -->
  <div class="container-fluid" id="main_container">
   <!-- START TOP NAVBAR-->
   {% include 'navbar.html.twig' %}
