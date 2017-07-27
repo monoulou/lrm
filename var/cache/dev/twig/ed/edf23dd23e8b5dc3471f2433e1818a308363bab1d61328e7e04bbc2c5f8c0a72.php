@@ -15,11 +15,11 @@ class __TwigTemplate_4881fe4ec2c9963135bf7b6441d7c57ef66b1728fa7049b98234c968a5e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5fc34bf6e9bbfb92b4f28fcaa29bccc521c12d2b27138dc5d1f929fb1dfbcd1d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_5fc34bf6e9bbfb92b4f28fcaa29bccc521c12d2b27138dc5d1f929fb1dfbcd1d->enter($__internal_5fc34bf6e9bbfb92b4f28fcaa29bccc521c12d2b27138dc5d1f929fb1dfbcd1d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "sidebar.html.twig"));
+        $__internal_2c16796458a03d7ab8bc051d82bee4840662d9c90f85457c7558754a3f6c443d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_2c16796458a03d7ab8bc051d82bee4840662d9c90f85457c7558754a3f6c443d->enter($__internal_2c16796458a03d7ab8bc051d82bee4840662d9c90f85457c7558754a3f6c443d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "sidebar.html.twig"));
 
-        $__internal_58b76a94b68f24d4124909eacaf7edf3867f133894bf70228a53d736b19a682c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_58b76a94b68f24d4124909eacaf7edf3867f133894bf70228a53d736b19a682c->enter($__internal_58b76a94b68f24d4124909eacaf7edf3867f133894bf70228a53d736b19a682c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "sidebar.html.twig"));
+        $__internal_cccbe6ca4f1040705d739c63c7750bf7627ec541964675d9689d34b24b1fadd6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_cccbe6ca4f1040705d739c63c7750bf7627ec541964675d9689d34b24b1fadd6->enter($__internal_cccbe6ca4f1040705d739c63c7750bf7627ec541964675d9689d34b24b1fadd6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "sidebar.html.twig"));
 
         // line 1
         echo "<link href=\"";
@@ -60,10 +60,10 @@ class __TwigTemplate_4881fe4ec2c9963135bf7b6441d7c57ef66b1728fa7049b98234c968a5e
 
 ";
         
-        $__internal_5fc34bf6e9bbfb92b4f28fcaa29bccc521c12d2b27138dc5d1f929fb1dfbcd1d->leave($__internal_5fc34bf6e9bbfb92b4f28fcaa29bccc521c12d2b27138dc5d1f929fb1dfbcd1d_prof);
+        $__internal_2c16796458a03d7ab8bc051d82bee4840662d9c90f85457c7558754a3f6c443d->leave($__internal_2c16796458a03d7ab8bc051d82bee4840662d9c90f85457c7558754a3f6c443d_prof);
 
         
-        $__internal_58b76a94b68f24d4124909eacaf7edf3867f133894bf70228a53d736b19a682c->leave($__internal_58b76a94b68f24d4124909eacaf7edf3867f133894bf70228a53d736b19a682c_prof);
+        $__internal_cccbe6ca4f1040705d739c63c7750bf7627ec541964675d9689d34b24b1fadd6->leave($__internal_cccbe6ca4f1040705d739c63c7750bf7627ec541964675d9689d34b24b1fadd6_prof);
 
     }
 

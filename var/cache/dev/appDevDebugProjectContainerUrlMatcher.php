@@ -561,7 +561,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         goto not_ma_lrm_gestion_edit;
                     }
 
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ma_lrm_gestion_edit')), array (  '_controller' => 'MALrmBundle:Gesion:edit',));
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ma_lrm_gestion_edit')), array (  '_controller' => 'MA\\LrmBundle\\Controller\\GestionController::editAction',));
                 }
                 not_ma_lrm_gestion_edit:
 
@@ -575,6 +575,28 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'ma_lrm_gestion_delete')), array (  '_controller' => 'MA\\LrmBundle\\Controller\\GestionController::deleteAction',));
                 }
                 not_ma_lrm_gestion_delete:
+
+                // ma_lrm_gestion_resume
+                if (preg_match('#^/admin/gestion/(?P<id>[^/]++)/resume$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                        $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                        goto not_ma_lrm_gestion_resume;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ma_lrm_gestion_resume')), array (  '_controller' => 'MA\\LrmBundle\\Controller\\GestionController::resumeAction',));
+                }
+                not_ma_lrm_gestion_resume:
+
+                // ma_lrm_gestion_detail
+                if (preg_match('#^/admin/gestion/(?P<id>[^/]++)/detail$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                        $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                        goto not_ma_lrm_gestion_detail;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ma_lrm_gestion_detail')), array (  '_controller' => 'MA\\LrmBundle\\Controller\\GestionController::detailAction',));
+                }
+                not_ma_lrm_gestion_detail:
 
             }
 

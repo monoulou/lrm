@@ -54,25 +54,28 @@
                 <tr>
                     <th>Offre</th>
                     <th>Entreprise</th>
-                    <th>Nombre de postes</th>
-                    <th>Nombre de poste restant</th>
+                    <th>Postes à pourvoir</th>
+                    <th>Postes pourvus</th>
+                    <th>Postes restant</th>
                 </tr>
                 </thead>
                 <tfoot>
                 <tr>
                     <th>Offre</th>
                     <th>Entreprise</th>
-                    <th>Nombre de postes</th>
-                    <th>Nombre de poste restant</th>
+                    <th>Postes à pourvoir</th>
+                    <th>Postes pourvus</th>
+                    <th>Postes restant</th>
                 </tr>
                 </tfoot>
                 <tbody>
-                {% for offre in suiviOffre %}
+                {% for id, offre in suiviOffre %}
                     <tr>
-                        <td>{{ offre[1] }}</td>
+                        <td> <a href="{{ path('ma_lrm_gestion_resume', { 'id': id }) }}" >{{ offre[1] }}</a></td>
                         <td>{{ offre[2] }}</td>
                         <td>{{ offre[3] }}</td>
                         <td>{{ offre[4] }}</td>
+                        <td>{{ offre[5] }}</td>
                     </tr>
                 {% endfor %}
 

@@ -3,6 +3,7 @@
 namespace MA\LrmBundle\Controller;
 
 use MA\LrmBundle\Entity\Gestion;
+use  MA\LrmBundle\Entity\Candidat;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use MA\LrmBundle\MALrmBundle;
@@ -23,50 +24,30 @@ class GestionController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $gestions = $em->getRepository('MALrmBundle:Gestion')->findAll();
-        $clients = $em->getRepository('MALrmBundle:Client')->findAll();
 
         $suiviOffre = array();
-        $tmp = array();
-        $compteur = 0;
 
-        foreach ($clients as $cle => $client )
+        /** *************************Permet le suivi des poste pourvus et restant à pourvoir**************************** */
+        foreach ($gestions as $index => $gestion)
         {
-            foreach ($gestions as $index => $gestion)
-            {
-                $idEmploi = $gestion->getEmploi()->getId();
-                $emploi = $em->getRepository('MALrmBundle:Emploi')->findOneBy(array('id'=>$idEmploi));
+            $idEmploi = $gestion->getEmploi()->getId();
 
+            $getEmploi = $em->getRepository('MALrmBundle:Emploi')->findOneBy(array('id'=>$idEmploi));
+            $getClient = $em->getRepository('MALrmBundle:Client')->findOneBy(array('id'=>$getEmploi->getClient()->getId()));
+            //$countPostePourvu = $em->getRepository('MALrmBundle:Gestion')->countPostePourvu($getEmploi->getId());
+            $postePourvu = $em->getRepository('MALrmBundle:Gestion')->findBy(array('emploi'=>$getEmploi->getId()));
 
-                    $nbrPoste = $emploi->getNombrePoste();
-                    $getClient = $em->getRepository('MALrmBundle:Client')->findOneBy(array('id'=>$emploi->getClient()->getId()));
+            $nbrPoste = $getEmploi->getNombrePoste();
 
-
-
-                    if ( $getClient->getId() == $client->getId() )
-                    {
-                        //$compteur++;
-                        array_push($tmp,$gestion->getId());
-                        //dump(count($tmp));die();
-
-                    }
-
-                $suiviOffre[$gestion->getEmploi()->getId().':'.$gestion->getId()] = array('1'=>$emploi->getIntitule(),
+            
+            $suiviOffre[$gestion->getEmploi()->getId()] = array('1'=>$getEmploi->getIntitule(),
                     '2'=>$getClient->getDenomination(),
                     '3'=>$nbrPoste,
-                    '4'=>$nbrPoste - count($tmp));
-
-
-
-
-
-            }
-
+                    '4'=>count($postePourvu),
+                    '5'=>$nbrPoste - count($postePourvu));
         }
-
-        dump($suiviOffre);die();
-
-
-
+        /** ************************************************************************************************************ */
+       //
         return $this->render('MALrmBundle:Gestion:index.html.twig', array(
             'gestions' => $gestions,
             'suiviOffre' => $suiviOffre,
@@ -89,7 +70,6 @@ class GestionController extends Controller
             $em->persist($gestion);
             $em->flush();
 
-            dump($gestion);die();
             return $this->redirectToRoute('ma_lrm_gestion_show', array('id' => $gestion->getId()));
         }
 
@@ -107,10 +87,68 @@ class GestionController extends Controller
     {
         $deleteForm = $this->createDeleteForm($gestion);
 
-
-        return $this->render('MALrmBundle:Emploi:show.html.twig', array(
+        return $this->render('MALrmBundle:Gestion:show.html.twig', array(
             'gestion' => $gestion,
             'delete_form' => $deleteForm->createView(),
+        ));
+    }
+
+    /**
+     * Liste des candidats recrutés par poste
+     * 
+     */
+    public function resumeAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $getEmploi = $em->getRepository('MALrmBundle:Emploi')->findOneBy(array('id'=>$id));
+        $gestions = $em->getRepository('MALrmBundle:Gestion')->findBy(array('emploi'=>$id));
+
+        $resumeByPoste = array();
+        $arrayPoste = array();
+        $arrayCandidat = array();
+
+        foreach ($gestions as $index => $gestion)
+        {
+            $getCandidat = $em->getRepository('MALrmBundle:Candidat')->findOneBy(array('id'=>$gestion->getCandidat()->getId()));
+            $getClient = $em->getRepository('MALrmBundle:Client')->findOneBy(array('id'=>$gestion->getEmploi()->getClient()->getId()));
+
+            $arrayCandidat[$getCandidat->getId()] = array(
+                '1' => $getCandidat->getNom(),
+                '2' => $getCandidat->getPrenom()
+            );
+
+            $arrayPoste = array('1'=> $gestion->getEmploi()->getIntitule(), '2'=>$getClient->getDenomination());
+        }
+
+        $resumeByPoste[$getEmploi->getId()] =  $arrayCandidat;
+
+        return $this->render('MALrmBundle:Gestion:resume.html.twig', array(
+            'arrayPoste' => $arrayPoste,
+            'resumeByPoste' => $resumeByPoste,
+        ));
+    }
+    /*
+     * 
+     */
+    public function detailAction(Candidat $candidat)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $gestions = $em->getRepository('MALrmBundle:Gestion')->findAll();
+
+        $arrCandidat = array();
+
+        foreach ($gestions as $key => $gestion)
+        {
+            if ($gestion->getCandidat()->getId() == $candidat->getId())
+            {
+                $arrCandidat[$candidat->getId()] = $gestion->getId();
+            }
+        }
+        
+        return $this->render('MALrmBundle:Gestion:detail.html.twig', array(
+            'arrCandidat' => $arrCandidat,
+            'candidat' => $candidat,
+            'gestions' => $gestions,
         ));
     }
 
@@ -131,6 +169,7 @@ class GestionController extends Controller
         }
 
         return $this->render('MALrmBundle:Gestion:edit.html.twig', array(
+            'gestion' => $gestion,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));

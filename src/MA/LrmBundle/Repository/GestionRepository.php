@@ -10,4 +10,12 @@ namespace MA\LrmBundle\Repository;
  */
 class GestionRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function countPostePourvu($idEmploi)
+    {
+        $query = $this->_em->createQuery('SELECT g FROM MALrmBundle:Gestion g WHERE g.emploi = '.$idEmploi.'');
+
+        $results = $query->getResult();
+        
+        return $results;
+    }
 }

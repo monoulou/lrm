@@ -39,3 +39,16 @@
     overflow-wrap: break-word;
 }
 
+#msg_gestion{
+    margin-top: 10px;
+    background-color:  #e7e7e7;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#previous{
+    background-color:  #e7e7e7;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+}

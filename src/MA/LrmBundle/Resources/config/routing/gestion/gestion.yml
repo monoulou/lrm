@@ -15,13 +15,24 @@ ma_lrm_gestion_new:
 
 ma_lrm_gestion_edit:
     path:     /{id}/edit
-    defaults: { _controller: "MALrmBundle:Gesion:edit" }
+    defaults: { _controller: "MALrmBundle:Gestion:edit" }
     methods:  [GET, POST]
 
 ma_lrm_gestion_delete:
     path:     /{id}/delete
     defaults: { _controller: "MALrmBundle:Gestion:delete" }
     methods:  [GET, POST, DELETE]
+
+ma_lrm_gestion_resume:
+    path:     /{id}/resume
+    defaults: { _controller: "MALrmBundle:Gestion:resume" }
+    methods:  [GET, POST]
+
+ma_lrm_gestion_detail:
+    path:     /{id}/detail
+    defaults: { _controller: "MALrmBundle:Gestion:detail" }
+    methods:  [GET, POST]
+
 
 #ma_lrm_client_ville:
 #    path:     /new/ville/{cp}

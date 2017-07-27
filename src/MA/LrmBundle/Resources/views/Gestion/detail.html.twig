@@ -1,0 +1,98 @@
+{% extends "::base.html.twig" %}
+
+ {% block stylesheets %}
+     <link href="{{ asset ('css/client.css') }}" rel='stylesheet' type='text/css' />
+ {% endblock %}
+{% block javascripts %}
+{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid" id="header_container">
+        <div class="row">
+            <div class="col-lg-offset-10">
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    <i class="material-icons">person</i> Bonjour, {{ app.user.username }}--<a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+                {% else %}
+                    <a href="{{ path('fos_user_security_login') }}">Connexion</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="main_container">
+    <!-- START TOP NAVBAR-->
+    {% include 'navbar.html.twig' %}
+    <!-- END TOP NAVBAR -->
+    <!-- START SIDEBAR-->
+    {% include 'sidebar.html.twig' %}
+    <!-- END SIDEBAR-->
+
+    <div class="col-lg-9" style="margin-left: 10px;">
+    <div class="row">
+        <h3>PROFIL CANDIDAT</h3><hr style="border: 1px solid darkgray;">
+    </div>
+    <div class="row" id="head_row">
+        <h5>INTERFACE DE VISUALISATION D'UN CANDIDAT:</h5>
+    </div>
+    <div class="row">
+        <div class=" col-lg-5">
+            <h1>{{ candidat.nom|upper }} {{ candidat.prenom }}</h1>
+        </div>
+
+        <div class="col-lg-offset-4 col-lg-3" id="edit">
+            <a href="{{ path ('ma_lrm_gestion_edit', { 'id': arrCandidat[candidat.id]}) }}">Modifier</a>/<a href="{{ path ('ma_lrm_gestion_delete', { 'id': arrCandidat[candidat.id]}) }}" onclick="return confirm('Souhaitez-vous confirmer la suppression de ce candidat pour ce poste ?')";>Supprimer</a>
+        </div>
+
+
+    </div>
+
+    <div class="row">
+        <table class="table table-striped" id="show_client">
+            <tbody>
+            <tr>
+                <th>Numéro de candidat</th>
+                <td>{{ candidat.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ candidat.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ candidat.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>{{ candidat.age }} ans</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ candidat.adresse }} - {{ candidat.villeCodePostal }} - {{ candidat.ville }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ candidat.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ candidat.email }}</td>
+            </tr>
+            <tr>
+                <th>CV</th>
+                <td><a href="{{ asset('uploads/cvtheque/' ~ candidat.cvCandidat) }}">{{ candidat.cvCandidat }}</a></td>
+                {#<td><iframe src ="{{ asset('uploads/cvtheque/' ~ candidat.cvCandidat) }}">{{ candidat.cvCandidat }}</iframe></td>#}
+            </tr>
+            <tr>
+                <th>Commentaires</th>
+                <td>{{ candidat.commentaire }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-offset-11">
+            <a href="{{ path('ma_lrm_gestion_resume', { 'id': candidat.emploi.id }) }}"><i class="material-icons" id="previous">skip_previous</i></a>
+        </div>
+    </div>
+{% endblock %}
