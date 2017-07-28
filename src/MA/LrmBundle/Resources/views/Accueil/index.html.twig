@@ -2,7 +2,15 @@
 
  {% block stylesheets %}
   <link href="{{ asset ('css/index.css') }}" rel='stylesheet' type='text/css' />
+  <link href="{{ asset('bundles/fullcalendar/css/fullcalendar/fullcalendar.min.css') }}"  rel="stylesheet" />
  {% endblock %}
+
+{% block javascripts %}
+ <script type="text/javascript" src="{{ asset('bundles/fullcalendar/js/fullcalendar/lib/jquery.min.js') }}"></script>
+ <script type="text/javascript" src="{{ asset('bundles/fullcalendar/js/fullcalendar/lib/moment.min.js') }}"></script>
+ <script type="text/javascript" src="{{ asset('bundles/fullcalendar/js/fullcalendar/fullcalendar.min.js') }}"></script>
+ <script type="text/javascript" src="{{ asset('bundles/fullcalendar/js/fullcalendar/fullcalendar.default-settings.js') }}"></script>
+{% endblock %}
 
 {% block body %}
 
@@ -25,14 +33,10 @@
    <div class="row">
     <h5>LES RELANCES CANDIDATS:</h5>
    </div>
+   <div class="row">
+     {% include '@FullCalendar/Calendar/calendar.html.twig' %}
+   </div>
   </div>
 
 </div>
-
-
-
-{% endblock %}
-
-
-{% block javascripts %}
 {% endblock %}

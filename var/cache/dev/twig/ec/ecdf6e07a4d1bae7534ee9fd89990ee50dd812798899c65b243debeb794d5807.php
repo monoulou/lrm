@@ -11,8 +11,8 @@ class __TwigTemplate_40f3eb3f8494005fceb6e440809e56d81ec4d3e438d274daeb57884d2ff
         $this->parent = $this->loadTemplate("::base.html.twig", "MALrmBundle:Accueil:index.html.twig", 1);
         $this->blocks = array(
             'stylesheets' => array($this, 'block_stylesheets'),
-            'body' => array($this, 'block_body'),
             'javascripts' => array($this, 'block_javascripts'),
+            'body' => array($this, 'block_body'),
         );
     }
 
@@ -23,123 +23,111 @@ class __TwigTemplate_40f3eb3f8494005fceb6e440809e56d81ec4d3e438d274daeb57884d2ff
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_03b84e2d7ad4080664ad7ef65acf125b434848318e0f3c5b40b7663a1096b7d3 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_03b84e2d7ad4080664ad7ef65acf125b434848318e0f3c5b40b7663a1096b7d3->enter($__internal_03b84e2d7ad4080664ad7ef65acf125b434848318e0f3c5b40b7663a1096b7d3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MALrmBundle:Accueil:index.html.twig"));
+        $__internal_614471709d8f2593adfd604b384ca51179cb1704854532dcb4f27e5848950d15 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_614471709d8f2593adfd604b384ca51179cb1704854532dcb4f27e5848950d15->enter($__internal_614471709d8f2593adfd604b384ca51179cb1704854532dcb4f27e5848950d15_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MALrmBundle:Accueil:index.html.twig"));
 
-        $__internal_6101f1c59ced5463152ba8a2bd979dcf84aaea7699318fc6f2e5b0ed010274f1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6101f1c59ced5463152ba8a2bd979dcf84aaea7699318fc6f2e5b0ed010274f1->enter($__internal_6101f1c59ced5463152ba8a2bd979dcf84aaea7699318fc6f2e5b0ed010274f1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MALrmBundle:Accueil:index.html.twig"));
+        $__internal_0bcd9e972bad734d456d16e28e7176a3c61ec0584b2bef66cd03aa27c3eedba0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_0bcd9e972bad734d456d16e28e7176a3c61ec0584b2bef66cd03aa27c3eedba0->enter($__internal_0bcd9e972bad734d456d16e28e7176a3c61ec0584b2bef66cd03aa27c3eedba0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MALrmBundle:Accueil:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_03b84e2d7ad4080664ad7ef65acf125b434848318e0f3c5b40b7663a1096b7d3->leave($__internal_03b84e2d7ad4080664ad7ef65acf125b434848318e0f3c5b40b7663a1096b7d3_prof);
+        $__internal_614471709d8f2593adfd604b384ca51179cb1704854532dcb4f27e5848950d15->leave($__internal_614471709d8f2593adfd604b384ca51179cb1704854532dcb4f27e5848950d15_prof);
 
         
-        $__internal_6101f1c59ced5463152ba8a2bd979dcf84aaea7699318fc6f2e5b0ed010274f1->leave($__internal_6101f1c59ced5463152ba8a2bd979dcf84aaea7699318fc6f2e5b0ed010274f1_prof);
+        $__internal_0bcd9e972bad734d456d16e28e7176a3c61ec0584b2bef66cd03aa27c3eedba0->leave($__internal_0bcd9e972bad734d456d16e28e7176a3c61ec0584b2bef66cd03aa27c3eedba0_prof);
 
     }
 
     // line 3
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_ce680a7f306593c949168f342107405aa74c985d2deeabfeac8f4a943110a333 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_ce680a7f306593c949168f342107405aa74c985d2deeabfeac8f4a943110a333->enter($__internal_ce680a7f306593c949168f342107405aa74c985d2deeabfeac8f4a943110a333_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_860ef742502b3018312e0eefe569f60d84dc5cf17ed12f65fd6a08d8f78f62c6 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_860ef742502b3018312e0eefe569f60d84dc5cf17ed12f65fd6a08d8f78f62c6->enter($__internal_860ef742502b3018312e0eefe569f60d84dc5cf17ed12f65fd6a08d8f78f62c6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        $__internal_ea8402184e187531264c82c11e031c3305055c73e47406bbe0f581cd6ba3aee1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ea8402184e187531264c82c11e031c3305055c73e47406bbe0f581cd6ba3aee1->enter($__internal_ea8402184e187531264c82c11e031c3305055c73e47406bbe0f581cd6ba3aee1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_e9f944dedc4c706269b9a15bb47bd5e7098341b58e925e4d2a311bef528b2fe0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e9f944dedc4c706269b9a15bb47bd5e7098341b58e925e4d2a311bef528b2fe0->enter($__internal_e9f944dedc4c706269b9a15bb47bd5e7098341b58e925e4d2a311bef528b2fe0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
         echo "  <link href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/index.css"), "html", null, true);
         echo "\" rel='stylesheet' type='text/css' />
+  <link href=\"";
+        // line 5
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/fullcalendar/css/fullcalendar/fullcalendar.min.css"), "html", null, true);
+        echo "\"  rel=\"stylesheet\" />
  ";
         
-        $__internal_ea8402184e187531264c82c11e031c3305055c73e47406bbe0f581cd6ba3aee1->leave($__internal_ea8402184e187531264c82c11e031c3305055c73e47406bbe0f581cd6ba3aee1_prof);
+        $__internal_e9f944dedc4c706269b9a15bb47bd5e7098341b58e925e4d2a311bef528b2fe0->leave($__internal_e9f944dedc4c706269b9a15bb47bd5e7098341b58e925e4d2a311bef528b2fe0_prof);
 
         
-        $__internal_ce680a7f306593c949168f342107405aa74c985d2deeabfeac8f4a943110a333->leave($__internal_ce680a7f306593c949168f342107405aa74c985d2deeabfeac8f4a943110a333_prof);
+        $__internal_860ef742502b3018312e0eefe569f60d84dc5cf17ed12f65fd6a08d8f78f62c6->leave($__internal_860ef742502b3018312e0eefe569f60d84dc5cf17ed12f65fd6a08d8f78f62c6_prof);
 
     }
 
-    // line 7
+    // line 8
+    public function block_javascripts($context, array $blocks = array())
+    {
+        $__internal_7d435de38b76d36d4465872a6baa893609834f274553cf421c54b537431f4086 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_7d435de38b76d36d4465872a6baa893609834f274553cf421c54b537431f4086->enter($__internal_7d435de38b76d36d4465872a6baa893609834f274553cf421c54b537431f4086_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_4763f907d15f040a44ce69595ddd274c85ba894f80ee990f8c010cb1a59b6aad = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_4763f907d15f040a44ce69595ddd274c85ba894f80ee990f8c010cb1a59b6aad->enter($__internal_4763f907d15f040a44ce69595ddd274c85ba894f80ee990f8c010cb1a59b6aad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 9
+        echo " <script type=\"text/javascript\" src=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/fullcalendar/js/fullcalendar/lib/jquery.min.js"), "html", null, true);
+        echo "\"></script>
+ <script type=\"text/javascript\" src=\"";
+        // line 10
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/fullcalendar/js/fullcalendar/lib/moment.min.js"), "html", null, true);
+        echo "\"></script>
+ <script type=\"text/javascript\" src=\"";
+        // line 11
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/fullcalendar/js/fullcalendar/fullcalendar.min.js"), "html", null, true);
+        echo "\"></script>
+ <script type=\"text/javascript\" src=\"";
+        // line 12
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/fullcalendar/js/fullcalendar/fullcalendar.default-settings.js"), "html", null, true);
+        echo "\"></script>
+";
+        
+        $__internal_4763f907d15f040a44ce69595ddd274c85ba894f80ee990f8c010cb1a59b6aad->leave($__internal_4763f907d15f040a44ce69595ddd274c85ba894f80ee990f8c010cb1a59b6aad_prof);
+
+        
+        $__internal_7d435de38b76d36d4465872a6baa893609834f274553cf421c54b537431f4086->leave($__internal_7d435de38b76d36d4465872a6baa893609834f274553cf421c54b537431f4086_prof);
+
+    }
+
+    // line 15
     public function block_body($context, array $blocks = array())
     {
-        $__internal_06e895cfbbd99c7d4d37d9a2cf09d4f0d9f3c5988c431c53c959cf90fc0f04b5 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_06e895cfbbd99c7d4d37d9a2cf09d4f0d9f3c5988c431c53c959cf90fc0f04b5->enter($__internal_06e895cfbbd99c7d4d37d9a2cf09d4f0d9f3c5988c431c53c959cf90fc0f04b5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_d0312bb80f0c8285c9f66b4747f5bf31b691feb9f67974438072c2085bad8531 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_d0312bb80f0c8285c9f66b4747f5bf31b691feb9f67974438072c2085bad8531->enter($__internal_d0312bb80f0c8285c9f66b4747f5bf31b691feb9f67974438072c2085bad8531_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_02a76fbadaf5f56ac7f3423a0a1311fde5a7a9ca441955514a165ed6d9398206 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_02a76fbadaf5f56ac7f3423a0a1311fde5a7a9ca441955514a165ed6d9398206->enter($__internal_02a76fbadaf5f56ac7f3423a0a1311fde5a7a9ca441955514a165ed6d9398206_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_fb945db08a46c9ba9a0ae01c656506f0a90e08d5cb00fa55591a84814f591b98 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_fb945db08a46c9ba9a0ae01c656506f0a90e08d5cb00fa55591a84814f591b98->enter($__internal_fb945db08a46c9ba9a0ae01c656506f0a90e08d5cb00fa55591a84814f591b98_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 8
+        // line 16
         echo "
  <div class=\"container-fluid\" id=\"header_container\">
-  <div class=\"row\">
-    ";
-        // line 11
-        if (((isset($context["register"]) ? $context["register"] : $this->getContext($context, "register")) == true)) {
-            // line 12
-            echo "     <div class=\"col-lg-offset-6\">
-      ";
-            // line 13
-            if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-                // line 14
-                echo "       Connecté en tant que ";
-                echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
-                echo "--<a href=\"";
-                echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_logout");
-                echo "\">Déconnexion</a>
-      ";
-            } else {
-                // line 16
-                echo "       <a href=\"";
-                echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_login");
-                echo "\">Connexion</a>
-      ";
-            }
-            // line 18
-            echo "      -- Créer un nouvel utilisateur --<a href=\"";
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_register");
-            echo "\"> Créer un compte </a>
-     </div>
-    ";
-        } else {
-            // line 21
-            echo "     <div class=\"col-lg-offset-9\">
-      ";
-            // line 22
-            if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-                // line 23
-                echo "       Connecté en tant que ";
-                echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
-                echo "--<a href=\"";
-                echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_logout");
-                echo "\">Déconnexion</a>
-      ";
-            } else {
-                // line 25
-                echo "       <a href=\"";
-                echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_login");
-                echo "\">Connexion</a>
-      ";
-            }
-            // line 27
-            echo "     </div>
-    ";
-        }
-        // line 29
-        echo "  </div>
- </div>
+  <!-- START CONNECT BAR-->
+  ";
+        // line 19
+        $this->loadTemplate("connexion.html.twig", "MALrmBundle:Accueil:index.html.twig", 19)->display($context);
+        // line 20
+        echo "  <!-- END CONNECT BAR -->
  <div class=\"container-fluid\" id=\"main_container\">
   <!-- START TOP NAVBAR-->
   ";
-        // line 33
-        $this->loadTemplate("navbar.html.twig", "MALrmBundle:Accueil:index.html.twig", 33)->display($context);
-        // line 34
+        // line 23
+        $this->loadTemplate("navbar.html.twig", "MALrmBundle:Accueil:index.html.twig", 23)->display($context);
+        // line 24
         echo "  <!-- END TOP NAVBAR -->
   <!-- START SIDEBAR-->
   ";
-        // line 36
-        $this->loadTemplate("sidebar.html.twig", "MALrmBundle:Accueil:index.html.twig", 36)->display($context);
-        // line 37
+        // line 26
+        $this->loadTemplate("sidebar.html.twig", "MALrmBundle:Accueil:index.html.twig", 26)->display($context);
+        // line 27
         echo "  <!-- END SIDEBAR-->
 
   <div class=\"col-lg-9\" style=\"margin-left: 10px;\">
@@ -149,35 +137,21 @@ class __TwigTemplate_40f3eb3f8494005fceb6e440809e56d81ec4d3e438d274daeb57884d2ff
    <div class=\"row\">
     <h5>LES RELANCES CANDIDATS:</h5>
    </div>
+   <div class=\"row\">
+     ";
+        // line 37
+        $this->loadTemplate("@FullCalendar/Calendar/calendar.html.twig", "MALrmBundle:Accueil:index.html.twig", 37)->display($context);
+        // line 38
+        echo "   </div>
   </div>
 
 </div>
-
-
-
 ";
         
-        $__internal_02a76fbadaf5f56ac7f3423a0a1311fde5a7a9ca441955514a165ed6d9398206->leave($__internal_02a76fbadaf5f56ac7f3423a0a1311fde5a7a9ca441955514a165ed6d9398206_prof);
+        $__internal_fb945db08a46c9ba9a0ae01c656506f0a90e08d5cb00fa55591a84814f591b98->leave($__internal_fb945db08a46c9ba9a0ae01c656506f0a90e08d5cb00fa55591a84814f591b98_prof);
 
         
-        $__internal_06e895cfbbd99c7d4d37d9a2cf09d4f0d9f3c5988c431c53c959cf90fc0f04b5->leave($__internal_06e895cfbbd99c7d4d37d9a2cf09d4f0d9f3c5988c431c53c959cf90fc0f04b5_prof);
-
-    }
-
-    // line 55
-    public function block_javascripts($context, array $blocks = array())
-    {
-        $__internal_379caa37a783b70c55fbd67a58e718d21662c735e17d3efe9fece4e6bd70b9c5 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_379caa37a783b70c55fbd67a58e718d21662c735e17d3efe9fece4e6bd70b9c5->enter($__internal_379caa37a783b70c55fbd67a58e718d21662c735e17d3efe9fece4e6bd70b9c5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
-
-        $__internal_ef8b0e4ff3476b08a2bb653807b2f791520b109458b58f10dede2d808223bae4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ef8b0e4ff3476b08a2bb653807b2f791520b109458b58f10dede2d808223bae4->enter($__internal_ef8b0e4ff3476b08a2bb653807b2f791520b109458b58f10dede2d808223bae4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
-
-        
-        $__internal_ef8b0e4ff3476b08a2bb653807b2f791520b109458b58f10dede2d808223bae4->leave($__internal_ef8b0e4ff3476b08a2bb653807b2f791520b109458b58f10dede2d808223bae4_prof);
-
-        
-        $__internal_379caa37a783b70c55fbd67a58e718d21662c735e17d3efe9fece4e6bd70b9c5->leave($__internal_379caa37a783b70c55fbd67a58e718d21662c735e17d3efe9fece4e6bd70b9c5_prof);
+        $__internal_d0312bb80f0c8285c9f66b4747f5bf31b691feb9f67974438072c2085bad8531->leave($__internal_d0312bb80f0c8285c9f66b4747f5bf31b691feb9f67974438072c2085bad8531_prof);
 
     }
 
@@ -193,7 +167,7 @@ class __TwigTemplate_40f3eb3f8494005fceb6e440809e56d81ec4d3e438d274daeb57884d2ff
 
     public function getDebugInfo()
     {
-        return array (  168 => 55,  143 => 37,  141 => 36,  137 => 34,  135 => 33,  129 => 29,  125 => 27,  119 => 25,  111 => 23,  109 => 22,  106 => 21,  99 => 18,  93 => 16,  85 => 14,  83 => 13,  80 => 12,  78 => 11,  73 => 8,  64 => 7,  51 => 4,  42 => 3,  11 => 1,);
+        return array (  145 => 38,  143 => 37,  131 => 27,  129 => 26,  125 => 24,  123 => 23,  118 => 20,  116 => 19,  111 => 16,  102 => 15,  90 => 12,  86 => 11,  82 => 10,  77 => 9,  68 => 8,  56 => 5,  51 => 4,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -210,32 +184,22 @@ class __TwigTemplate_40f3eb3f8494005fceb6e440809e56d81ec4d3e438d274daeb57884d2ff
 
  {% block stylesheets %}
   <link href=\"{{ asset ('css/index.css') }}\" rel='stylesheet' type='text/css' />
+  <link href=\"{{ asset('bundles/fullcalendar/css/fullcalendar/fullcalendar.min.css') }}\"  rel=\"stylesheet\" />
  {% endblock %}
+
+{% block javascripts %}
+ <script type=\"text/javascript\" src=\"{{ asset('bundles/fullcalendar/js/fullcalendar/lib/jquery.min.js') }}\"></script>
+ <script type=\"text/javascript\" src=\"{{ asset('bundles/fullcalendar/js/fullcalendar/lib/moment.min.js') }}\"></script>
+ <script type=\"text/javascript\" src=\"{{ asset('bundles/fullcalendar/js/fullcalendar/fullcalendar.min.js') }}\"></script>
+ <script type=\"text/javascript\" src=\"{{ asset('bundles/fullcalendar/js/fullcalendar/fullcalendar.default-settings.js') }}\"></script>
+{% endblock %}
 
 {% block body %}
 
  <div class=\"container-fluid\" id=\"header_container\">
-  <div class=\"row\">
-    {% if register == true %}
-     <div class=\"col-lg-offset-6\">
-      {% if is_granted(\"IS_AUTHENTICATED_REMEMBERED\") %}
-       Connecté en tant que {{ app.user.username }}--<a href=\"{{ path('fos_user_security_logout') }}\">Déconnexion</a>
-      {% else %}
-       <a href=\"{{ path('fos_user_security_login') }}\">Connexion</a>
-      {% endif %}
-      -- Créer un nouvel utilisateur --<a href=\"{{ path('ma_lrm_register') }}\"> Créer un compte </a>
-     </div>
-    {% else %}
-     <div class=\"col-lg-offset-9\">
-      {% if is_granted(\"IS_AUTHENTICATED_REMEMBERED\") %}
-       Connecté en tant que {{ app.user.username }}--<a href=\"{{ path('fos_user_security_logout') }}\">Déconnexion</a>
-      {% else %}
-       <a href=\"{{ path('fos_user_security_login') }}\">Connexion</a>
-      {% endif %}
-     </div>
-    {% endif %}
-  </div>
- </div>
+  <!-- START CONNECT BAR-->
+  {% include 'connexion.html.twig' %}
+  <!-- END CONNECT BAR -->
  <div class=\"container-fluid\" id=\"main_container\">
   <!-- START TOP NAVBAR-->
   {% include 'navbar.html.twig' %}
@@ -251,16 +215,12 @@ class __TwigTemplate_40f3eb3f8494005fceb6e440809e56d81ec4d3e438d274daeb57884d2ff
    <div class=\"row\">
     <h5>LES RELANCES CANDIDATS:</h5>
    </div>
+   <div class=\"row\">
+     {% include '@FullCalendar/Calendar/calendar.html.twig' %}
+   </div>
   </div>
 
 </div>
-
-
-
-{% endblock %}
-
-
-{% block javascripts %}
 {% endblock %}", "MALrmBundle:Accueil:index.html.twig", "C:\\wamp64\\www\\ligne_rh\\src\\MA\\LrmBundle/Resources/views/Accueil/index.html.twig");
     }
 }

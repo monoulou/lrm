@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new MA\LrmBundle\MALrmBundle(),
             new MA\UserBundle\MAUserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new AncaRebeca\FullCalendarBundle\FullCalendarBundle(),
 
             
         ];

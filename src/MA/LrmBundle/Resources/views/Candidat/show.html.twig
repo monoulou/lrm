@@ -38,7 +38,7 @@
         <div class=" col-lg-5"><h1>{{ candidat.nom|upper }} {{ candidat.prenom }}</h1></div>
 
         <div class="col-lg-offset-4 col-lg-3" id="edit">
-            <a href="{{ path('ma_lrm_candidat_edit', { 'id': candidat.id }) }}" >METTRE A JOUR</a>
+            <a href="{{ path('ma_lrm_candidat_edit', { 'id': candidat.id }) }}" ><i class="material-icons" style="margin-left: 40px">mode_edit</i></a>
         </div>
     </div>
 
@@ -89,7 +89,7 @@
     <div class="row">
         <div class="col-lg-offset-10 col-lg-2">
             {{ form_start(delete_form) }}
-            <button id="delete_button" type="submit" class="btn  btn-default" name="delete_candidat" data-dismiss="modal" onclick="return confirm('Souhaitez-vous vraiment supprimer ce candidat ?');">Supprimer</button>
+            <button id="delete_button" type="submit" class="btn  btn-default" name="delete_candidat" data-dismiss="modal" onclick="return confirm('Souhaitez-vous vraiment supprimer ce candidat ?');"><i class="material-icons">delete</i></button>
             {{ form_end(delete_form) }}
         </div>
     </div>

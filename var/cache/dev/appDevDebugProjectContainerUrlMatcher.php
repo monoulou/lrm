@@ -286,6 +286,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_fos_user_change_password:
 
+        // ancarebeca_full_calendar_load
+        if ($pathinfo === '/full-calendar/load') {
+            return array (  '_controller' => 'AncaRebeca\\FullCalendarBundle\\Controller\\CalendarController::loadAction',  '_route' => 'ancarebeca_full_calendar_load',);
+        }
+
         if (0 === strpos($pathinfo, '/admin')) {
             // ma_lrm_accueil
             if ($pathinfo === '/admin/accueil') {
