@@ -10,6 +10,7 @@
  <script type="text/javascript" src="{{ asset('bundles/fullcalendar/js/fullcalendar/lib/moment.min.js') }}"></script>
  <script type="text/javascript" src="{{ asset('bundles/fullcalendar/js/fullcalendar/fullcalendar.min.js') }}"></script>
  <script type="text/javascript" src="{{ asset('bundles/fullcalendar/js/fullcalendar/fullcalendar.default-settings.js') }}"></script>
+ <script type="text/javascript" src="{{ asset('js/calendar.js') }}" ></script>
 {% endblock %}
 
 {% block body %}
@@ -32,9 +33,16 @@
    </div>
    <div class="row">
     <h5>LES RELANCES CANDIDATS:</h5>
+    ...
    </div>
    <div class="row">
-     {% include '@FullCalendar/Calendar/calendar.html.twig' %}
+    <h5>LES CLIENTS A FACTURER:</h5>
+    ...
+   </div>
+   <div class="row">
+     <div class="container" id="calendar-holder">
+        {% include '@FullCalendar/Calendar/calendar.html.twig' %}
+     </div>
    </div>
   </div>
 

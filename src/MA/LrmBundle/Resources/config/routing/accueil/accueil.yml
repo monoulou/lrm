@@ -5,3 +5,8 @@ ma_lrm_accueil:
 ma_lrm_register:
     path:     /register
     defaults:  { _controller: MAUserBundle:Registration:register }
+
+ma_lrm_calendar:
+    path:     /accueil/calendar
+    defaults: { _controller: "MALrmBundle:Index:load" }
+    methods:  [GET, POST]

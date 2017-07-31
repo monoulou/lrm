@@ -2,78 +2,100 @@
 
 namespace AncaRebeca\FullCalendarBundle\Model;
 
+use Doctrine\ORM\Mapping as ORM;
+
 class Event extends FullCalendarEvent
 {
     /**
      * @var integer
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
     /**
      * @var string
+     * @ORM\Column(type="string", length=255, name="title")
      */
     protected $title;
     /**
      * @var boolean
+     * @ORM\Column(type="boolean", name="allDay")
      */
     protected $allDay = true;
     /**
      * @var \DateTime
+     * @ORM\Column(type="datetime", name="event_start")
      */
     protected $startDate;
     /**
      * @var \DateTime
+     * @ORM\Column(type="datetime", name="event_end")
      */
     protected $endDate;
     /**
      * @var string
+     * @ORM\Column(type="string", length=255, name="url")
      */
     protected $url;
     /**
      * @var string
+     * @ORM\Column(type="string", length=255, name="className")
      */
     protected $className;
     /**
      * @var boolean
+     * @ORM\Column(type="boolean", name="editable")
      */
     protected $editable = false;
     /**
      * @var boolean
+     * @ORM\Column(type="boolean", name="strartEditable")
      */
     protected $startEditable = false;
     /**
      * @var boolean
+     * @ORM\Column(type="boolean", name="durationEditable")
      */
     protected $durationEditable = false;
     /**
      * @var string
+     * @ORM\Column(type="string", length=255, name="rendering")
      */
     protected $rendering;
     /**
      * @var boolean
+     * @ORM\Column(type="boolean", name="overlap")
      */
     protected $overlap = true;
     /**
      * @var integer
+     * @ORM\Column(type="integer", name="constraint")
      */
     protected $constraint;
     /**
      * @var string
+     * @ORM\Column(type="string", length=255, name="event_source")
      */
     protected $source;
     /**
      * @var string
+     * @ORM\Column(type="string", length=255, name="color")
      */
     protected $color;
     /**
      * @var string
+     * @ORM\Column(type="string", length=255, name="backgroundColor")
      */
     protected $backgroundColor;
     /**
      * @var string
+     * @ORM\Column(type="string", length=255, name="textColor")
      */
     protected $textColor;
     /**
      * @var array
+     * @ORM\Column(type="array", name="customFields")
      */
     protected $customFields = [];
 

@@ -4,6 +4,6 @@ parameters:
     #parameter_name: value
 
 services:
-    app_bundle.service.listener:
+    ma_lrm_bundle.service.listener:
         class: MA\LrmBundle\Listener\LoadDataListener
         arguments: [name: 'kernel.event_listener', event: 'fullcalendar.set_data', method: loadData]

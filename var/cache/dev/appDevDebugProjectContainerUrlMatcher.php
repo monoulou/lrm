@@ -302,6 +302,17 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'MA\\UserBundle\\Controller\\RegistrationController::registerAction',  '_route' => 'ma_lrm_register',);
             }
 
+            // ma_lrm_calendar
+            if ($pathinfo === '/admin/accueil/calendar') {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_ma_lrm_calendar;
+                }
+
+                return array (  '_controller' => 'MA\\LrmBundle\\Controller\\IndexController::loadAction',  '_route' => 'ma_lrm_calendar',);
+            }
+            not_ma_lrm_calendar:
+
             if (0 === strpos($pathinfo, '/admin/client')) {
                 // ma_lrm_client_index
                 if (rtrim($pathinfo, '/') === '/admin/client') {
