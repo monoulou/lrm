@@ -105,6 +105,7 @@ class Event extends FullCalendarEvent
      */
     public function __construct($title, \DateTime $start)
     {
+        parent::__construct($title, $start);
         $this->title = $title;
         $this->startDate = $start;
     }
