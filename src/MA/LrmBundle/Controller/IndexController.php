@@ -11,21 +11,20 @@ class IndexController extends Controller
 {
     public function loadAction()
     {
-        $calendarService = $this->get('ma_lrm_bundle.service.listener');
         //dump($calendarService);die();
-
         $em = $this->getDoctrine()->getManager();
         $evenements = $em->getRepository('MALrmBundle:CalendarEvent')->findAll();
+
+        $calendarService = $this->get('ma_lrm_bundle.service.listener');
 
         $events = array();
 
         foreach ($evenements as $key => $evenement)
         {
-            $events = $calendarService->loadData($evenement);
-            //$events = $calendarService->loadData($evenement);
+            //$events = $calendarService->loadData();
+            $events[$evenement->getId()] = $calendarService->loadData($evenement);
         }
-
-        dump($events);die();
+        
         $response = new JsonResponse();
         return $response->setData(array('fullCalendarEvent' => $events));
 

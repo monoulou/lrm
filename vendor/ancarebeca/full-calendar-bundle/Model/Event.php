@@ -436,7 +436,7 @@ class Event extends FullCalendarEvent
         $event = [];
 
         $event['title']             = $this->getTitle();
-        $event['start']             = $this->getStartDate()->format("Y-m-d\TH:i:sP");
+        $event['start']             = $this->getStartDate()->format("Y-m-d");
         $event['allDay']            = $this->isAllDay();
         $event['editable']          = $this->isEditable();
         $event['startEditable']     = $this->isStartEditable();
@@ -464,7 +464,7 @@ class Event extends FullCalendarEvent
         }
 
         if (null !== $this->getEndDate()) {
-            $event['end'] = $this->getEndDate()->format("Y-m-d\TH:i:sP");
+            $event['end'] = $this->getEndDate()->format("Y-m-d");
         }
 
         if (null !== $this->getRendering()) {

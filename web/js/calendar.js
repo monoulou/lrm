@@ -34,8 +34,9 @@ $(function () {
             {
                 url: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar',
                 type: 'POST',
+                dataType: "json",
                 data: {
-                    filters: { param: foo }
+                    filters: { param: fullCalendarEvent }
                 },
                 error: function() {
                     //alert()
