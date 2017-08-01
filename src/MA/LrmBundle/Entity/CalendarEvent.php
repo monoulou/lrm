@@ -3,16 +3,17 @@
 namespace MA\LrmBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use AncaRebeca\FullCalendarBundle\Model\Event as BaseEvent;
+use AncaRebeca\FullCalendarBundle\Model\Event;
 
 /**
  * CalendarEvent
  *
- * @ORM\Table(name="calendar_evenement")
+ * @ORM\Table(name="calendar_event")
  * @ORM\Entity(repositoryClass="MA\LrmBundle\Repository\CalendarEventRepository")
  */
-class CalendarEvent extends BaseEvent
+class CalendarEvent extends Event
 {
+
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
