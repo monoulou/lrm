@@ -10,3 +10,9 @@ ma_lrm_calendar:
     path:     /accueil/calendar
     defaults: { _controller: "MALrmBundle:Index:load" }
     methods:  [GET, POST]
+
+ma_lrm_calendar_new:
+    path:     /accueil/calendar/new
+    defaults: { _controller: "MALrmBundle:Event:new" }
+    methods:  [GET, POST]
+

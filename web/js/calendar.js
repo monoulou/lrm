@@ -130,9 +130,9 @@ $(document).ready(function(){
         },
         eventResize: function(event) {
             $.ajax({
-                url: 'index.php',
+                url: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar',
                 //data: 'action=update&title='+event.title+'&start='+moment(event.start).format()+'&end='+moment(event.end).format()+'&id='+event.id,
-                data: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar',
+                //data: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar',
                 type: "POST",
                 success: function(json) {
                     //alert(json);
@@ -159,7 +159,7 @@ $(document).ready(function(){
         $.ajax({
             url: 'index.php',
             //data: 'action=delete&id='+eventID,
-            data: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar',
+            //data: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar',
             type: "POST",
             success: function(json) {
                 if(json == 1)
@@ -178,9 +178,9 @@ $(document).ready(function(){
         var endTime = $('#endTime').val();
 
         $.ajax({
-            url: 'index.php',
+            url: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar/new',
             //data: 'action=add&title='+title+'&start='+startTime+'&end='+endTime,
-            data: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar',
+            //data: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar',
             type: "POST",
             success: function(json) {
                 $("#calendar").fullCalendar('renderEvent',

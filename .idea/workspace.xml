@@ -3,34 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="4ba38cec-42f6-4187-83aa-2792115ab71d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MA/LrmBundle/Controller/IndexController.php" afterPath="$PROJECT_DIR$/src/MA/LrmBundle/Controller/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MA/LrmBundle/Resources/config/routing/accueil/accueil.yml" afterPath="$PROJECT_DIR$/src/MA/LrmBundle/Resources/config/routing/accueil/accueil.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MA/LrmBundle/Resources/views/Accueil/index.html.twig" afterPath="$PROJECT_DIR$/src/MA/LrmBundle/Resources/views/Accueil/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/4/2/wa54wnmZ2vc5A8oW76FX" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/4/2/wa54wnmZ2vc5A8oW76FX" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/6/9/H-pBzmkmwU0sw8yyLQOd" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/6/9/H-pBzmkmwU0sw8yyLQOd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/6/B/dJmYiGsbeL8rWmt7o7-g" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/6/B/dJmYiGsbeL8rWmt7o7-g" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/9/U/sHzpxjeQ0FeWmHnzMnZk" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/9/U/sHzpxjeQ0FeWmHnzMnZk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/C/H/bIV84vLInjsxqnVrTJJP" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/C/H/bIV84vLInjsxqnVrTJJP" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/D/J/wwryftpcz6reQhQnFZwt" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/D/J/wwryftpcz6reQhQnFZwt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/I/M/qu0JoVTpU1v5ASs3hS-E" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/I/M/qu0JoVTpU1v5ASs3hS-E" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/K/I/s0Nki+waAdUMnKGgKPhR" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/K/I/s0Nki+waAdUMnKGgKPhR" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/M/K/AGZwPTz2XzG8q2QsYRIu" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/M/K/AGZwPTz2XzG8q2QsYRIu" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/P/Y/NIPhSl2xg6uIPHTP0oMT" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/P/Y/NIPhSl2xg6uIPHTP0oMT" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/R/3/HLF+0LYfXNgbu2tyt1sl" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/R/3/HLF+0LYfXNgbu2tyt1sl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/U/+/aKSuKBQ3ns2dn3aRddnZ" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/U/+/aKSuKBQ3ns2dn3aRddnZ" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/W/N/ebv9w3bZGQY+7CLQVC0S" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/W/N/ebv9w3bZGQY+7CLQVC0S" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/Y/T/YovoXCgm1qA7N-MPEb1h" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/Y/T/YovoXCgm1qA7N-MPEb1h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/04/0430a5dc43b075b2911e6e52dd002fc18d53c1dba751aa8f9948a446b96c4360.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/04/0430a5dc43b075b2911e6e52dd002fc18d53c1dba751aa8f9948a446b96c4360.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/04/043817ab84943f32096e83c61db1a3b2ba5bfe05956fecf33295721761199020.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/04/043817ab84943f32096e83c61db1a3b2ba5bfe05956fecf33295721761199020.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/64/641a8d6461bd643ed8b0af792ddd94f36c9ad9b2b1a92741eae300675e21a621.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/64/641a8d6461bd643ed8b0af792ddd94f36c9ad9b2b1a92741eae300675e21a621.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/65/655716d73cf75b3572b20af2c049ff5d37f7cc62a628530e4b5b45f3be4feabc.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/65/655716d73cf75b3572b20af2c049ff5d37f7cc62a628530e4b5b45f3be4feabc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/82/82092dfebd47587cd0e734ffc8a84371ed493f4089ec91bb6bcb65c0a632f501.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/82/82092dfebd47587cd0e734ffc8a84371ed493f4089ec91bb6bcb65c0a632f501.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/96/9655091d95c12ae9300758328dbc05cd716ecff79336a0f67e2a18e34a84f24d.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/96/9655091d95c12ae9300758328dbc05cd716ecff79336a0f67e2a18e34a84f24d.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/c7/c74cb640161d7e830a393847021411742907c38eeac64e205eb549acf5e0bd53.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/c7/c74cb640161d7e830a393847021411742907c38eeac64e205eb549acf5e0bd53.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/ec/ecdf6e07a4d1bae7534ee9fd89990ee50dd812798899c65b243debeb794d5807.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/ec/ecdf6e07a4d1bae7534ee9fd89990ee50dd812798899c65b243debeb794d5807.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/ed/edf23dd23e8b5dc3471f2433e1818a308363bab1d61328e7e04bbc2c5f8c0a72.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/ed/edf23dd23e8b5dc3471f2433e1818a308363bab1d61328e7e04bbc2c5f8c0a72.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/logs/dev.log" afterPath="$PROJECT_DIR$/var/logs/dev.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/calendar.js" afterPath="$PROJECT_DIR$/web/js/calendar.js" />
     </list>
@@ -79,7 +57,7 @@
       <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Controller/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
+            <state relative-caret-position="466">
               <caret line="31" column="0" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="58" />
               <folding>
                 <element signature="e#43#100#0#PHP" expanded="true" />
@@ -88,11 +66,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="EventController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Controller/EventController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29">
+              <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+              <folding>
+                <element signature="e#44#82#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="calendar.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/calendar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="86" column="39" selection-start-line="86" selection-start-column="39" selection-end-line="86" selection-end-column="39" />
+            <state relative-caret-position="493">
+              <caret line="188" column="37" selection-start-line="188" selection-start-column="37" selection-end-line="188" selection-end-column="37" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -100,26 +90,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://D:/jquery-fullcalendar-integration-bootstrap-php-mysql/index.php">
+      <file leaf-file-name="navbar.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/navbar.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="215" column="78" selection-start-line="212" selection-start-column="2" selection-end-line="215" selection-end-column="78" />
+            <state relative-caret-position="-246">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1493828064000" expanded="true" signature="554:682" placeholder="SELECT `id`,... events" />
-                <marker date="1493828064000" expanded="true" signature="924:1510" placeholder="INSERT INTO `events`... " />
-                <marker date="1493828064000" expanded="true" signature="1724:2112" placeholder="UPDATE `even... " />
-                <marker date="1493828064000" expanded="true" signature="2218:2367" placeholder="DELETE from " />
+                <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Resources/views/Accueil/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1396">
-              <caret line="108" column="15" selection-start-line="108" selection-start-column="15" selection-end-line="108" selection-end-column="15" />
+            <state relative-caret-position="572">
+              <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="accueil.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Resources/config/routing/accueil/accueil.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -168,7 +165,6 @@
         <option value="$PROJECT_DIR$/vendor/ancarebeca/full-calendar-bundle/Model/FullCalendarEvent.php" />
         <option value="$PROJECT_DIR$/src/MA/LrmBundle/Repository/EvenementRepository.php" />
         <option value="$PROJECT_DIR$/src/MA/LrmBundle/Entity/Evenement.php" />
-        <option value="$PROJECT_DIR$/src/MA/LrmBundle/Resources/config/routing/accueil/accueil.yml" />
         <option value="$PROJECT_DIR$/app/config/services.yml" />
         <option value="$PROJECT_DIR$/src/MA/LrmBundle/Repository/CalendarEventRepository.php" />
         <option value="$PROJECT_DIR$/src/MA/LrmBundle/Entity/CalendarEvent.php" />
@@ -178,8 +174,10 @@
         <option value="$PROJECT_DIR$/vendor/ancarebeca/full-calendar-bundle/Model/Event.php" />
         <option value="$PROJECT_DIR$/src/MA/LrmBundle/Listener/LoadDataListener.php" />
         <option value="$PROJECT_DIR$/src/MA/LrmBundle/Controller/IndexController.php" />
-        <option value="$PROJECT_DIR$/web/js/calendar.js" />
         <option value="$PROJECT_DIR$/src/MA/LrmBundle/Resources/views/Accueil/index.html.twig" />
+        <option value="$PROJECT_DIR$/web/js/calendar.js" />
+        <option value="$PROJECT_DIR$/src/MA/LrmBundle/Resources/config/routing/accueil/accueil.yml" />
+        <option value="$PROJECT_DIR$/src/MA/LrmBundle/Controller/EventController.php" />
       </list>
     </option>
   </component>
@@ -223,8 +221,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -651,6 +647,134 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MA" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LrmBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routing" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="candidat" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ligne_rh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ligne_rh" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MA" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LrmBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routing" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accueil" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ligne_rh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ligne_rh" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MA" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LrmBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ligne_rh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ligne_rh" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MA" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LrmBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ligne_rh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ligne_rh" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -672,9 +796,15 @@
               <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -750,15 +880,16 @@
       <workItem from="1501620419687" duration="2535000" />
       <workItem from="1501623091126" duration="21000" />
       <workItem from="1501695587096" duration="1542000" />
+      <workItem from="1501711518677" duration="2749000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51671000" />
+    <option name="totallyTimeSpent" value="54420000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25208333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -799,20 +930,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Resources/views/Emploi/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1786">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Resources/config/routing/emploi/emploi.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Resources/views/Candidat/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="678">
@@ -969,24 +1086,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Resources/config/routing/candidat/candidat.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="28" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Resources/config/routing/client/client.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Resources/config/routing/accueil/accueil.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1074,13 +1177,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Controller/CandidatController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Listener/LoadDataListener.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
@@ -1099,31 +1195,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="31" column="0" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="58" />
-          <folding>
-            <element signature="e#43#100#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/ville.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="9" column="91" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/calendar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="86" column="39" selection-start-line="86" selection-start-column="39" selection-end-line="86" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1139,14 +1214,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="59" column="7" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Controller/CandidatController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="32" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Resources/config/routing/candidat/candidat.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="28" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://D:/jquery-fullcalendar-integration-bootstrap-php-mysql/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="215" column="78" selection-start-line="212" selection-start-column="2" selection-end-line="215" selection-end-column="78" />
+        <state relative-caret-position="638">
+          <caret line="220" column="9" selection-start-line="211" selection-start-column="0" selection-end-line="220" selection-end-column="9" />
           <folding>
             <marker date="1493828064000" expanded="true" signature="554:682" placeholder="SELECT `id`,... events" />
             <marker date="1493828064000" expanded="true" signature="924:1510" placeholder="INSERT INTO `events`... " />
@@ -1156,11 +1246,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/navbar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-246">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Resources/views/Accueil/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1396">
-          <caret line="108" column="15" selection-start-line="108" selection-start-column="15" selection-end-line="108" selection-end-column="15" />
+        <state relative-caret-position="572">
+          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/calendar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="188" column="37" selection-start-line="188" selection-start-column="37" selection-end-line="188" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Resources/config/routing/accueil/accueil.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="31" column="0" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="58" />
+          <folding>
+            <element signature="e#43#100#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Controller/EventController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+          <folding>
+            <element signature="e#44#82#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
