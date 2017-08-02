@@ -4,51 +4,34 @@
     <list default="true" id="4ba38cec-42f6-4187-83aa-2792115ab71d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MA/LrmBundle/Controller/IndexController.php" afterPath="$PROJECT_DIR$/src/MA/LrmBundle/Controller/IndexController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MA/LrmBundle/Listener/LoadDataListener.php" afterPath="$PROJECT_DIR$/src/MA/LrmBundle/Listener/LoadDataListener.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/-/I/UhIlZiHTlxLzpULqu8JU" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/-/I/UhIlZiHTlxLzpULqu8JU" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/0/G/uPupVz-i4W27q+9V8EUF" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/0/G/uPupVz-i4W27q+9V8EUF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/0/J/QZx7NREnaDVhhzidWMHi" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/0/J/QZx7NREnaDVhhzidWMHi" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MA/LrmBundle/Resources/views/Accueil/index.html.twig" afterPath="$PROJECT_DIR$/src/MA/LrmBundle/Resources/views/Accueil/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/4/2/wa54wnmZ2vc5A8oW76FX" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/4/2/wa54wnmZ2vc5A8oW76FX" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/6/9/H-pBzmkmwU0sw8yyLQOd" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/6/9/H-pBzmkmwU0sw8yyLQOd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/6/B/dJmYiGsbeL8rWmt7o7-g" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/6/B/dJmYiGsbeL8rWmt7o7-g" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/7/B/Zz7tkGJYz1Dujn95zkKV" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/7/B/Zz7tkGJYz1Dujn95zkKV" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/8/M/ybdAlFa9Vug4hS1c3FYe" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/8/M/ybdAlFa9Vug4hS1c3FYe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/9/F/mHBTxsvsqSswRLYtWTsG" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/9/F/mHBTxsvsqSswRLYtWTsG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/9/V/yTP+5SJuI8Kdc9BcuAbS" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/9/V/yTP+5SJuI8Kdc9BcuAbS" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/C/E/Lpq5JfR74O9MvLeNiCYT" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/C/E/Lpq5JfR74O9MvLeNiCYT" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/C/E/zSZtAPFL+bO7ZdvZqZhv" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/C/E/zSZtAPFL+bO7ZdvZqZhv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/9/U/sHzpxjeQ0FeWmHnzMnZk" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/9/U/sHzpxjeQ0FeWmHnzMnZk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/C/H/bIV84vLInjsxqnVrTJJP" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/C/H/bIV84vLInjsxqnVrTJJP" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/C/V/6LMJCyIouzfs9jL-2qMM" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/C/V/6LMJCyIouzfs9jL-2qMM" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/D/1/uZZ1a3eZqcpwr4Z+HGlK" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/D/1/uZZ1a3eZqcpwr4Z+HGlK" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/D/J/wwryftpcz6reQhQnFZwt" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/D/J/wwryftpcz6reQhQnFZwt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/E/I/ilIiTHofhXo1EGPRsN6g" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/E/I/ilIiTHofhXo1EGPRsN6g" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/E/M/pVdM2wfpoFyiyHNE9j4L" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/E/M/pVdM2wfpoFyiyHNE9j4L" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/E/N/exqMi7TOdJl3qsxlj-t-" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/E/N/exqMi7TOdJl3qsxlj-t-" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/H/X/GhhXE-zAdUqalNRaVqFq" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/H/X/GhhXE-zAdUqalNRaVqFq" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/H/X/e54qSjNBSk3dQ757aZJH" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/H/X/e54qSjNBSk3dQ757aZJH" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/J/H/z1i5TGW3XFGhclmQHWzC" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/J/H/z1i5TGW3XFGhclmQHWzC" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/K/J/fUwKSFJ5ycZRD8Ax+4Gl" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/K/J/fUwKSFJ5ycZRD8Ax+4Gl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/K/Z/nnWitsUg66FXQY2sSPKz" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/K/Z/nnWitsUg66FXQY2sSPKz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/L/B/lQq8ENll9U7Hx+AwZyGV" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/L/B/lQq8ENll9U7Hx+AwZyGV" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/L/V/cumH8bHkY9zGyLI3L3pV" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/L/V/cumH8bHkY9zGyLI3L3pV" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/I/M/qu0JoVTpU1v5ASs3hS-E" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/I/M/qu0JoVTpU1v5ASs3hS-E" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/K/I/s0Nki+waAdUMnKGgKPhR" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/K/I/s0Nki+waAdUMnKGgKPhR" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/M/K/AGZwPTz2XzG8q2QsYRIu" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/M/K/AGZwPTz2XzG8q2QsYRIu" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/N/R/tVrB96UNkSggLq6qHbL9" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/N/R/tVrB96UNkSggLq6qHbL9" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/O/V/KYzUb8X3HCm-ISPRVKya" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/O/V/KYzUb8X3HCm-ISPRVKya" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/P/9/H2wAcodu0jvSrIS5f-pW" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/P/9/H2wAcodu0jvSrIS5f-pW" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/P/I/xEHwet9MMYG1ZDBgjZAM" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/P/I/xEHwet9MMYG1ZDBgjZAM" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/P/O/1wfCNqYbKWQUIaAcQ6nO" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/P/O/1wfCNqYbKWQUIaAcQ6nO" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/P/Y/NIPhSl2xg6uIPHTP0oMT" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/P/Y/NIPhSl2xg6uIPHTP0oMT" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/R/3/HLF+0LYfXNgbu2tyt1sl" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/R/3/HLF+0LYfXNgbu2tyt1sl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/R/7/jidz9jFVwK1gVLcpiFrP" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/R/7/jidz9jFVwK1gVLcpiFrP" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/R/E/YJFlqxdYURq72dPwqvjx" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/R/E/YJFlqxdYURq72dPwqvjx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/S/7/qqKH+PHAHL8FmU7kjME6" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/S/7/qqKH+PHAHL8FmU7kjME6" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/T/H/UpwR9-0WT7oEr8e+iBjk" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/T/H/UpwR9-0WT7oEr8e+iBjk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/T/W/27YCcKW49W+vOXFVRQAZ" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/T/W/27YCcKW49W+vOXFVRQAZ" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/W/L/vbeB-1-cSrzWmb7E8ZMJ" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/W/L/vbeB-1-cSrzWmb7E8ZMJ" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/Y/C/sRTeiX+aXlFIrTIU-Qdx" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/Y/C/sRTeiX+aXlFIrTIU-Qdx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/Y/Q/ywIzwwXHkJ9pPQoMIIBl" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/Y/Q/ywIzwwXHkJ9pPQoMIIBl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/U/+/aKSuKBQ3ns2dn3aRddnZ" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/U/+/aKSuKBQ3ns2dn3aRddnZ" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/W/N/ebv9w3bZGQY+7CLQVC0S" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/W/N/ebv9w3bZGQY+7CLQVC0S" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/Y/T/YovoXCgm1qA7N-MPEb1h" afterPath="$PROJECT_DIR$/var/cache/dev/pools/XVELvT0IgY/Y/T/YovoXCgm1qA7N-MPEb1h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/04/0430a5dc43b075b2911e6e52dd002fc18d53c1dba751aa8f9948a446b96c4360.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/04/0430a5dc43b075b2911e6e52dd002fc18d53c1dba751aa8f9948a446b96c4360.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/04/043817ab84943f32096e83c61db1a3b2ba5bfe05956fecf33295721761199020.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/04/043817ab84943f32096e83c61db1a3b2ba5bfe05956fecf33295721761199020.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/64/641a8d6461bd643ed8b0af792ddd94f36c9ad9b2b1a92741eae300675e21a621.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/64/641a8d6461bd643ed8b0af792ddd94f36c9ad9b2b1a92741eae300675e21a621.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/65/655716d73cf75b3572b20af2c049ff5d37f7cc62a628530e4b5b45f3be4feabc.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/65/655716d73cf75b3572b20af2c049ff5d37f7cc62a628530e4b5b45f3be4feabc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/82/82092dfebd47587cd0e734ffc8a84371ed493f4089ec91bb6bcb65c0a632f501.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/82/82092dfebd47587cd0e734ffc8a84371ed493f4089ec91bb6bcb65c0a632f501.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/96/9655091d95c12ae9300758328dbc05cd716ecff79336a0f67e2a18e34a84f24d.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/96/9655091d95c12ae9300758328dbc05cd716ecff79336a0f67e2a18e34a84f24d.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/c7/c74cb640161d7e830a393847021411742907c38eeac64e205eb549acf5e0bd53.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/c7/c74cb640161d7e830a393847021411742907c38eeac64e205eb549acf5e0bd53.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/ec/ecdf6e07a4d1bae7534ee9fd89990ee50dd812798899c65b243debeb794d5807.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/ec/ecdf6e07a4d1bae7534ee9fd89990ee50dd812798899c65b243debeb794d5807.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/ed/edf23dd23e8b5dc3471f2433e1818a308363bab1d61328e7e04bbc2c5f8c0a72.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/ed/edf23dd23e8b5dc3471f2433e1818a308363bab1d61328e7e04bbc2c5f8c0a72.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/logs/dev.log" afterPath="$PROJECT_DIR$/var/logs/dev.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/logs/prod.log" afterPath="$PROJECT_DIR$/var/logs/prod.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/ancarebeca/full-calendar-bundle/Model/Event.php" afterPath="$PROJECT_DIR$/vendor/ancarebeca/full-calendar-bundle/Model/Event.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/calendar.js" afterPath="$PROJECT_DIR$/web/js/calendar.js" />
     </list>
     <ignored path="ligne_rh.iws" />
@@ -84,7 +67,7 @@
       <file leaf-file-name="LoadDataListener.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Listener/LoadDataListener.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
+            <state relative-caret-position="616">
               <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
               <folding>
                 <element signature="e#42#100#0#PHP" expanded="true" />
@@ -96,8 +79,8 @@
       <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Controller/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="28" column="58" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="58" />
+            <state relative-caret-position="550">
+              <caret line="31" column="0" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="58" />
               <folding>
                 <element signature="e#43#100#0#PHP" expanded="true" />
               </folding>
@@ -105,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calendar.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="calendar.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/calendar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+            <state relative-caret-position="334">
+              <caret line="86" column="39" selection-start-line="86" selection-start-column="39" selection-end-line="86" selection-end-column="39" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -117,31 +100,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ville.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/ville.js">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://D:/jquery-fullcalendar-integration-bootstrap-php-mysql/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="9" column="91" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="91" />
-              <folding />
+            <state relative-caret-position="528">
+              <caret line="215" column="78" selection-start-line="212" selection-start-column="2" selection-end-line="215" selection-end-column="78" />
+              <folding>
+                <marker date="1493828064000" expanded="true" signature="554:682" placeholder="SELECT `id`,... events" />
+                <marker date="1493828064000" expanded="true" signature="924:1510" placeholder="INSERT INTO `events`... " />
+                <marker date="1493828064000" expanded="true" signature="1724:2112" placeholder="UPDATE `even... " />
+                <marker date="1493828064000" expanded="true" signature="2218:2367" placeholder="DELETE from " />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CalendarEvent.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/ancarebeca/full-calendar-bundle/Event/CalendarEvent.php">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Resources/views/Accueil/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1276">
-              <caret line="59" column="7" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Event.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/ancarebeca/full-calendar-bundle/Model/Event.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="841">
-              <caret line="466" column="62" selection-start-line="466" selection-start-column="62" selection-end-line="466" selection-end-column="62" />
+            <state relative-caret-position="1396">
+              <caret line="108" column="15" selection-start-line="108" selection-start-column="15" selection-end-line="108" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -192,7 +170,6 @@
         <option value="$PROJECT_DIR$/src/MA/LrmBundle/Entity/Evenement.php" />
         <option value="$PROJECT_DIR$/src/MA/LrmBundle/Resources/config/routing/accueil/accueil.yml" />
         <option value="$PROJECT_DIR$/app/config/services.yml" />
-        <option value="$PROJECT_DIR$/src/MA/LrmBundle/Resources/views/Accueil/index.html.twig" />
         <option value="$PROJECT_DIR$/src/MA/LrmBundle/Repository/CalendarEventRepository.php" />
         <option value="$PROJECT_DIR$/src/MA/LrmBundle/Entity/CalendarEvent.php" />
         <option value="$PROJECT_DIR$/src/MA/LrmBundle/Resources/views/Client/index.html.twig" />
@@ -202,6 +179,7 @@
         <option value="$PROJECT_DIR$/src/MA/LrmBundle/Listener/LoadDataListener.php" />
         <option value="$PROJECT_DIR$/src/MA/LrmBundle/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/web/js/calendar.js" />
+        <option value="$PROJECT_DIR$/src/MA/LrmBundle/Resources/views/Accueil/index.html.twig" />
       </list>
     </option>
   </component>
@@ -245,8 +223,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -591,6 +569,40 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Accueil" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ligne_rh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ligne_rh" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MA" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LrmBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -735,16 +747,18 @@
       <workItem from="1501325906767" duration="2850000" />
       <workItem from="1501536092955" duration="3605000" />
       <workItem from="1501614355058" duration="1120000" />
-      <workItem from="1501620419687" duration="2228000" />
+      <workItem from="1501620419687" duration="2535000" />
+      <workItem from="1501623091126" duration="21000" />
+      <workItem from="1501695587096" duration="1542000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49801000" />
+    <option name="totallyTimeSpent" value="51671000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25208333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -785,13 +799,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Resources/views/Client/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="185" column="33" selection-start-line="185" selection-start-column="33" selection-end-line="185" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Resources/views/Emploi/edit.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1786">
@@ -1053,13 +1060,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Resources/views/Accueil/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="38" column="36" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Resources/views/Candidat/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="559">
@@ -1071,9 +1071,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding>
-            <element signature="e#39#71#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1084,25 +1081,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/ancarebeca/full-calendar-bundle/Event/CalendarEvent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1276">
-          <caret line="59" column="7" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/ancarebeca/full-calendar-bundle/Model/Event.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
-          <caret line="466" column="62" selection-start-line="466" selection-start-column="62" selection-end-line="466" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Listener/LoadDataListener.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
+        <state relative-caret-position="616">
           <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
           <folding>
             <element signature="e#42#100#0#PHP" expanded="true" />
@@ -1120,8 +1101,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Controller/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="28" column="58" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="58" />
+        <state relative-caret-position="550">
+          <caret line="31" column="0" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="58" />
           <folding>
             <element signature="e#43#100#0#PHP" expanded="true" />
           </folding>
@@ -1138,11 +1119,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/calendar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+        <state relative-caret-position="334">
+          <caret line="86" column="39" selection-start-line="86" selection-start-column="39" selection-end-line="86" selection-end-column="39" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/ancarebeca/full-calendar-bundle/Model/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="466" column="62" selection-start-line="466" selection-start-column="62" selection-end-line="466" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/ancarebeca/full-calendar-bundle/Event/CalendarEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="59" column="7" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/jquery-fullcalendar-integration-bootstrap-php-mysql/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="215" column="78" selection-start-line="212" selection-start-column="2" selection-end-line="215" selection-end-column="78" />
+          <folding>
+            <marker date="1493828064000" expanded="true" signature="554:682" placeholder="SELECT `id`,... events" />
+            <marker date="1493828064000" expanded="true" signature="924:1510" placeholder="INSERT INTO `events`... " />
+            <marker date="1493828064000" expanded="true" signature="1724:2112" placeholder="UPDATE `even... " />
+            <marker date="1493828064000" expanded="true" signature="2218:2367" placeholder="DELETE from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MA/LrmBundle/Resources/views/Accueil/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1396">
+          <caret line="108" column="15" selection-start-line="108" selection-start-column="15" selection-end-line="108" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>

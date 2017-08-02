@@ -23,6 +23,8 @@ class IndexController extends Controller
         {
             //$events = $calendarService->loadData();
             $events[$evenement->getId()] = $calendarService->loadData($evenement);
+            //$events = $calendarService->loadData($evenement);
+
         }
         
         $response = new JsonResponse();
