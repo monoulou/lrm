@@ -48,6 +48,66 @@
     <h5>LES CLIENTS A FACTURER:</h5>
     ...
    </div>
+
+   <div class="row">
+    <div class="col-lg-offset-8">
+     <button style="margin-bottom: -47px" class="btn  btn-default" data-toggle="modal" data-target="#myModal"><i class="fa fa-check" style="width: 100%"></i>Nouvel evenement</button>
+    </div>
+   </div>
+
+   <!-- Modal -->
+   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+     <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+       <h4 class="modal-title" id="myModalLabel">Ajouter un evenement</h4>
+      </div>
+      <div class="modal-body">
+
+       <!-- BEGIN FORM-->
+       {{ form_start(form, {'class': 'horizontal-form'}) }}
+       <div class="row" >
+        <div class="col-lg-12">
+         <div class="form-group">
+          <label class="control-label">Titre:</label>
+          {{ form_errors(form.title)}}
+          {{ form_widget(form.title) }}
+         </div>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-lg-12">
+         <div class="form-group">
+          <label class="control-label">Début:</label>
+          {{ form_errors(form.startDate)}}
+          {{ form_widget(form.startDate) }}
+         </div>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-lg-12">
+         <div class="form-group">
+          <label class="control-label">Fin:</label>
+          {{ form_errors(form.endDate)}}
+          {{ form_widget(form.endDate) }}
+         </div>
+        </div>
+       </div>
+
+       <div class="row" style="padding: 5px">
+        <div class="col-lg-12">
+         <button type="submit" style="width: 100%" class="btn  btn-default"><i class="fa fa-check" style="width: 100%"></i>Enregistrer</button>
+        </div>
+       </div>
+       {{ form_end(form) }}
+       <!-- END FORM-->
+
+      </div>
+     </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+   </div><!-- /.modal -->
+
    <div class="row" id="calendar">
         {% include '@FullCalendar/Calendar/calendar.html.twig' %}
    </div>

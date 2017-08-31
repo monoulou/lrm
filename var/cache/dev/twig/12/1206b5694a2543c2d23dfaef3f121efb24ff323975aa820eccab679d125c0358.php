@@ -15,11 +15,11 @@ class __TwigTemplate_deb36e6e734d895424648ac854feb18b51c4f47e0c52918483270df86ba
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8f0cf701d651bc0c0b674a928be1a37f77cddb80a0ab478cab0d36b0c44d3f97 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_8f0cf701d651bc0c0b674a928be1a37f77cddb80a0ab478cab0d36b0c44d3f97->enter($__internal_8f0cf701d651bc0c0b674a928be1a37f77cddb80a0ab478cab0d36b0c44d3f97_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::sidebar.html.twig"));
+        $__internal_7b8a96ef10990c75b6c4a53d26b06872d03e889c5b56e4dcae3aa6f291b36258 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_7b8a96ef10990c75b6c4a53d26b06872d03e889c5b56e4dcae3aa6f291b36258->enter($__internal_7b8a96ef10990c75b6c4a53d26b06872d03e889c5b56e4dcae3aa6f291b36258_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::sidebar.html.twig"));
 
-        $__internal_039a503ecc99552e40c25ba6aa27c8f30cf6d753efc9acd52734b708da75dfc9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_039a503ecc99552e40c25ba6aa27c8f30cf6d753efc9acd52734b708da75dfc9->enter($__internal_039a503ecc99552e40c25ba6aa27c8f30cf6d753efc9acd52734b708da75dfc9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::sidebar.html.twig"));
+        $__internal_c6003a121483afbed4bbce51482440fb3ac9da9d77cbf42ecd4ced017f0fb057 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c6003a121483afbed4bbce51482440fb3ac9da9d77cbf42ecd4ced017f0fb057->enter($__internal_c6003a121483afbed4bbce51482440fb3ac9da9d77cbf42ecd4ced017f0fb057_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::sidebar.html.twig"));
 
         // line 1
         echo "<link href=\"";
@@ -35,69 +35,9 @@ class __TwigTemplate_deb36e6e734d895424648ac854feb18b51c4f47e0c52918483270df86ba
         echo "
 
 
-    <h5>PREVOIR UN ENTRETIEN</h5>
-    <!-- BEGIN FORM-->
-    ";
-        // line 55
-        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start', array("class" => "horizontal-form"));
+   ";
+        // line 91
         echo "
-    <div class=\"row\" >
-        <div class=\"col-lg-12\">
-            <div class=\"form-group\">
-                <label class=\"control-label\">Titre:</label>
-                ";
-        // line 60
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "title", array()), 'errors');
-        echo "
-                ";
-        // line 61
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "title", array()), 'widget');
-        echo "
-            </div>
-        </div>
-    </div>
-    <div class=\"row\">
-        <div class=\"col-lg-12\">
-            <div class=\"form-group\">
-                <label class=\"control-label\">Début:</label>
-                ";
-        // line 69
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "startDate", array()), 'errors');
-        echo "
-                ";
-        // line 70
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "startDate", array()), 'widget');
-        echo "
-            </div>
-        </div>
-    </div>
-    <div class=\"row\">
-        <div class=\"col-lg-12\">
-            <div class=\"form-group\">
-                <label class=\"control-label\">Fin:</label>
-                ";
-        // line 78
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "endDate", array()), 'errors');
-        echo "
-                ";
-        // line 79
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "endDate", array()), 'widget');
-        echo "
-            </div>
-        </div>
-    </div>
-
-    <div class=\"row\" style=\"padding: 5px\">
-        <div class=\"col-lg-12\">
-            <button type=\"submit\" style=\"width: 100%\" class=\"btn  btn-default\"><i class=\"fa fa-check\" style=\"width: 100%\"></i>Enregistrer</button>
-        </div>
-    </div>
-    ";
-        // line 89
-        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
-        echo "
-    <!-- END FORM-->
-
     <div class=\"row\" style=\"margin-top: 550px; margin-left: 5px\">
         <i class=\"material-icons\">keyboard_tab</i><h5 style=\"float: right; margin-right: 55px;\">ACCES RAPIDE</h5>
     </div>
@@ -134,10 +74,10 @@ class __TwigTemplate_deb36e6e734d895424648ac854feb18b51c4f47e0c52918483270df86ba
 
 ";
         
-        $__internal_8f0cf701d651bc0c0b674a928be1a37f77cddb80a0ab478cab0d36b0c44d3f97->leave($__internal_8f0cf701d651bc0c0b674a928be1a37f77cddb80a0ab478cab0d36b0c44d3f97_prof);
+        $__internal_7b8a96ef10990c75b6c4a53d26b06872d03e889c5b56e4dcae3aa6f291b36258->leave($__internal_7b8a96ef10990c75b6c4a53d26b06872d03e889c5b56e4dcae3aa6f291b36258_prof);
 
         
-        $__internal_039a503ecc99552e40c25ba6aa27c8f30cf6d753efc9acd52734b708da75dfc9->leave($__internal_039a503ecc99552e40c25ba6aa27c8f30cf6d753efc9acd52734b708da75dfc9_prof);
+        $__internal_c6003a121483afbed4bbce51482440fb3ac9da9d77cbf42ecd4ced017f0fb057->leave($__internal_c6003a121483afbed4bbce51482440fb3ac9da9d77cbf42ecd4ced017f0fb057_prof);
 
     }
 
@@ -153,7 +93,7 @@ class __TwigTemplate_deb36e6e734d895424648ac854feb18b51c4f47e0c52918483270df86ba
 
     public function getDebugInfo()
     {
-        return array (  124 => 107,  116 => 102,  108 => 97,  97 => 89,  84 => 79,  80 => 78,  69 => 70,  65 => 69,  54 => 61,  50 => 60,  42 => 55,  35 => 50,  31 => 18,  25 => 1,);
+        return array (  64 => 107,  56 => 102,  48 => 97,  40 => 91,  35 => 50,  31 => 18,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -218,7 +158,7 @@ class __TwigTemplate_deb36e6e734d895424648ac854feb18b51c4f47e0c52918483270df86ba
 
 
 
-    <h5>PREVOIR UN ENTRETIEN</h5>
+   {# <h5>PREVOIR UN ENTRETIEN</h5>
     <!-- BEGIN FORM-->
     {{ form_start(form, {'class': 'horizontal-form'}) }}
     <div class=\"row\" >
@@ -255,7 +195,7 @@ class __TwigTemplate_deb36e6e734d895424648ac854feb18b51c4f47e0c52918483270df86ba
         </div>
     </div>
     {{ form_end(form) }}
-    <!-- END FORM-->
+    <!-- END FORM-->#}
 
     <div class=\"row\" style=\"margin-top: 550px; margin-left: 5px\">
         <i class=\"material-icons\">keyboard_tab</i><h5 style=\"float: right; margin-right: 55px;\">ACCES RAPIDE</h5>
