@@ -70,6 +70,11 @@ $(document).ready(function(){
         });
 
     })
+
+    $('.dateTimePicker').datetimepicker({
+        //format: 'dd-mm-yyyy hh:ii',
+        language: "fr"
+    });
     
 });
 

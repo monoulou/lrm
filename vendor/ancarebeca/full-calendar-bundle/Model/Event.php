@@ -20,9 +20,9 @@ class Event extends FullCalendarEvent
     protected $title;
     /**
      * @var boolean
-     * @ORM\Column(type="boolean", name="allDay")
+     * @ORM\Column(type="boolean", name="allDay", nullable = true)
      */
-    protected $allDay = true;
+    protected $allDay;
     /**
      * @var \DateTime
      * @ORM\Column(type="datetime", name="event_start")
@@ -35,67 +35,67 @@ class Event extends FullCalendarEvent
     protected $endDate;
     /**
      * @var string
-     * @ORM\Column(type="string", length=255, name="url")
+     * @ORM\Column(type="string", length=255, name="url", nullable = true)
      */
     protected $url;
     /**
      * @var string
-     * @ORM\Column(type="string", length=255, name="className")
+     * @ORM\Column(type="string", length=255, name="className", nullable = true)
      */
     protected $className;
     /**
      * @var boolean
-     * @ORM\Column(type="boolean", name="editable")
+     * @ORM\Column(type="boolean", name="editable", nullable = true)
      */
-    protected $editable = false;
+    protected $editable = true;
     /**
      * @var boolean
-     * @ORM\Column(type="boolean", name="strartEditable")
+     * @ORM\Column(type="boolean", name="strartEditable", nullable = true)
      */
-    protected $startEditable = false;
+    protected $startEditable = true;
     /**
      * @var boolean
-     * @ORM\Column(type="boolean", name="durationEditable")
+     * @ORM\Column(type="boolean", name="durationEditable", nullable = true)
      */
-    protected $durationEditable = false;
+    protected $durationEditable = true;
     /**
      * @var string
-     * @ORM\Column(type="string", length=255, name="rendering")
+     * @ORM\Column(type="string", length=255, name="rendering", nullable = true)
      */
     protected $rendering;
     /**
      * @var boolean
-     * @ORM\Column(type="boolean", name="overlap")
+     * @ORM\Column(type="boolean", name="overlap", nullable = true)
      */
     protected $overlap = true;
     /**
      * @var integer
-     * @ORM\Column(type="integer", name="constraint")
+     * @ORM\Column(type="integer", name="event_constraint", nullable = true)
      */
     protected $constraint;
     /**
      * @var string
-     * @ORM\Column(type="string", length=255, name="event_source")
+     * @ORM\Column(type="string", length=255, name="event_source", nullable = true)
      */
     protected $source;
     /**
      * @var string
-     * @ORM\Column(type="string", length=255, name="color")
+     * @ORM\Column(type="string", length=255, name="color", nullable = true)
      */
     protected $color;
     /**
      * @var string
-     * @ORM\Column(type="string", length=255, name="backgroundColor")
+     * @ORM\Column(type="string", length=255, name="backgroundColor", nullable = true)
      */
     protected $backgroundColor;
     /**
      * @var string
-     * @ORM\Column(type="string", length=255, name="textColor")
+     * @ORM\Column(type="string", length=255, name="textColor", nullable = true)
      */
     protected $textColor;
     /**
      * @var array
-     * @ORM\Column(type="array", name="customFields")
+     * @ORM\Column(type="array", name="customFields", nullable = true)
      */
     protected $customFields = [];
 
@@ -103,12 +103,12 @@ class Event extends FullCalendarEvent
      * @param string $title
      * @param \DateTime $start
      */
-    public function __construct($title, \DateTime $start)
+   /* public function __construct($title, \DateTime $start)
     {
         parent::__construct($title, $start);
         $this->title = $title;
         $this->startDate = $start;
-    }
+    }*/
 
     /**
      * @return int
@@ -434,18 +434,22 @@ class Event extends FullCalendarEvent
     public function toArray()
     {
         $event = [];
-
+        /*if (null !== $this->getId()) {
+            $event['id'] = $this->getId();
+        }*/
         $event['title']             = $this->getTitle();
-        $event['start']             = $this->getStartDate()->format("Y-m-d");
         $event['allDay']            = $this->isAllDay();
+        $event['start']             = $this->getStartDate()->format('Y-m-d\TH:i:s');
+        if (null !== $this->getEndDate()) {
+            $event['end'] = $this->getEndDate()->format('Y-m-d\TH:i:s');
+        }
+
         $event['editable']          = $this->isEditable();
         $event['startEditable']     = $this->isStartEditable();
         $event['durationEditable']  = $this->isDurationEditable();
         $event['overlap']           = $this->isOverlap();
 
-        if (null !== $this->getId()) {
-            $event['id'] = $this->getId();
-        }
+
 
         if (null !== $this->getUrl()) {
             $event['url'] = $this->getUrl();
@@ -463,9 +467,6 @@ class Event extends FullCalendarEvent
             $event['className'] = $this->getClassName();
         }
 
-        if (null !== $this->getEndDate()) {
-            $event['end'] = $this->getEndDate()->format("Y-m-d");
-        }
 
         if (null !== $this->getRendering()) {
             $event['rendering'] = $this->getRendering();
@@ -483,9 +484,13 @@ class Event extends FullCalendarEvent
             $event['color'] = $this->getColor();
         }
 
-        foreach ($this->getCustomFields() as $field => $value) {
-            $event[$field] = $value;
+        if (!empty($this->getCustomFields()))
+        {
+            foreach ($this->getCustomFields() as $field => $value) {
+                $event[$field] = $value;
+            }
         }
+
 
         return $event;
     }

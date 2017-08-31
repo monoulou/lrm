@@ -23,29 +23,29 @@ class __TwigTemplate_40f3eb3f8494005fceb6e440809e56d81ec4d3e438d274daeb57884d2ff
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5066e89bef4bedb7057416a8d7350408182ade5aaaf40677209e1242ba4326d7 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_5066e89bef4bedb7057416a8d7350408182ade5aaaf40677209e1242ba4326d7->enter($__internal_5066e89bef4bedb7057416a8d7350408182ade5aaaf40677209e1242ba4326d7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MALrmBundle:Accueil:index.html.twig"));
+        $__internal_f2b4a0c696eaba6e3baaa34f5fd5394d80512ce3b69697d37ac0d2796c12e8db = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_f2b4a0c696eaba6e3baaa34f5fd5394d80512ce3b69697d37ac0d2796c12e8db->enter($__internal_f2b4a0c696eaba6e3baaa34f5fd5394d80512ce3b69697d37ac0d2796c12e8db_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MALrmBundle:Accueil:index.html.twig"));
 
-        $__internal_95a120aee6b396c689116987f24f5962febc18251ffedc51081f59bd7013783f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_95a120aee6b396c689116987f24f5962febc18251ffedc51081f59bd7013783f->enter($__internal_95a120aee6b396c689116987f24f5962febc18251ffedc51081f59bd7013783f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MALrmBundle:Accueil:index.html.twig"));
+        $__internal_2d19e613c73555cf57df01b722875bcf503c708a459cb6ff066f436ca9afaedf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2d19e613c73555cf57df01b722875bcf503c708a459cb6ff066f436ca9afaedf->enter($__internal_2d19e613c73555cf57df01b722875bcf503c708a459cb6ff066f436ca9afaedf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MALrmBundle:Accueil:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_5066e89bef4bedb7057416a8d7350408182ade5aaaf40677209e1242ba4326d7->leave($__internal_5066e89bef4bedb7057416a8d7350408182ade5aaaf40677209e1242ba4326d7_prof);
+        $__internal_f2b4a0c696eaba6e3baaa34f5fd5394d80512ce3b69697d37ac0d2796c12e8db->leave($__internal_f2b4a0c696eaba6e3baaa34f5fd5394d80512ce3b69697d37ac0d2796c12e8db_prof);
 
         
-        $__internal_95a120aee6b396c689116987f24f5962febc18251ffedc51081f59bd7013783f->leave($__internal_95a120aee6b396c689116987f24f5962febc18251ffedc51081f59bd7013783f_prof);
+        $__internal_2d19e613c73555cf57df01b722875bcf503c708a459cb6ff066f436ca9afaedf->leave($__internal_2d19e613c73555cf57df01b722875bcf503c708a459cb6ff066f436ca9afaedf_prof);
 
     }
 
     // line 3
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_63fae1ca87f060be8f2054f16fb89bd8b167d22e8a30d2cd22b6ed274a30a81e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_63fae1ca87f060be8f2054f16fb89bd8b167d22e8a30d2cd22b6ed274a30a81e->enter($__internal_63fae1ca87f060be8f2054f16fb89bd8b167d22e8a30d2cd22b6ed274a30a81e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_9277c1aee31ce7bcc2206e330686a8660d2447b24cd5f7b163d71d8b8a6920e8 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_9277c1aee31ce7bcc2206e330686a8660d2447b24cd5f7b163d71d8b8a6920e8->enter($__internal_9277c1aee31ce7bcc2206e330686a8660d2447b24cd5f7b163d71d8b8a6920e8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        $__internal_a7f01e5a62f455ef0de18802f05a913517f3bd82b99875f9a9a74af6891ad056 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a7f01e5a62f455ef0de18802f05a913517f3bd82b99875f9a9a74af6891ad056->enter($__internal_a7f01e5a62f455ef0de18802f05a913517f3bd82b99875f9a9a74af6891ad056_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_a6f738f60b81479fa23331ffd810e90f9f85df778282887e64bb8df56b5f2b6c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a6f738f60b81479fa23331ffd810e90f9f85df778282887e64bb8df56b5f2b6c->enter($__internal_a6f738f60b81479fa23331ffd810e90f9f85df778282887e64bb8df56b5f2b6c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
         echo "  <link href=\"";
@@ -57,21 +57,21 @@ class __TwigTemplate_40f3eb3f8494005fceb6e440809e56d81ec4d3e438d274daeb57884d2ff
         echo "\"  rel=\"stylesheet\" />
  ";
         
-        $__internal_a7f01e5a62f455ef0de18802f05a913517f3bd82b99875f9a9a74af6891ad056->leave($__internal_a7f01e5a62f455ef0de18802f05a913517f3bd82b99875f9a9a74af6891ad056_prof);
+        $__internal_a6f738f60b81479fa23331ffd810e90f9f85df778282887e64bb8df56b5f2b6c->leave($__internal_a6f738f60b81479fa23331ffd810e90f9f85df778282887e64bb8df56b5f2b6c_prof);
 
         
-        $__internal_63fae1ca87f060be8f2054f16fb89bd8b167d22e8a30d2cd22b6ed274a30a81e->leave($__internal_63fae1ca87f060be8f2054f16fb89bd8b167d22e8a30d2cd22b6ed274a30a81e_prof);
+        $__internal_9277c1aee31ce7bcc2206e330686a8660d2447b24cd5f7b163d71d8b8a6920e8->leave($__internal_9277c1aee31ce7bcc2206e330686a8660d2447b24cd5f7b163d71d8b8a6920e8_prof);
 
     }
 
     // line 8
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_dff5d2e25f532976419c3a8fdca00f1126538ca32c5eeab2fa47c26f89431cab = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_dff5d2e25f532976419c3a8fdca00f1126538ca32c5eeab2fa47c26f89431cab->enter($__internal_dff5d2e25f532976419c3a8fdca00f1126538ca32c5eeab2fa47c26f89431cab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_089263ba7d48d47781f4c9fae9958072edd7700c3083b036c63324503765ea63 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_089263ba7d48d47781f4c9fae9958072edd7700c3083b036c63324503765ea63->enter($__internal_089263ba7d48d47781f4c9fae9958072edd7700c3083b036c63324503765ea63_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_c577a4abad50bf997caeee4528db7044d364fdfcc4f55da714c7983f28594646 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c577a4abad50bf997caeee4528db7044d364fdfcc4f55da714c7983f28594646->enter($__internal_c577a4abad50bf997caeee4528db7044d364fdfcc4f55da714c7983f28594646_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_e1439364779d1a48599024b43f8433d2ef040dfd543b87c676cfb7995d40ea54 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e1439364779d1a48599024b43f8433d2ef040dfd543b87c676cfb7995d40ea54->enter($__internal_e1439364779d1a48599024b43f8433d2ef040dfd543b87c676cfb7995d40ea54_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 9
         echo " ";
@@ -83,68 +83,66 @@ class __TwigTemplate_40f3eb3f8494005fceb6e440809e56d81ec4d3e438d274daeb57884d2ff
         // line 11
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/fullcalendar/js/fullcalendar/fullcalendar.min.js"), "html", null, true);
         echo "\"></script>
+
  ";
-        // line 13
+        // line 14
         echo " <script type=\"text/javascript\" src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/fullcalendar/js/fullcalendar/locale/fr.js"), "html", null, true);
         echo "\"></script>
  <script type=\"text/javascript\" src=\"";
-        // line 14
+        // line 15
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/calendar.js"), "html", null, true);
+        echo "\" ></script>
+ <script type=\"text/javascript\" src=\"";
+        // line 16
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/datepicker.js"), "html", null, true);
         echo "\" ></script>
 
 
 
- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-21769945-4', 'auto');
-  ga('send', 'pageview');
-
- </script>
 ";
         
-        $__internal_c577a4abad50bf997caeee4528db7044d364fdfcc4f55da714c7983f28594646->leave($__internal_c577a4abad50bf997caeee4528db7044d364fdfcc4f55da714c7983f28594646_prof);
+        $__internal_e1439364779d1a48599024b43f8433d2ef040dfd543b87c676cfb7995d40ea54->leave($__internal_e1439364779d1a48599024b43f8433d2ef040dfd543b87c676cfb7995d40ea54_prof);
 
         
-        $__internal_dff5d2e25f532976419c3a8fdca00f1126538ca32c5eeab2fa47c26f89431cab->leave($__internal_dff5d2e25f532976419c3a8fdca00f1126538ca32c5eeab2fa47c26f89431cab_prof);
+        $__internal_089263ba7d48d47781f4c9fae9958072edd7700c3083b036c63324503765ea63->leave($__internal_089263ba7d48d47781f4c9fae9958072edd7700c3083b036c63324503765ea63_prof);
 
     }
 
-    // line 30
+    // line 23
     public function block_body($context, array $blocks = array())
     {
-        $__internal_9a937b68b6ae39a99c340f0222eca899252fbb5094b971036c8cba3d91589c54 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_9a937b68b6ae39a99c340f0222eca899252fbb5094b971036c8cba3d91589c54->enter($__internal_9a937b68b6ae39a99c340f0222eca899252fbb5094b971036c8cba3d91589c54_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_578a34a476b08cb5805631eeca2d4ddcadf825f72636fab851177bdbb75ef980 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_578a34a476b08cb5805631eeca2d4ddcadf825f72636fab851177bdbb75ef980->enter($__internal_578a34a476b08cb5805631eeca2d4ddcadf825f72636fab851177bdbb75ef980_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_8743d2ee91795d5d2c399281b766618b1a88b6bad9c6c48bc69d6b0c492676fe = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8743d2ee91795d5d2c399281b766618b1a88b6bad9c6c48bc69d6b0c492676fe->enter($__internal_8743d2ee91795d5d2c399281b766618b1a88b6bad9c6c48bc69d6b0c492676fe_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_f021bd6870d9c43de8cb1dc03dcca925e2cff2c07a73cfe138ec510c420081db = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f021bd6870d9c43de8cb1dc03dcca925e2cff2c07a73cfe138ec510c420081db->enter($__internal_f021bd6870d9c43de8cb1dc03dcca925e2cff2c07a73cfe138ec510c420081db_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 31
+        // line 24
         echo "
  <div class=\"container-fluid\" id=\"header_container\">
   <!-- START CONNECT BAR-->
   ";
-        // line 34
-        $this->loadTemplate("connexion.html.twig", "MALrmBundle:Accueil:index.html.twig", 34)->display($context);
-        // line 35
+        // line 27
+        $this->loadTemplate("connexion.html.twig", "MALrmBundle:Accueil:index.html.twig", 27)->display($context);
+        // line 28
         echo "  <!-- END CONNECT BAR -->
  <div class=\"container-fluid\" id=\"main_container\">
   <!-- START TOP NAVBAR-->
   ";
-        // line 38
-        $this->loadTemplate("navbar.html.twig", "MALrmBundle:Accueil:index.html.twig", 38)->display($context);
-        // line 39
+        // line 31
+        $this->loadTemplate("navbar.html.twig", "MALrmBundle:Accueil:index.html.twig", 31)->display($context);
+        // line 32
         echo "  <!-- END TOP NAVBAR -->
   <!-- START SIDEBAR-->
   ";
-        // line 41
-        $this->loadTemplate("sidebar.html.twig", "MALrmBundle:Accueil:index.html.twig", 41)->display($context);
-        // line 42
+        // line 34
+        $this->loadTemplate("sidebar.html.twig", "MALrmBundle:Accueil:index.html.twig", 34)->display($context);
+        // line 35
         echo "  <!-- END SIDEBAR-->
+
+
 
   <div class=\"col-lg-9\" style=\"margin-left: 10px;\">
    <div class=\"row\">
@@ -160,79 +158,22 @@ class __TwigTemplate_40f3eb3f8494005fceb6e440809e56d81ec4d3e438d274daeb57884d2ff
    </div>
    <div class=\"row\" id=\"calendar\">
         ";
-        // line 57
-        $this->loadTemplate("@FullCalendar/Calendar/calendar.html.twig", "MALrmBundle:Accueil:index.html.twig", 57)->display($context);
-        // line 58
+        // line 52
+        $this->loadTemplate("@FullCalendar/Calendar/calendar.html.twig", "MALrmBundle:Accueil:index.html.twig", 52)->display($context);
+        // line 53
         echo "   </div>
-   <!-- Modal -->
-   <div id=\"createEventModal\" class=\"modal fade\" role=\"dialog\">
-    <div class=\"modal-dialog\">
 
-     <!-- Modal content-->
-     <div class=\"modal-content\">
-      <div class=\"modal-header\">
-       <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
-       <h4 class=\"modal-title\">Add Event</h4>
-      </div>
-      <div class=\"modal-body\">
-       <div class=\"control-group\">
-        <label class=\"control-label\" for=\"inputPatient\">Event:</label>
-        <div class=\"field desc\">
-         <input class=\"form-control\" id=\"title\" name=\"title\" placeholder=\"Event\" type=\"text\" value=\"\">
-        </div>
-       </div>
-
-       <input type=\"hidden\" id=\"startTime\"/>
-       <input type=\"hidden\" id=\"endTime\"/>
-
-
-
-       <div class=\"control-group\">
-        <label class=\"control-label\" for=\"when\">When:</label>
-        <div class=\"controls controls-row\" id=\"when\" style=\"margin-top:5px;\">
-        </div>
-       </div>
-
-      </div>
-      <div class=\"modal-footer\">
-       <button class=\"btn\" data-dismiss=\"modal\" aria-hidden=\"true\">Cancel</button>
-       <button type=\"submit\" class=\"btn btn-primary\" id=\"submitButton\">Save</button>
-      </div>
-     </div>
-
-    </div>
-   </div>
-
-
-   <div id=\"calendarModal\" class=\"modal fade\">
-    <div class=\"modal-dialog\">
-     <div class=\"modal-content\">
-      <div class=\"modal-header\">
-       <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
-       <h4 class=\"modal-title\">Event Details</h4>
-      </div>
-      <div id=\"modalBody\" class=\"modal-body\">
-       <h4 id=\"modalTitle\" class=\"modal-title\"></h4>
-       <div id=\"modalWhen\" style=\"margin-top:5px;\"></div>
-      </div>
-      <input type=\"hidden\" id=\"eventID\"/>
-      <div class=\"modal-footer\">
-       <button class=\"btn\" data-dismiss=\"modal\" aria-hidden=\"true\">Cancel</button>
-       <button type=\"submit\" class=\"btn btn-danger\" id=\"deleteButton\">Delete</button>
-      </div>
-     </div>
-    </div>
-   </div>
-   <!--Modal-->
   </div>
 
-</div>
+ </div>
+
+ </div>
 ";
         
-        $__internal_8743d2ee91795d5d2c399281b766618b1a88b6bad9c6c48bc69d6b0c492676fe->leave($__internal_8743d2ee91795d5d2c399281b766618b1a88b6bad9c6c48bc69d6b0c492676fe_prof);
+        $__internal_f021bd6870d9c43de8cb1dc03dcca925e2cff2c07a73cfe138ec510c420081db->leave($__internal_f021bd6870d9c43de8cb1dc03dcca925e2cff2c07a73cfe138ec510c420081db_prof);
 
         
-        $__internal_9a937b68b6ae39a99c340f0222eca899252fbb5094b971036c8cba3d91589c54->leave($__internal_9a937b68b6ae39a99c340f0222eca899252fbb5094b971036c8cba3d91589c54_prof);
+        $__internal_578a34a476b08cb5805631eeca2d4ddcadf825f72636fab851177bdbb75ef980->leave($__internal_578a34a476b08cb5805631eeca2d4ddcadf825f72636fab851177bdbb75ef980_prof);
 
     }
 
@@ -248,7 +189,7 @@ class __TwigTemplate_40f3eb3f8494005fceb6e440809e56d81ec4d3e438d274daeb57884d2ff
 
     public function getDebugInfo()
     {
-        return array (  166 => 58,  164 => 57,  147 => 42,  145 => 41,  141 => 39,  139 => 38,  134 => 35,  132 => 34,  127 => 31,  118 => 30,  93 => 14,  88 => 13,  84 => 11,  79 => 10,  77 => 9,  68 => 8,  56 => 5,  51 => 4,  42 => 3,  11 => 1,);
+        return array (  164 => 53,  162 => 52,  143 => 35,  141 => 34,  137 => 32,  135 => 31,  130 => 28,  128 => 27,  123 => 24,  114 => 23,  98 => 16,  94 => 15,  89 => 14,  84 => 11,  79 => 10,  77 => 9,  68 => 8,  56 => 5,  51 => 4,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -272,22 +213,15 @@ class __TwigTemplate_40f3eb3f8494005fceb6e440809e56d81ec4d3e438d274daeb57884d2ff
  {#<script type=\"text/javascript\" src=\"{{ asset('bundles/fullcalendar/js/fullcalendar/lib/jquery.min.js') }}\"></script>#}
  <script type=\"text/javascript\" src=\"{{ asset('bundles/fullcalendar/js/fullcalendar/lib/moment.min.js') }}\"></script>
  <script type=\"text/javascript\" src=\"{{ asset('bundles/fullcalendar/js/fullcalendar/fullcalendar.min.js') }}\"></script>
+
  {#<script type=\"text/javascript\" src=\"{{ asset('bundles/fullcalendar/js/fullcalendar/fullcalendar.default-settings.js') }}\"></script>#}
  <script type=\"text/javascript\" src=\"{{ asset('bundles/fullcalendar/js/fullcalendar/locale/fr.js') }}\"></script>
  <script type=\"text/javascript\" src=\"{{ asset('js/calendar.js') }}\" ></script>
+ <script type=\"text/javascript\" src=\"{{ asset('js/datepicker.js') }}\" ></script>
 
 
 
- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-21769945-4', 'auto');
-  ga('send', 'pageview');
-
- </script>
 {% endblock %}
 
 {% block body %}
@@ -304,6 +238,8 @@ class __TwigTemplate_40f3eb3f8494005fceb6e440809e56d81ec4d3e438d274daeb57884d2ff
   {% include 'sidebar.html.twig' %}
   <!-- END SIDEBAR-->
 
+
+
   <div class=\"col-lg-9\" style=\"margin-left: 10px;\">
    <div class=\"row\">
     <h3>TABLEAU DE BORD</h3><hr style=\"border: 1px solid darkgray;\">
@@ -319,69 +255,12 @@ class __TwigTemplate_40f3eb3f8494005fceb6e440809e56d81ec4d3e438d274daeb57884d2ff
    <div class=\"row\" id=\"calendar\">
         {% include '@FullCalendar/Calendar/calendar.html.twig' %}
    </div>
-   <!-- Modal -->
-   <div id=\"createEventModal\" class=\"modal fade\" role=\"dialog\">
-    <div class=\"modal-dialog\">
 
-     <!-- Modal content-->
-     <div class=\"modal-content\">
-      <div class=\"modal-header\">
-       <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
-       <h4 class=\"modal-title\">Add Event</h4>
-      </div>
-      <div class=\"modal-body\">
-       <div class=\"control-group\">
-        <label class=\"control-label\" for=\"inputPatient\">Event:</label>
-        <div class=\"field desc\">
-         <input class=\"form-control\" id=\"title\" name=\"title\" placeholder=\"Event\" type=\"text\" value=\"\">
-        </div>
-       </div>
-
-       <input type=\"hidden\" id=\"startTime\"/>
-       <input type=\"hidden\" id=\"endTime\"/>
-
-
-
-       <div class=\"control-group\">
-        <label class=\"control-label\" for=\"when\">When:</label>
-        <div class=\"controls controls-row\" id=\"when\" style=\"margin-top:5px;\">
-        </div>
-       </div>
-
-      </div>
-      <div class=\"modal-footer\">
-       <button class=\"btn\" data-dismiss=\"modal\" aria-hidden=\"true\">Cancel</button>
-       <button type=\"submit\" class=\"btn btn-primary\" id=\"submitButton\">Save</button>
-      </div>
-     </div>
-
-    </div>
-   </div>
-
-
-   <div id=\"calendarModal\" class=\"modal fade\">
-    <div class=\"modal-dialog\">
-     <div class=\"modal-content\">
-      <div class=\"modal-header\">
-       <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
-       <h4 class=\"modal-title\">Event Details</h4>
-      </div>
-      <div id=\"modalBody\" class=\"modal-body\">
-       <h4 id=\"modalTitle\" class=\"modal-title\"></h4>
-       <div id=\"modalWhen\" style=\"margin-top:5px;\"></div>
-      </div>
-      <input type=\"hidden\" id=\"eventID\"/>
-      <div class=\"modal-footer\">
-       <button class=\"btn\" data-dismiss=\"modal\" aria-hidden=\"true\">Cancel</button>
-       <button type=\"submit\" class=\"btn btn-danger\" id=\"deleteButton\">Delete</button>
-      </div>
-     </div>
-    </div>
-   </div>
-   <!--Modal-->
   </div>
 
-</div>
+ </div>
+
+ </div>
 {% endblock %}", "MALrmBundle:Accueil:index.html.twig", "C:\\wamp64\\www\\ligne_rh\\src\\MA\\LrmBundle/Resources/views/Accueil/index.html.twig");
     }
 }
