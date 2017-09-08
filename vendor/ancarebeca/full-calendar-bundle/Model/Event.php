@@ -15,7 +15,7 @@ class Event extends FullCalendarEvent
     protected $id;
     /**
      * @var string
-     * @ORM\Column(type="string", length=255, name="title")
+     * @ORM\Column(type="string", length=255, name="title",  nullable = true)
      */
     protected $title;
     /**
@@ -434,16 +434,20 @@ class Event extends FullCalendarEvent
     public function toArray()
     {
         $event = [];
-        /*if (null !== $this->getId()) {
+        if (null !== $this->getId()) {
             $event['id'] = $this->getId();
-        }*/
+        }
         $event['title']             = $this->getTitle();
         $event['allDay']            = $this->isAllDay();
         $event['start']             = $this->getStartDate()->format('Y-m-d\TH:i:s');
         if (null !== $this->getEndDate()) {
             $event['end'] = $this->getEndDate()->format('Y-m-d\TH:i:s');
         }
+        $event['chargeRecrutement'] = $this->getChargeRecrutement();
 
+        /*if (null !== $this->getChargeRecrutement()) {
+            $event['chargeRecrutement'] = $this->getChargeRecrutement();
+        }*/
         $event['editable']          = $this->isEditable();
         $event['startEditable']     = $this->isStartEditable();
         $event['durationEditable']  = $this->isDurationEditable();

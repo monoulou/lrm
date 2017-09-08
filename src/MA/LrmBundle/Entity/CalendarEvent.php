@@ -4,6 +4,7 @@ namespace MA\LrmBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use AncaRebeca\FullCalendarBundle\Model\Event;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * CalendarEvent
@@ -21,5 +22,100 @@ class CalendarEvent extends Event
      */
     protected $id;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="MA\UserBundle\Entity\User", cascade={"persist"})
+     * @ORM\JoinColumn(name="user_id", nullable=true)
+     * @Assert\NotBlank()
+     */
+    private $chargeRecrutement;
 
+
+
+    /**
+     * Get allDay
+     *
+     * @return boolean
+     */
+    public function getAllDay()
+    {
+        return $this->allDay;
+    }
+
+    /**
+     * Get editable
+     *
+     * @return boolean
+     */
+    public function getEditable()
+    {
+        return $this->editable;
+    }
+
+    /**
+     * Get startEditable
+     *
+     * @return boolean
+     */
+    public function getStartEditable()
+    {
+        return $this->startEditable;
+    }
+
+    /**
+     * Get durationEditable
+     *
+     * @return boolean
+     */
+    public function getDurationEditable()
+    {
+        return $this->durationEditable;
+    }
+
+    /**
+     * Get overlap
+     *
+     * @return boolean
+     */
+    public function getOverlap()
+    {
+        return $this->overlap;
+    }
+
+    /**
+     * Set customFields
+     *
+     * @param array $customFields
+     *
+     * @return CalendarEvent
+     */
+    public function setCustomFields($customFields)
+    {
+        $this->customFields = $customFields;
+
+        return $this;
+    }
+
+    /**
+     * Set chargeRecrutement
+     *
+     * @param \MA\UserBundle\Entity\User $chargeRecrutement
+     *
+     * @return CalendarEvent
+     */
+    public function setChargeRecrutement(\MA\UserBundle\Entity\User $chargeRecrutement = null)
+    {
+        $this->chargeRecrutement = $chargeRecrutement;
+
+        return $this;
+    }
+
+    /**
+     * Get chargeRecrutement
+     *
+     * @return \MA\UserBundle\Entity\User
+     */
+    public function getChargeRecrutement()
+    {
+        return $this->chargeRecrutement;
+    }
 }

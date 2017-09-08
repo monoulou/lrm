@@ -50,12 +50,26 @@
    </div>
 
    <div class="row">
-    <div class="col-lg-offset-8">
-     <button style="margin-bottom: -47px" class="btn  btn-default" data-toggle="modal" data-target="#myModal"><i class="fa fa-check" style="width: 100%"></i>Nouvel evenement</button>
+    <div class="col-lg-3">
+     <!-- BEGIN FORM-->
+     {{ form_start(userForm, {'class': 'horizontal-form'}) }}
+      <div class="form-group" style="margin-left: 100px; margin-bottom: -50px">
+       <label class="control-label"></label>
+       {{ form_errors(userForm.chargeRecrutement)}}
+       {{ form_widget(userForm.chargeRecrutement) }}
+      </div>
+     {{ form_end(userForm) }}
+     <!-- END FORM-->
     </div>
    </div>
 
-   <!-- Modal -->
+   <div class="row">
+    <div class="col-lg-offset-7">
+     <button style="margin-bottom: -47px; margin-left: 100px" class="btn  btn-default" data-toggle="modal" data-target="#myModal"><i class="fa fa-check" style="width: 100%"></i>Nouvel evenement</button>
+    </div>
+   </div>
+
+   <!-- Modal create event -->
    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
      <div class="modal-content">
@@ -94,8 +108,24 @@
          </div>
         </div>
        </div>
+       <div class="row">
+        <div class="col-lg-6">
+         <div class="form-group">
+          <label class="control-label">Toute la journée:</label>
+          {{ form_errors(form.allDay)}}
+          {{ form_widget(form.allDay) }}
+         </div>
+        </div>
+        <div class="col-lg-6">
+         <div class="form-group">
+          <label class="control-label">Priorité:</label>
+          {{ form_errors(form.backgroundColor)}}
+          {{ form_widget(form.backgroundColor) }}
+         </div>
+        </div>
+       </div>
 
-       <div class="row" style="padding: 5px">
+       <div class="row">
         <div class="col-lg-12">
          <button type="submit" style="width: 100%" class="btn  btn-default"><i class="fa fa-check" style="width: 100%"></i>Enregistrer</button>
         </div>
@@ -107,6 +137,64 @@
      </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
    </div><!-- /.modal -->
+
+   <!-- Modal Details evenement-->
+   <div id="calendarModal" class="modal fade">
+    <div class="modal-dialog">
+     <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Détails de l'événement</h4>
+      </div>
+      <div id="modalBody" class="modal-body">
+       <h4 id="modalTitle" class="modal-title"></h4>
+       <div id="modalWhen" style="margin-top:5px;"></div>
+      </div>
+      <input type="hidden" id="eventID"/>
+      <div class="modal-footer">
+       <button class="btn" data-dismiss="modal" aria-hidden="true">Annuler</button>
+       <button class="btn" data-dismiss="modal" aria-hidden="true" id="editButton">Editer</button>
+       <button type="submit" class="btn btn-danger" id="deleteButton">Supprimer</button>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!--Modal Details evenement-->
+
+   <!-- Modal Edit -->
+   <div id="editModal" class="modal fade">
+    <div class="modal-dialog">
+     <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4 class="modal-title">Editer</h4>
+      </div>
+      <div id="modalBody" class="modal-body">
+       {#<h4 id="modalTitle" class="modal-title"></h4>
+       <div id="modalWhen" style="margin-top:5px;"></div>#}
+       <!-- BEGIN EDITFORM-->
+       {{ form_start(editForm, {'class': 'horizontal-form'}) }}
+       <div class="row" >
+        <div class="col-lg-12">
+         <div class="form-group">
+          <label class="control-label">Titre:</label>
+          {{ form_errors(editForm.title)}}
+          {{ form_widget(editForm.title) }}
+         </div>
+        </div>
+       </div>
+       {{ form_end(editForm) }}
+       <!-- BEGIN EDITFORM-->
+      </div>
+      <input type="hidden" id="eventID"/>
+      <div class="modal-footer">
+       <button class="btn" data-dismiss="modal" aria-hidden="true">Annuler</button>
+       <button type="submit" class="btn btn-danger" id="saveButton">Envoyer</button>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- Modal Edit -->
 
    <div class="row" id="calendar">
         {% include '@FullCalendar/Calendar/calendar.html.twig' %}

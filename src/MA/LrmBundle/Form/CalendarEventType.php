@@ -7,6 +7,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class CalendarEventType extends AbstractType
 {
@@ -15,17 +16,21 @@ class CalendarEventType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        $color = array( 'Important'=>'#ee2930', 'Normal'=>'#337ab7', 'Mémo'=>'#9A939E');
+
         $builder
             ->add('title',  TextType::class)
-            //->add('allDay')
-            ->add('startDate', TextType::class, array(
+            ->add('startDate', DateType::class, array(
                 //'widget' => 'single_text',
+                // do not render as type="date", to avoid HTML5 date pickers
                 //'html5' => false,
                 'attr'=> array('class' => 'dateTimePicker')))
-            ->add('endDate', TextType::class, array(
+            ->add('endDate', DateType::class, array(
                 //'widget' => 'single_text',
+                // do not render as type="date", to avoid HTML5 date pickers
                 //'html5' => false,
-                'attr'=> array('class' => 'dateTimePicker')));
+                'attr'=> array('class' => 'dateTimePicker')))
+            //->add('chargeRecrutement')
            /* ->add('startDate', TextType::class, array(
                 'attr'=> array('class' => 'dateTimePicker')))
             ->add('endDate', TextType::class, array(
@@ -40,7 +45,7 @@ class CalendarEventType extends AbstractType
             //->add('constraint')
             //->add('source')
             //->add('color')
-            //->add('backgroundColor')
+           ->add('backgroundColor', ChoiceType::class, array('choices' => $color ));
             //->add('textColor')
             //->add('customFields');
     }

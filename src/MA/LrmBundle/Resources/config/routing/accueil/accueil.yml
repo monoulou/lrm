@@ -9,8 +9,36 @@ ma_lrm_register:
 
 ma_lrm_calendar:
     path:     /accueil/calendar
-    defaults: { _controller: "MALrmBundle:Index:load" }
+    defaults: { _controller: MALrmBundle:Index:load }
     methods:  [GET, POST]
+
+ma_lrm_calendar_resize:
+    path:     /accueil/calendar/resize
+    defaults: { _controller: MALrmBundle:Index:resizeEvent }
+    methods:  [GET, POST]
+
+ma_lrm_calendar_drop:
+    path:     /accueil/calendar/drop
+    defaults: { _controller: MALrmBundle:Index:dropEvent }
+    methods:  [GET, POST]
+
+ma_lrm_calendar_delete:
+    path:     /accueil/calendar/delete
+    defaults: { _controller: MALrmBundle:Index:deleteEvent }
+    methods:  [GET, POST]
+
+ma_lrm_calendar_selectUser:
+    path:     /accueil/calendar/select/user
+    defaults: { _controller: MALrmBundle:Index:selectUser }
+    methods:  [GET, POST]
+
+ma_lrm_calendar_editTitle:
+    path:     /accueil/calendar/edit/title
+    defaults: { _controller: MALrmBundle:Index:editTitle }
+    methods:  [GET, POST]
+
+
+
 
 #ma_lrm_calendar_new:
 #    path:     /accueil

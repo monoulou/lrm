@@ -54,15 +54,14 @@ function calcul_age(naissance,reponse){
 $(document).ready(function(){
 
     $( ".datepicker" ).datepicker({
+        language: 'fr',
         dateFormat: 'dd/mm/yy',
         yearRange: '1920:c+10',
         changeMonth: true,
         changeYear: true
     });
-
-
-
     
+
     $("#ma_lrmbundle_candidat_dateAnniversaire").focus(function () {
         $(this).change(function () {
            var resultat_age = calcul_age('ma_lrmbundle_candidat_dateAnniversaire','ma_lrmbundle_candidat_age');
@@ -75,7 +74,12 @@ $(document).ready(function(){
         //format: 'dd-mm-yyyy hh:ii',
         language: "fr"
     });
-    
+
+    $('.dateTimePicker2').datetimepicker({
+        format: "dd-mm-yyyy",
+        minView: "month",
+        language: "fr",
+    });
 });
 
 
