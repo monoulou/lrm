@@ -23,29 +23,29 @@ class __TwigTemplate_afd873a04fabff9db31f43a0cb15f489365b3210454df2b69cc3fd8b3c3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_bbc3c11f39603f3e200136def073588da7e26df3473adbe946e0394329417c62 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_bbc3c11f39603f3e200136def073588da7e26df3473adbe946e0394329417c62->enter($__internal_bbc3c11f39603f3e200136def073588da7e26df3473adbe946e0394329417c62_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MALrmBundle:Emploi:index.html.twig"));
+        $__internal_b0f048a8d0d3656fdd5a18ced44c72e0d92fad1c88902f4e643f7b9372d2c9a9 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_b0f048a8d0d3656fdd5a18ced44c72e0d92fad1c88902f4e643f7b9372d2c9a9->enter($__internal_b0f048a8d0d3656fdd5a18ced44c72e0d92fad1c88902f4e643f7b9372d2c9a9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MALrmBundle:Emploi:index.html.twig"));
 
-        $__internal_0be4c5b32dabbd68d589404814860d159dff280ab1df3bb0f80147339a5b5eb7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0be4c5b32dabbd68d589404814860d159dff280ab1df3bb0f80147339a5b5eb7->enter($__internal_0be4c5b32dabbd68d589404814860d159dff280ab1df3bb0f80147339a5b5eb7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MALrmBundle:Emploi:index.html.twig"));
+        $__internal_f5548396164cfb721cd9c0f8aeb93cd4ab52fa6b4400f645c48f7b9a27914881 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f5548396164cfb721cd9c0f8aeb93cd4ab52fa6b4400f645c48f7b9a27914881->enter($__internal_f5548396164cfb721cd9c0f8aeb93cd4ab52fa6b4400f645c48f7b9a27914881_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MALrmBundle:Emploi:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_bbc3c11f39603f3e200136def073588da7e26df3473adbe946e0394329417c62->leave($__internal_bbc3c11f39603f3e200136def073588da7e26df3473adbe946e0394329417c62_prof);
+        $__internal_b0f048a8d0d3656fdd5a18ced44c72e0d92fad1c88902f4e643f7b9372d2c9a9->leave($__internal_b0f048a8d0d3656fdd5a18ced44c72e0d92fad1c88902f4e643f7b9372d2c9a9_prof);
 
         
-        $__internal_0be4c5b32dabbd68d589404814860d159dff280ab1df3bb0f80147339a5b5eb7->leave($__internal_0be4c5b32dabbd68d589404814860d159dff280ab1df3bb0f80147339a5b5eb7_prof);
+        $__internal_f5548396164cfb721cd9c0f8aeb93cd4ab52fa6b4400f645c48f7b9a27914881->leave($__internal_f5548396164cfb721cd9c0f8aeb93cd4ab52fa6b4400f645c48f7b9a27914881_prof);
 
     }
 
     // line 3
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_1ed815cf19336cf7ee17d67fed91710ef39eeb8f0995df4c7a7311501ae37fb2 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_1ed815cf19336cf7ee17d67fed91710ef39eeb8f0995df4c7a7311501ae37fb2->enter($__internal_1ed815cf19336cf7ee17d67fed91710ef39eeb8f0995df4c7a7311501ae37fb2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_a54cb03b608e625f7dd8ce6359022e067c2663f38dc1edcee7b21ee21f064912 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_a54cb03b608e625f7dd8ce6359022e067c2663f38dc1edcee7b21ee21f064912->enter($__internal_a54cb03b608e625f7dd8ce6359022e067c2663f38dc1edcee7b21ee21f064912_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        $__internal_2152c1d3b4c51dd30868ee8ad3c2e80623a2c1fe2e87d5a780a132f0c6f35836 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2152c1d3b4c51dd30868ee8ad3c2e80623a2c1fe2e87d5a780a132f0c6f35836->enter($__internal_2152c1d3b4c51dd30868ee8ad3c2e80623a2c1fe2e87d5a780a132f0c6f35836_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_53269887c1dfaff72ee7e994b4f258fa69663616766171eeb2db1ddc4fea75c3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_53269887c1dfaff72ee7e994b4f258fa69663616766171eeb2db1ddc4fea75c3->enter($__internal_53269887c1dfaff72ee7e994b4f258fa69663616766171eeb2db1ddc4fea75c3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
         echo "     <link href=\"";
@@ -57,21 +57,21 @@ class __TwigTemplate_afd873a04fabff9db31f43a0cb15f489365b3210454df2b69cc3fd8b3c3
         echo "\" rel='stylesheet' type='text/css' />
  ";
         
-        $__internal_2152c1d3b4c51dd30868ee8ad3c2e80623a2c1fe2e87d5a780a132f0c6f35836->leave($__internal_2152c1d3b4c51dd30868ee8ad3c2e80623a2c1fe2e87d5a780a132f0c6f35836_prof);
+        $__internal_53269887c1dfaff72ee7e994b4f258fa69663616766171eeb2db1ddc4fea75c3->leave($__internal_53269887c1dfaff72ee7e994b4f258fa69663616766171eeb2db1ddc4fea75c3_prof);
 
         
-        $__internal_1ed815cf19336cf7ee17d67fed91710ef39eeb8f0995df4c7a7311501ae37fb2->leave($__internal_1ed815cf19336cf7ee17d67fed91710ef39eeb8f0995df4c7a7311501ae37fb2_prof);
+        $__internal_a54cb03b608e625f7dd8ce6359022e067c2663f38dc1edcee7b21ee21f064912->leave($__internal_a54cb03b608e625f7dd8ce6359022e067c2663f38dc1edcee7b21ee21f064912_prof);
 
     }
 
     // line 8
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_2391ec8ebd34f5259c9423977aff657214782725beb46bd8a7e359c044d42c66 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_2391ec8ebd34f5259c9423977aff657214782725beb46bd8a7e359c044d42c66->enter($__internal_2391ec8ebd34f5259c9423977aff657214782725beb46bd8a7e359c044d42c66_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_012c61e56075326d04d423f7ba4190ce78c8744c77605b020eba53fdeecc74a6 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_012c61e56075326d04d423f7ba4190ce78c8744c77605b020eba53fdeecc74a6->enter($__internal_012c61e56075326d04d423f7ba4190ce78c8744c77605b020eba53fdeecc74a6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_48637a81ae2c85751d23b4954c783d6c3c79e8ae74a0911f43f78b2af1f9f12e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_48637a81ae2c85751d23b4954c783d6c3c79e8ae74a0911f43f78b2af1f9f12e->enter($__internal_48637a81ae2c85751d23b4954c783d6c3c79e8ae74a0911f43f78b2af1f9f12e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_90da77958e2f0d74b616777b5f2951be2cdc6b11665327fa77f05208f3b84e91 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_90da77958e2f0d74b616777b5f2951be2cdc6b11665327fa77f05208f3b84e91->enter($__internal_90da77958e2f0d74b616777b5f2951be2cdc6b11665327fa77f05208f3b84e91_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 9
         echo "    <script src =\"";
@@ -83,21 +83,21 @@ class __TwigTemplate_afd873a04fabff9db31f43a0cb15f489365b3210454df2b69cc3fd8b3c3
         echo "\" type=\"text/javascript\"></script>
 ";
         
-        $__internal_48637a81ae2c85751d23b4954c783d6c3c79e8ae74a0911f43f78b2af1f9f12e->leave($__internal_48637a81ae2c85751d23b4954c783d6c3c79e8ae74a0911f43f78b2af1f9f12e_prof);
+        $__internal_90da77958e2f0d74b616777b5f2951be2cdc6b11665327fa77f05208f3b84e91->leave($__internal_90da77958e2f0d74b616777b5f2951be2cdc6b11665327fa77f05208f3b84e91_prof);
 
         
-        $__internal_2391ec8ebd34f5259c9423977aff657214782725beb46bd8a7e359c044d42c66->leave($__internal_2391ec8ebd34f5259c9423977aff657214782725beb46bd8a7e359c044d42c66_prof);
+        $__internal_012c61e56075326d04d423f7ba4190ce78c8744c77605b020eba53fdeecc74a6->leave($__internal_012c61e56075326d04d423f7ba4190ce78c8744c77605b020eba53fdeecc74a6_prof);
 
     }
 
     // line 15
     public function block_body($context, array $blocks = array())
     {
-        $__internal_3e029d5434ce474f129feb28da9f888f808340aa345a6284ea5904d47e8c470e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_3e029d5434ce474f129feb28da9f888f808340aa345a6284ea5904d47e8c470e->enter($__internal_3e029d5434ce474f129feb28da9f888f808340aa345a6284ea5904d47e8c470e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_d087114cfe734530df9b3662e5a03c6d883d2361a513fe94663a96aec5ac6e37 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_d087114cfe734530df9b3662e5a03c6d883d2361a513fe94663a96aec5ac6e37->enter($__internal_d087114cfe734530df9b3662e5a03c6d883d2361a513fe94663a96aec5ac6e37_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_19d46ce2d2db368d830b869236f32a81c0f8c0602e7b821f2c0e451253039165 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_19d46ce2d2db368d830b869236f32a81c0f8c0602e7b821f2c0e451253039165->enter($__internal_19d46ce2d2db368d830b869236f32a81c0f8c0602e7b821f2c0e451253039165_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_09ed8431285da0054445d84d823eca0e610eb5c6cc4d6fb9483a3499b184c943 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_09ed8431285da0054445d84d823eca0e610eb5c6cc4d6fb9483a3499b184c943->enter($__internal_09ed8431285da0054445d84d823eca0e610eb5c6cc4d6fb9483a3499b184c943_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 16
         echo "
@@ -172,6 +172,7 @@ class __TwigTemplate_afd873a04fabff9db31f43a0cb15f489365b3210454df2b69cc3fd8b3c3
                 <thead>
                 <tr>
                     <th>Intitulé du poste</th>
+                    <th>Utilisateur</th>
                     <th>Entreprise</th>
                     <th>Contrat</th>
                     <th>Lieux d'activité</th>
@@ -183,6 +184,7 @@ class __TwigTemplate_afd873a04fabff9db31f43a0cb15f489365b3210454df2b69cc3fd8b3c3
                 <tfoot>
                 <tr>
                     <th>Intitulé du poste</th>
+                    <th>Utilisateur</th>
                     <th>Entreprise</th>
                     <th>Contrat</th>
                     <th>Lieux d'activité</th>
@@ -193,60 +195,64 @@ class __TwigTemplate_afd873a04fabff9db31f43a0cb15f489365b3210454df2b69cc3fd8b3c3
                 </tfoot>
                 <tbody>
                 ";
-        // line 76
+        // line 78
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["emplois"]) ? $context["emplois"] : $this->getContext($context, "emplois")));
         foreach ($context['_seq'] as $context["_key"] => $context["emploi"]) {
-            // line 77
+            // line 79
             echo "                    ";
             if (($this->getAttribute($context["emploi"], "id", array()) != "16")) {
-                // line 78
+                // line 80
                 echo "                        <tr>
                             <td><a href=\"";
-                // line 79
+                // line 81
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_emploi_show", array("id" => $this->getAttribute($context["emploi"], "id", array()))), "html", null, true);
                 echo "\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["emploi"], "intitule", array()), "html", null, true);
                 echo "</a></td>
                             <td>";
-                // line 80
+                // line 82
+                echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["emploi"], "client", array()), "chargeRecrutement", array()), "username", array()), "html", null, true);
+                echo "</td>
+                            <td>";
+                // line 83
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["emploi"], "client", array()), "denomination", array()), "html", null, true);
                 echo "</td>
                             <td>";
-                // line 81
+                // line 84
                 echo twig_escape_filter($this->env, $this->getAttribute($context["emploi"], "contrat", array()), "html", null, true);
                 echo "</td>
                             <td>";
-                // line 82
+                // line 85
                 echo twig_escape_filter($this->env, $this->getAttribute($context["emploi"], "villeCodePostal", array()), "html", null, true);
                 echo " - ";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["emploi"], "villeActivite", array()), "html", null, true);
                 echo "</td>
                             <td>";
-                // line 83
+                // line 86
                 echo twig_escape_filter($this->env, $this->getAttribute($context["emploi"], "nombrePoste", array()), "html", null, true);
                 echo "</td>
                             ";
-                // line 84
+                // line 87
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable((isset($context["siteParution"]) ? $context["siteParution"] : $this->getContext($context, "siteParution")));
                 foreach ($context['_seq'] as $context["index"] => $context["site"]) {
-                    // line 85
+                    // line 88
                     echo "                                ";
                     if (($context["index"] == $this->getAttribute($context["emploi"], "id", array()))) {
-                        // line 86
+                        // line 89
                         echo "                                    <td>";
                         echo twig_escape_filter($this->env, $context["site"], "html", null, true);
                         echo "</td>
                                 ";
                     }
-                    // line 88
+                    // line 91
                     echo "                            ";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['index'], $context['site'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 89
+                // line 92
                 echo "                            <td style=\"text-align: center\"><a href=\"";
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_emploi_edit", array("id" => $this->getAttribute($context["emploi"], "id", array()))), "html", null, true);
                 echo "\"><i class=\"material-icons\" style=\"margin-left: 40px\">mode_edit</i></a><a href=\"";
@@ -255,13 +261,13 @@ class __TwigTemplate_afd873a04fabff9db31f43a0cb15f489365b3210454df2b69cc3fd8b3c3
                         </tr>
                     ";
             }
-            // line 92
+            // line 95
             echo "                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['emploi'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 93
+        // line 96
         echo "                </tbody>
             </table>
         </div>
@@ -271,10 +277,10 @@ class __TwigTemplate_afd873a04fabff9db31f43a0cb15f489365b3210454df2b69cc3fd8b3c3
 
 ";
         
-        $__internal_19d46ce2d2db368d830b869236f32a81c0f8c0602e7b821f2c0e451253039165->leave($__internal_19d46ce2d2db368d830b869236f32a81c0f8c0602e7b821f2c0e451253039165_prof);
+        $__internal_09ed8431285da0054445d84d823eca0e610eb5c6cc4d6fb9483a3499b184c943->leave($__internal_09ed8431285da0054445d84d823eca0e610eb5c6cc4d6fb9483a3499b184c943_prof);
 
         
-        $__internal_3e029d5434ce474f129feb28da9f888f808340aa345a6284ea5904d47e8c470e->leave($__internal_3e029d5434ce474f129feb28da9f888f808340aa345a6284ea5904d47e8c470e_prof);
+        $__internal_d087114cfe734530df9b3662e5a03c6d883d2361a513fe94663a96aec5ac6e37->leave($__internal_d087114cfe734530df9b3662e5a03c6d883d2361a513fe94663a96aec5ac6e37_prof);
 
     }
 
@@ -290,7 +296,7 @@ class __TwigTemplate_afd873a04fabff9db31f43a0cb15f489365b3210454df2b69cc3fd8b3c3
 
     public function getDebugInfo()
     {
-        return array (  265 => 93,  259 => 92,  250 => 89,  244 => 88,  238 => 86,  235 => 85,  231 => 84,  227 => 83,  221 => 82,  217 => 81,  213 => 80,  207 => 79,  204 => 78,  201 => 77,  197 => 76,  169 => 50,  160 => 47,  156 => 45,  152 => 44,  140 => 34,  138 => 33,  134 => 31,  132 => 30,  125 => 25,  119 => 23,  111 => 21,  109 => 20,  103 => 16,  94 => 15,  82 => 10,  77 => 9,  68 => 8,  56 => 5,  51 => 4,  42 => 3,  11 => 1,);
+        return array (  271 => 96,  265 => 95,  256 => 92,  250 => 91,  244 => 89,  241 => 88,  237 => 87,  233 => 86,  227 => 85,  223 => 84,  219 => 83,  215 => 82,  209 => 81,  206 => 80,  203 => 79,  199 => 78,  169 => 50,  160 => 47,  156 => 45,  152 => 44,  140 => 34,  138 => 33,  134 => 31,  132 => 30,  125 => 25,  119 => 23,  111 => 21,  109 => 20,  103 => 16,  94 => 15,  82 => 10,  77 => 9,  68 => 8,  56 => 5,  51 => 4,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -358,6 +364,7 @@ class __TwigTemplate_afd873a04fabff9db31f43a0cb15f489365b3210454df2b69cc3fd8b3c3
                 <thead>
                 <tr>
                     <th>Intitulé du poste</th>
+                    <th>Utilisateur</th>
                     <th>Entreprise</th>
                     <th>Contrat</th>
                     <th>Lieux d'activité</th>
@@ -369,6 +376,7 @@ class __TwigTemplate_afd873a04fabff9db31f43a0cb15f489365b3210454df2b69cc3fd8b3c3
                 <tfoot>
                 <tr>
                     <th>Intitulé du poste</th>
+                    <th>Utilisateur</th>
                     <th>Entreprise</th>
                     <th>Contrat</th>
                     <th>Lieux d'activité</th>
@@ -382,6 +390,7 @@ class __TwigTemplate_afd873a04fabff9db31f43a0cb15f489365b3210454df2b69cc3fd8b3c3
                     {% if emploi.id != '16' %}
                         <tr>
                             <td><a href=\"{{ path('ma_lrm_emploi_show', { 'id': emploi.id }) }}\">{{ emploi.intitule }}</a></td>
+                            <td>{{ emploi.client.chargeRecrutement.username}}</td>
                             <td>{{ emploi.client.denomination }}</td>
                             <td>{{ emploi.contrat }}</td>
                             <td>{{ emploi.villeCodePostal }} - {{ emploi.villeActivite}}</td>

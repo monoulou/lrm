@@ -29,8 +29,14 @@ class CalendarEvent extends Event
      */
     private $chargeRecrutement;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="commentaire", type="string", length = 2000, nullable = true)
+     */
+    private $commentaire;
 
-
+    
     /**
      * Get allDay
      *
@@ -117,5 +123,29 @@ class CalendarEvent extends Event
     public function getChargeRecrutement()
     {
         return $this->chargeRecrutement;
+    }
+
+    /**
+     * Set commentaire
+     *
+     * @param string $commentaire
+     *
+     * @return CalendarEvent
+     */
+    public function setCommentaire($commentaire)
+    {
+        $this->commentaire = $commentaire;
+
+        return $this;
+    }
+
+    /**
+     * Get commentaire
+     *
+     * @return string
+     */
+    public function getCommentaire()
+    {
+        return $this->commentaire;
     }
 }

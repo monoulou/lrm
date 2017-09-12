@@ -53,6 +53,8 @@
                             <th>#</th>
                             <th>Nom</th>
                             <th>Prénom</th>
+                            <th>Utilisateur</th>
+                            <th>Date Intégration</th>
                         </tr>
                     </thead>
                     {% for resume in resumeByPoste %}
@@ -63,6 +65,8 @@
                                 <td>{{ i }}</td>
                                 <td><a href="{{ path('ma_lrm_gestion_detail', { 'id': id }) }}">{{ candidat[1] }}</a></td>
                                 <td>{{ candidat[2] }}</td>
+                                <td>{{ candidat[3] }}</td>
+                                <td>{{ candidat[4] }}</td>
                             </tr>
                             </tbody>
                         {% endfor %}

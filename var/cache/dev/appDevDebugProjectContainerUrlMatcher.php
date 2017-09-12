@@ -361,16 +361,16 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
                 not_ma_lrm_calendar_selectUser:
 
-                // ma_lrm_calendar_editTitle
+                // ma_lrm_calendar_editEvent
                 if ($pathinfo === '/admin/accueil/calendar/edit/title') {
                     if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
                         $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
-                        goto not_ma_lrm_calendar_editTitle;
+                        goto not_ma_lrm_calendar_editEvent;
                     }
 
-                    return array (  '_controller' => 'MA\\LrmBundle\\Controller\\IndexController::editTitleAction',  '_route' => 'ma_lrm_calendar_editTitle',);
+                    return array (  '_controller' => 'MA\\LrmBundle\\Controller\\IndexController::editEventAction',  '_route' => 'ma_lrm_calendar_editEvent',);
                 }
-                not_ma_lrm_calendar_editTitle:
+                not_ma_lrm_calendar_editEvent:
 
             }
 

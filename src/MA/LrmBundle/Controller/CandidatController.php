@@ -3,11 +3,10 @@
 
 namespace MA\LrmBundle\Controller;
 
+use MA\LrmBundle\Entity\CalendarEvent;
 use MA\LrmBundle\Entity\Candidat;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Imagick;
 use Symfony\Component\HttpFoundation\Response;
-use MA\LrmBundle\MALrmBundle;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -95,17 +94,19 @@ class CandidatController extends Controller
         $em = $this->getDoctrine()->getManager();
         $candidats = $em->getRepository('MALrmBundle:Candidat')->findAll();
 
-        /** Construction d'un tableau pour recuperer la liste des entreprises clientes */
-        $nomClient = array();
+        $nomClient = array();//Recuperation de la liste des entreprises clientes
+        foreach ($candidats as $cle => $candidat)
+        {
+            $emploi = $em->getRepository('MALrmBundle:Emploi')->findOneBy(array('id'=>$candidat->getEmploi()->getId()));
+            $client = $em->getRepository('MALrmBundle:Client')->findOneBy(array('id'=>$emploi->getClient()->getId()));
 
-           foreach ($candidats as $cle => $candidat)
-            {
-                $emploi = $em->getRepository('MALrmBundle:Emploi')->findOneBy(array('id'=>$candidat->getEmploi()->getId()));
-                $client = $em->getRepository('MALrmBundle:Client')->findOneBy(array('id'=>$emploi->getClient()->getId()));
+            $nomClient[$emploi->getId()] = $client->getDenomination();
+        }
 
-                $nomClient[$emploi->getId()] = $client->getDenomination();
-            }
 
+
+
+        //dump($candidats, $nomClient);die();
         return $this->render('MALrmBundle:Candidat:index.html.twig', array(
             'candidats' => $candidats,
             'nomClient' => $nomClient,
@@ -119,6 +120,7 @@ class CandidatController extends Controller
     public function newAction(Request $request)
     {
         $candidat = new Candidat();
+        $relanceCandidat = new CalendarEvent();
         $form = $this->createForm('MA\LrmBundle\Form\CandidatType', $candidat);
         $form->handleRequest($request);
 
@@ -137,12 +139,34 @@ class CandidatController extends Controller
                 $this->getParameter('cv_directory'),
                 $fileName
             );
+
+            /** Si relance candidat => ajout d'un evenement au calendrier */
+            $dateRelance = $form->get('dateRelance')->getData();
+            if (isset($dateRelance))
+            {
+                $dateRelance = str_replace('/', '-', $form->get('dateRelance')->getData());
+                $title = 'Relance'.' '.$form->get('nom')->getData().' '.$form->get('prenom')->getData();
+                $start = new \DateTime($dateRelance);
+                $end = new \DateTime($dateRelance);
+                $user = $form->get('chargeRecrutement')->getData();
+                $duration = true;
+                $backgroundColor = '#9A939E';
+
+                $relanceCandidat->setTitle($title);
+                $relanceCandidat->setStartDate($start);
+                $relanceCandidat->setEndDate($end);
+                $relanceCandidat->setAllDay($duration);
+                $relanceCandidat->setChargeRecrutement($user);
+                $relanceCandidat->setBackgroundColor($backgroundColor);
+
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($relanceCandidat);
+                $em->flush();
+            }
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($candidat);
             $em->flush();
-
-            //$img = new Imagick('cv_directory'.'/'.$fileName);
-            //dump($file);die();
 
             return $this->redirectToRoute('ma_lrm_candidat_show', array('id' => $candidat->getId()));
         }
@@ -164,9 +188,6 @@ class CandidatController extends Controller
         /** Force le retour à la ligne pour l'affichage du commentaire */
         $wrapCommentaire = wordwrap($candidat->getCommentaire(), 100, "\n", true);
         $candidat->setCommentaire($wrapCommentaire);
-
-//        $img = new \ Imagick($candidat->getCvCandidat());
-//        dump($img);die();
 
         return $this->render('MALrmBundle:Candidat:show.html.twig', array(
             'candidat' => $candidat,
@@ -228,8 +249,20 @@ class CandidatController extends Controller
      */
     public function deleteAction(Request $request, Candidat $candidat)
     {
-
+        /** Suppresion d'un evenement lié à une relance candidat */
         $em = $this->getDoctrine()->getManager();
+        $relanceEvent = $em->getRepository('MALrmBundle:CalendarEvent')->findOneBy(array('title' => 'Relance'.' '.$candidat->getNom().' '.$candidat->getPrenom()));
+
+        if (!empty($relanceEvent))
+        {
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($relanceEvent);
+            $em->flush();
+        }
+        /** ************************************************* */
+        
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($relanceEvent);
         $em->remove($candidat);
         $em->flush();
         

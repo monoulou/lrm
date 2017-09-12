@@ -29,5 +29,99 @@ class CalendarEvent extends Event
      */
     private $chargeRecrutement;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="commentaire", type="string", length = 2000, nullable = true)
+     */
+    private $commentaire;
 
+    
+    /**
+     * Get allDay
+     *
+     * @return boolean
+     */
+    public function getAllDay()
+    {
+        return $this->allDay;
+    }
+
+    /**
+     * Get editable
+     *
+     * @return boolean
+     */
+    public function getEditable()
+    {
+        return $this->editable;
+    }
+
+    /**
+     * Get startEditable
+     *
+     * @return boolean
+     */
+    public function getStartEditable()
+    {
+        return $this->startEditable;
+    }
+
+    /**
+     * Get durationEditable
+     *
+     * @return boolean
+     */
+    public function getDurationEditable()
+    {
+        return $this->durationEditable;
+    }
+
+    /**
+     * Get overlap
+     *
+     * @return boolean
+     */
+    public function getOverlap()
+    {
+        return $this->overlap;
+    }
+
+    /**
+     * Set customFields
+     *
+     * @param array $customFields
+     *
+     * @return CalendarEvent
+     */
+    public function setCustomFields($customFields)
+    {
+        $this->customFields = $customFields;
+
+        return $this;
+    }
+
+    /**
+     * Set chargeRecrutement
+     *
+     * @param \MA\UserBundle\Entity\User $chargeRecrutement
+     *
+     * @return CalendarEvent
+     */
+    public function setChargeRecrutement(\MA\UserBundle\Entity\User $chargeRecrutement = null)
+    {
+        $this->chargeRecrutement = $chargeRecrutement;
+
+        return $this;
+    }
+
+    /**
+     * Get chargeRecrutement
+     *
+     * @return \MA\UserBundle\Entity\User
+     */
+    public function getChargeRecrutement()
+    {
+        return $this->chargeRecrutement;
+    }
 }

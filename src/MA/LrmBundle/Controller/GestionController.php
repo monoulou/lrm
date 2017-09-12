@@ -27,7 +27,7 @@ class GestionController extends Controller
 
         $suiviOffre = array();
 
-        /** *************************Permet le suivi des poste pourvus et restant à pourvoir**************************** */
+        /** *************************Permet le suivi des postes pourvus et restant à pourvoir**************************** */
         foreach ($gestions as $index => $gestion)
         {
             $idEmploi = $gestion->getEmploi()->getId();
@@ -109,12 +109,16 @@ class GestionController extends Controller
 
         foreach ($gestions as $index => $gestion)
         {
+            //dump($gestion);die();
             $getCandidat = $em->getRepository('MALrmBundle:Candidat')->findOneBy(array('id'=>$gestion->getCandidat()->getId()));
             $getClient = $em->getRepository('MALrmBundle:Client')->findOneBy(array('id'=>$gestion->getEmploi()->getClient()->getId()));
+            $getUser = $em->getRepository('MAUserBundle:User')->findOneBy(array('id'=>$gestion->getChargeRecrutement()->getId()));
 
             $arrayCandidat[$getCandidat->getId()] = array(
                 '1' => $getCandidat->getNom(),
-                '2' => $getCandidat->getPrenom()
+                '2' => $getCandidat->getPrenom(),
+                '3' => $getUser->getUsername(),
+                '4' => $gestion->getDateIntegration(),
             );
 
             $arrayPoste = array('1'=> $gestion->getEmploi()->getIntitule(), '2'=>$getClient->getDenomination());

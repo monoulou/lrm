@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Validator\Constraints\DateTime;
 
 class IndexController extends Controller
@@ -28,11 +29,13 @@ class IndexController extends Controller
         $em = $this->getDoctrine()->getManager();
         $evenements = $em->getRepository('MALrmBundle:CalendarEvent')->findAll();
 
+
         $calendarService = $this->get('ma_lrm_bundle.service.listener');
         $events = array();
 
         if (empty($userSelected))
         {
+            //$listeCandidat = $em->getRepository('MALrmBundle:Candidat')->findBy(array('chargeRecrutement' => $idUser));
             foreach ($evenements as $key => $evenement)
             {
                 //dump($evenement);die();
@@ -49,7 +52,7 @@ class IndexController extends Controller
                 //dump($evenement);die();
                 if ($evenement->getChargeRecrutement()->getId() == $userSelected)
                 {
-                    //Retourne les évenements de l'utilisateur en selectionné
+                    //Retourne les évenements de l'utilisateur selectionné
                     $events[] = $calendarService->loadData($evenement);
                 }
 
@@ -105,15 +108,16 @@ class IndexController extends Controller
         return new Response("Erreur.");
     }
 
-    public function editTitleAction(Request $request)
+    public function editEventAction(Request $request)
     {
         if ($request->isXmlHttpRequest())
         {
             $idEvent = $request->request->get('id');
             $newTitle = $request->request->get('new_title');
+            $newComm = $request->request->get('new_comm');
 
             $em = $this->getDoctrine()->getManager();
-            $rst = $em->getRepository('MALrmBundle:CalendarEvent')->editTitle($idEvent, $newTitle);
+            $rst = $em->getRepository('MALrmBundle:CalendarEvent')->editEvent($idEvent, $newTitle, $newComm);
 
         }
 
@@ -169,6 +173,7 @@ class IndexController extends Controller
                 'attr'=> array('class' => 'dateTimePicker')))
             ->add('endDate', TextType::class, array(
                 'attr'=> array('class' => 'dateTimePicker')))
+            ->add('commentaire', TextareaType::class)
             ->add('allDay', ChoiceType::class, array('choices' => $allDay ))
             ->add('backgroundColor', ChoiceType::class, array('choices' => $color ))
 
@@ -182,6 +187,7 @@ class IndexController extends Controller
             $title = $form->get('title')->getData();
             $start = new \DateTime($form->get('startDate')->getData());
             $end = new \DateTime($form->get('endDate')->getData());
+            $commentaire = wordwrap($form->get('commentaire')->getData(), 100, "\n", true);
             $duration = $form->get('allDay')->getData();
             $backgroundColor = $form->get('backgroundColor')->getData();
 
@@ -190,6 +196,7 @@ class IndexController extends Controller
             $event->setStartDate($start);
             $event->setEndDate($end);
             $event->setAllDay($duration);
+            $event->setCommentaire($commentaire);
             $event->setChargeRecrutement($user);
             $event->setBackgroundColor($backgroundColor);
 
@@ -219,11 +226,41 @@ class IndexController extends Controller
         $editData = array();
         $editForm = $this->createFormBuilder($editData)
             ->add('title',  TextType::class, array(
-                'attr'=> array('class' => 'input_edit')))
+                'attr'=> array('class' => 'input_edit_title')))
+            ->add('commentaire', TextareaType::class, array(
+                'attr'=> array('class' => 'input_edit_comm')))
 
             ->getForm();
 
         $editForm->handleRequest($request);
+
+        /** Affichage des clients a facturer */
+        $today = date('d/m/Y');
+        $em = $this->getDoctrine()->getManager();
+        $getGestion = $em->getRepository('MALrmBundle:Gestion')->findAll();
+        $clientAfacturer = array();
+
+        foreach ($getGestion as $index => $gestion)
+        {
+            if ($gestion->getDateIntegration() == $today)
+            {
+                //dump($gestion);die();
+                $getCandidat = $em->getRepository('MALrmBundle:Candidat')->findOneBy(array('id' => $gestion->getCandidat()->getId()));
+                $getEmploi = $em->getRepository('MALrmBundle:Emploi')->findOneBy(array('id' => $gestion->getEmploi()->getId()));
+                $getClient = $em->getRepository('MALrmBundle:Client')->findOneBy(array('id' => $getEmploi->getClient()->getId()));
+                $getUser = $em->getRepository('MAUserBundle:User')->findOneBy(array('id' => $gestion->getChargeRecrutement()->getId()));
+
+
+                $clientAfacturer[$getClient->getId().':'.$gestion->getCandidat()->getId()] = array(
+                    '1' =>$getClient->getDenomination(),
+                    '2' =>$getCandidat->getNom().' '.$getCandidat->getPrenom(),
+                    '3' =>$getUser->getUsername(),
+                    '4' => $getClient->getId());
+
+            }
+
+        };
+
         
         return $this->render('MALrmBundle:Accueil:index.html.twig',
             array(
@@ -231,6 +268,7 @@ class IndexController extends Controller
                 'form' => $form->createView(),
                 'userForm' => $userForm->createView(),
                 'editForm' => $editForm->createView(),
+                'clientAfacturer' => $clientAfacturer,
             ));
 
     }

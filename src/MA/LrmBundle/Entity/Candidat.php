@@ -46,28 +46,28 @@ class Candidat
     /**
      * @var string
      *
-     * @ORM\Column(name="date_anniversaire", type="string", length=50)
+     * @ORM\Column(name="date_anniversaire", type="string", length=50, nullable = true)
      */
     private $dateAnniversaire;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="age", type="string", length=50)
+     * @ORM\Column(name="age", type="string", length=50, nullable = true)
      */
     private $age;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="test_perso", type="string", length=50)
+     * @ORM\Column(name="test_perso", type="string", length=50, nullable = true)
      */
     private $testPersonnalite;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="date_relance", type="string", length=50)
+     * @ORM\Column(name="date_relance", type="string", length=50, nullable = true)
      */
     private $dateRelance;
 
@@ -91,14 +91,14 @@ class Candidat
      * @var string
      *
      * @ORM\Column(name="departement", type="string", length=255)
-     *
+     * @Assert\NotBlank()
      */
     private $departement;
 
     /**
      * @var string
-     *
      * @ORM\Column(name="pays", type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $pays;
 
@@ -106,6 +106,7 @@ class Candidat
      * @var string
      *
      * @ORM\Column(name="ville_code_postal", type="string", length=10)
+     * @Assert\NotBlank()
      */
     private $villeCodePostal;
 
@@ -119,8 +120,8 @@ class Candidat
 
     /**
      * @var string
-     *
      * @ORM\Column(name="email_adresse", type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $email;
 
@@ -140,8 +141,7 @@ class Candidat
     /**
      * @var string
      *
-     * @ORM\Column(name="cv_candidat", type="string", length = 255)
-     * @Assert\NotBlank(message="Insérer un cv au format PDF ou .doc .")
+     * @ORM\Column(name="cv_candidat", type="string", length = 255, nullable = true)
      * @Assert\File(mimeTypes={ "application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document" })
      */
     private $cvCandidat;
@@ -150,7 +150,7 @@ class Candidat
     /**
      * @var string
      *
-     * @ORM\Column(name="commentaire", type="string", length = 2000)
+     * @ORM\Column(name="commentaire", type="string", length = 2000, nullable = true)
      */
     private $commentaire;
 

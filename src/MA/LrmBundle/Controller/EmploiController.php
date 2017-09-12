@@ -92,14 +92,12 @@ class EmploiController extends Controller
         $emplois = $em->getRepository('MALrmBundle:Emploi')->findAll();
         
         $siteParution = array();
-
         foreach ($emplois as $cle => $emploi)
         {
             $site = implode(' - ', $emploi->getSiteParution());
             $siteParution[$emploi->getId()] = $site;
         }
 
-        //dump($siteParution);die();
         return $this->render('MALrmBundle:Emploi:index.html.twig', array(
             'emplois' => $emplois,
             'siteParution' => $siteParution,
@@ -188,7 +186,6 @@ class EmploiController extends Controller
     public function deleteAction(Request $request, Emploi $emploi)
     {
         /** Permet la suppression d'un emploi en conservant les candidatures qui lui sont liées */
-        
         $em = $this->getDoctrine()->getManager();
         $candidats = $em->getRepository('MALrmBundle:Candidat')->findBy(array('emploi'=>$emploi->getId()));
         $emplois = $em->getRepository('MALrmBundle:Emploi')->findAll();

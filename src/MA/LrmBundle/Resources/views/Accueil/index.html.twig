@@ -41,12 +41,40 @@
     <h3>TABLEAU DE BORD</h3><hr style="border: 1px solid darkgray;">
    </div>
    <div class="row">
-    <h5>LES RELANCES CANDIDATS:</h5>
-    ...
-   </div>
-   <div class="row">
-    <h5>LES CLIENTS A FACTURER:</h5>
-    ...
+    {% if clientAfacturer is not empty %}
+    {% set i = 0 %}
+     <div class="panel panel-default">
+      <div class="panel-heading">
+       <h3 class="panel-title">Clients à facturer</h3>
+      </div>
+      <table class="table">
+       <thead>
+       <tr>
+        <th>#</th>
+        <th>Client</th>
+        <th>Candidat</th>
+        <th>Utilisateur</th>
+
+       </tr>
+       </thead>
+       {% for client in clientAfacturer %}
+         <tbody>
+         <tr>
+          {% set i = i + 1 %}
+          <td>{{ i }}</td>
+          <td><a href="{{ path ('ma_lrm_client_edit', { 'id': client[4] }) }}">{{ client[1] }}</a></td>
+          <td>{{ client[2] }}</td>
+          <td>{{ client[3] }}</td>
+         </tr>
+         </tbody>
+       {% endfor %}
+      </table>
+     </div>
+     {% else %}
+      <div class="col-lg-12" id="facturer">
+       <p>AUCUN CLIENT A FACTURER AUJOURD'HUI.</p>
+      </div>
+     {% endif %}
    </div>
 
    <div class="row">
@@ -109,6 +137,15 @@
         </div>
        </div>
        <div class="row">
+        <div class="col-lg-12">
+         <div class="form-group">
+          <label class="control-label">Commentaires:</label>
+          {{ form_errors(form.commentaire)}}
+          {{ form_widget(form.commentaire) }}
+         </div>
+        </div>
+       </div>
+       <div class="row">
         <div class="col-lg-6">
          <div class="form-group">
           <label class="control-label">Toute la journée:</label>
@@ -149,6 +186,7 @@
       <div id="modalBody" class="modal-body">
        <h4 id="modalTitle" class="modal-title"></h4>
        <div id="modalWhen" style="margin-top:5px;"></div>
+       <div id="modalComm" style="margin-top:5px;"></div>
       </div>
       <input type="hidden" id="eventID"/>
       <div class="modal-footer">
@@ -183,6 +221,15 @@
          </div>
         </div>
        </div>
+       <div class="row" >
+        <div class="col-lg-12">
+         <div class="form-group">
+          <label class="control-label">Commentaires:</label>
+          {{ form_errors(editForm.commentaire)}}
+          {{ form_widget(editForm.commentaire) }}
+         </div>
+        </div>
+       </div>
        {{ form_end(editForm) }}
        <!-- BEGIN EDITFORM-->
       </div>
@@ -199,6 +246,8 @@
    <div class="row" id="calendar">
         {% include '@FullCalendar/Calendar/calendar.html.twig' %}
    </div>
+
+  <footer id="foot"></footer>
 
   </div>
 

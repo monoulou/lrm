@@ -54,6 +54,7 @@
                 <thead>
                 <tr>
                     <th>Candidat</th>
+                    <th>Utilisateur</th>
                     <th>Offre d'emploi</th>
                     <th>Entreprise</th>
                     <th>Action</th>
@@ -62,6 +63,7 @@
                 <tfoot>
                 <tr>
                     <th>Candidat</th>
+                    <th>Utilisateur</th>
                     <th>Offre d'emploi</th>
                     <th>Entreprise</th>
                     <th>Action</th>
@@ -71,6 +73,7 @@
                 {% for candidat in candidats %}
                     <tr>
                         <td><a href="{{ path('ma_lrm_candidat_show', { 'id': candidat.id }) }}">{{ candidat.nom }} {{ candidat.prenom }}</a></td>
+                        <td>{{ candidat.chargeRecrutement.username }}</td>
                         <td>{{ candidat.emploi.intitule }}</td>
                         {% for idOffre, client in nomClient %}
                             {% if idOffre == candidat.emploi.id      %}

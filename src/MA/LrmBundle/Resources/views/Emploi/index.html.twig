@@ -53,6 +53,7 @@
                 <thead>
                 <tr>
                     <th>Intitulé du poste</th>
+                    <th>Utilisateur</th>
                     <th>Entreprise</th>
                     <th>Contrat</th>
                     <th>Lieux d'activité</th>
@@ -64,6 +65,7 @@
                 <tfoot>
                 <tr>
                     <th>Intitulé du poste</th>
+                    <th>Utilisateur</th>
                     <th>Entreprise</th>
                     <th>Contrat</th>
                     <th>Lieux d'activité</th>
@@ -77,6 +79,7 @@
                     {% if emploi.id != '16' %}
                         <tr>
                             <td><a href="{{ path('ma_lrm_emploi_show', { 'id': emploi.id }) }}">{{ emploi.intitule }}</a></td>
+                            <td>{{ emploi.client.chargeRecrutement.username}}</td>
                             <td>{{ emploi.client.denomination }}</td>
                             <td>{{ emploi.contrat }}</td>
                             <td>{{ emploi.villeCodePostal }} - {{ emploi.villeActivite}}</td>

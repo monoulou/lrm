@@ -15,11 +15,11 @@ class __TwigTemplate_0f833ad109cda9047c6a107dde077f01cd06ecd37593a6c0290ac2f1043
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5010ba95777467a44dd69c7cfd527713bca2e6b3e251abb36b5defa8894dcef3 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_5010ba95777467a44dd69c7cfd527713bca2e6b3e251abb36b5defa8894dcef3->enter($__internal_5010ba95777467a44dd69c7cfd527713bca2e6b3e251abb36b5defa8894dcef3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "navbar.html.twig"));
+        $__internal_f5386d6c78e55b7a3098dd0fc80985a9b720a698554ba8894fd25fc21292e467 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_f5386d6c78e55b7a3098dd0fc80985a9b720a698554ba8894fd25fc21292e467->enter($__internal_f5386d6c78e55b7a3098dd0fc80985a9b720a698554ba8894fd25fc21292e467_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "navbar.html.twig"));
 
-        $__internal_33484a660e08feed8db5cb2764ec0c1185951f7f42b96e85e803bc3bd2afc959 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_33484a660e08feed8db5cb2764ec0c1185951f7f42b96e85e803bc3bd2afc959->enter($__internal_33484a660e08feed8db5cb2764ec0c1185951f7f42b96e85e803bc3bd2afc959_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "navbar.html.twig"));
+        $__internal_aa5e5c937d14b36e27ca8d4d80e0023bf2037a76f0cf7460634d67857494e26d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_aa5e5c937d14b36e27ca8d4d80e0023bf2037a76f0cf7460634d67857494e26d->enter($__internal_aa5e5c937d14b36e27ca8d4d80e0023bf2037a76f0cf7460634d67857494e26d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "navbar.html.twig"));
 
         // line 1
         echo "<nav class=\"navbar navbar-default\" style=\"margin-top: 5px\" role=\"navigation\">
@@ -95,10 +95,10 @@ class __TwigTemplate_0f833ad109cda9047c6a107dde077f01cd06ecd37593a6c0290ac2f1043
 </nav>
 ";
         
-        $__internal_5010ba95777467a44dd69c7cfd527713bca2e6b3e251abb36b5defa8894dcef3->leave($__internal_5010ba95777467a44dd69c7cfd527713bca2e6b3e251abb36b5defa8894dcef3_prof);
+        $__internal_f5386d6c78e55b7a3098dd0fc80985a9b720a698554ba8894fd25fc21292e467->leave($__internal_f5386d6c78e55b7a3098dd0fc80985a9b720a698554ba8894fd25fc21292e467_prof);
 
         
-        $__internal_33484a660e08feed8db5cb2764ec0c1185951f7f42b96e85e803bc3bd2afc959->leave($__internal_33484a660e08feed8db5cb2764ec0c1185951f7f42b96e85e803bc3bd2afc959_prof);
+        $__internal_aa5e5c937d14b36e27ca8d4d80e0023bf2037a76f0cf7460634d67857494e26d->leave($__internal_aa5e5c937d14b36e27ca8d4d80e0023bf2037a76f0cf7460634d67857494e26d_prof);
 
     }
 

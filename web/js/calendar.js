@@ -68,9 +68,18 @@ $(document).ready(function() {
         eventClick:  function(event, jsEvent, view) {
             endtime = $.fullCalendar.moment(event.end).format('H:mm');
             starttime = $.fullCalendar.moment(event.start).format('dddd, Do MMMM  YYYY, H:mm');
+            isAllDay = $.fullCalendar.moment(event.start).format('dddd, Do MMMM  YYYY');
+
             var mywhen = starttime + ' - ' + endtime;
+            console.log(event);
+            console.log(event.commentaire);
             $('#modalTitle').html(event.title);
-            $('#modalWhen').text(mywhen);
+            if(event.allDay == true) {
+                $('#modalWhen').text(isAllDay);
+            }else {
+                $('#modalWhen').text(mywhen);
+            }
+            $('#modalComm').text(event.commentaire);
             $('#eventID').val(event.id);
             $('#calendarModal').modal();
         },
@@ -104,6 +113,7 @@ $(document).ready(function() {
         });
     }
 
+    //Selection d'un autre utilisateur pour visualisation d'un autre planning
     $('#form_chargeRecrutement').change(function () {
         var idUser = $(this).val();
         console.log(idUser);
@@ -123,8 +133,7 @@ $(document).ready(function() {
         }
     });
 
-    //$("#editModal").hide();
-
+    //Editer un evenement
     $('#editButton').on('click',function () {
         var eventID = $('#eventID').val();
         //window.location.reload(true);
@@ -133,11 +142,12 @@ $(document).ready(function() {
         console.log(eventID);
 
         $('#saveButton').on('click', function(e){
-            var newTitle = $('.input_edit').val();
+            var newTitle = $('.input_edit_title').val();
+            var newComm = $('.input_edit_comm').val();
             console.log(newTitle);
             $.ajax({
                 url: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar/edit/title',
-                data: 'action=editTitle&id='+eventID+ '&new title=' + newTitle,
+                data: 'action=editTitle&id='+eventID+ '&new title=' + newTitle+ '&new comm=' + newComm,
                 type: "POST",
                 //dataType : 'json'
                 success: function(data) {
@@ -147,9 +157,6 @@ $(document).ready(function() {
                 },
             });
         });
-
-
-        
     });
     
 });

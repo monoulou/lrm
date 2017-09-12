@@ -21,7 +21,7 @@ class ClientType extends AbstractType
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $etat = array( 'En cours' => 'En cours', 'Facturé' => 'Facturé', 'Annulé' => 'Annulé', 'Suspendu' => 'Suspendu' );
+        $etat = array( 'En cours' => 'En cours', 'Facturé' => 'Facturé', 'Annulé' => 'Annulé', 'Suspendu' => 'Suspendu', 'Autre' => 'Autre' );
         $typeClient = array( 'Prospect'=> 'Prospect', 'Client' => 'Client');
         $civilite = array('Mme.'=>'Madame', 'M.'=>'Monsieur');
         $partenaire = array('Oui'=>'Oui', 'Non'=>'Non');

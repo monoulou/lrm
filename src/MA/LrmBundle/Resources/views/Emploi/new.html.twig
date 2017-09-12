@@ -40,86 +40,83 @@
         </div>
         <!-- BEGIN FORM -->
         <div class="row" id="form_row">
-            <!-- BEGIN FORM-->
-            {{ form_start(form, {'class': 'horizontal-form'}) }}
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="form-group">
-                        <label class="control-label">Entreprise:</label>
-                        {{ form_errors(form.client)}}
-                        {{ form_widget(form.client) }}
+            <div class="col-lg-6" id="block_left_emploi">
+                <!-- BEGIN FORM-->
+                {{ form_start(form, {'class': 'horizontal-form'}) }}
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="control-label">Entreprise</label>
+                            {{ form_errors(form.client)}}
+                            {{ form_widget(form.client) }}
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="control-label">Intitulé du poste</label>
+                            {{ form_errors(form.intitule) }}
+                            {{ form_widget(form.intitule) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label class="control-label">Contrat</label>
+                            {{ form_errors(form.contrat)}}
+                            {{ form_widget(form.contrat)}}
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="control-label">Code postal</label>
+                            {{ form_errors(form.villeCodePostal) }}
+                            {{ form_widget(form.villeCodePostal) }}
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="form-group">
+                            <label class="control-label">Ville</label>
+                            {{ form_errors(form.villeActivite) }}
+                            {{ form_widget(form.villeActivite) }}
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="form-group">
-                        <label class="control-label">Intitulé du poste:</label>
-                        {{ form_errors(form.intitule) }}
-                        {{ form_widget(form.intitule) }}
+            <div class="col-lg-6" id="block_right_emploi">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="form-group">
+                            <label class="control-label">Nombre de postes</label>
+                            {{ form_errors(form.nombrePoste)}}
+                            {{ form_widget(form.nombrePoste)}}
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="form-group">
+                            <label class="control-label">Site de parution</label>
+                            {{ form_errors(form.siteParution)}}
+                            {{ form_widget(form.siteParution)}}
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-2">
-                    <div class="form-group">
-                        <label class="control-label">Type de contrat:</label>
-                        {{ form_errors(form.contrat)}}
-                        {{ form_widget(form.contrat)}}
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="control-label">Description du poste</label>
+                            {{ form_errors(form.description)}}
+                            {{ form_widget(form.description) }}
+                        </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-lg-offset-7 col-lg-5">
+                        <button type="submit" style="width: 100%;" class="btn  btn-default"><i class="fa fa-check" ></i>Enregistrer</button>
+                    </div>
+                </div>
+                {{ form_end(form) }}
+                <!-- END FORM-->
             </div>
-            <div class="row">
-                <div class="col-lg-3">
-                    <label class="control-label">Lieu d'activité:</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="form-group">
-                        {#<label class="control-label">Code postal</label>#}
-                        {{ form_errors(form.villeCodePostal) }}
-                        {{ form_widget(form.villeCodePostal) }}
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="form-group">
-                        {#<label class="control-label">Ville</label>#}
-                        {{ form_errors(form.villeActivite) }}
-                        {{ form_widget(form.villeActivite) }}
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="form-group">
-                        <label class="control-label">Nombre de postes:</label>
-                        {{ form_errors(form.nombrePoste)}}
-                        {{ form_widget(form.nombrePoste)}}
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="form-group">
-                        <label class="control-label">Site de parution:</label>
-                        {{ form_errors(form.siteParution)}}
-                        {{ form_widget(form.siteParution)}}
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="form-group">
-                        <label class="control-label">Description du poste:</label>
-                        {{ form_errors(form.description)}}
-                        {{ form_widget(form.description) }}
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-offset-5">
-                    <button type="submit" class="btn  btn-default"><i class="fa fa-check" ></i>Enregistrer</button>
-                </div>
-            </div>
-            {{ form_end(form) }}
-            <!-- END FORM-->
         </div>
     </div>
 

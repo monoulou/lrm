@@ -443,6 +443,7 @@ class Event extends FullCalendarEvent
         if (null !== $this->getEndDate()) {
             $event['end'] = $this->getEndDate()->format('Y-m-d\TH:i:s');
         }
+        $event['commentaire'] = $this->getCommentaire();
         $event['chargeRecrutement'] = $this->getChargeRecrutement();
 
         /*if (null !== $this->getChargeRecrutement()) {

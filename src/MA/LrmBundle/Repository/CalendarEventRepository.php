@@ -40,15 +40,17 @@ class CalendarEventRepository extends \Doctrine\ORM\EntityRepository
             ->getResult();
     }
 
-    public function editTitle($idEvent, $newTitle)
+    public function editEvent($idEvent, $newTitle, $newComm)
     {
         return $this
             ->createQueryBuilder('e')
             ->update('MALrmBundle:CalendarEvent', 'e')
             ->set('e.title', '?1')
-            ->where('e.id = ?2')
+            ->set('e.commentaire', '?2')
+            ->where('e.id = ?3')
             ->setParameter(1, $newTitle)
-            ->setParameter(2, $idEvent)
+            ->setParameter(2, $newComm)
+            ->setParameter(3, $idEvent)
             ->getQuery()
             ->getResult();
     }

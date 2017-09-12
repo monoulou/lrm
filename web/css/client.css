@@ -52,3 +52,39 @@
     border: 1px solid #e7e7e7;
     border-radius: 5px;
 }
+
+#block_left_candidat {
+    margin-top: 20px;
+    /*border-right: 1px solid black;*/
+
+}
+
+#block_right_candidat{
+    margin-top: 20px;
+    border-left: 1px solid black;
+
+}
+
+#block_left_client {
+    margin-top: 20px;
+    /*border-right: 1px solid black;*/
+
+}
+
+#block_right_client {
+    margin-top: 20px;
+    border-left: 1px solid black;
+
+}
+
+#block_left_emploi {
+    margin-top: 20px;
+    /*border-right: 1px solid black;*/
+
+}
+
+#block_right_emploi {
+    margin-top: 20px;
+    border-left: 1px solid black;
+
+}

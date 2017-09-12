@@ -32,9 +32,9 @@ ma_lrm_calendar_selectUser:
     defaults: { _controller: MALrmBundle:Index:selectUser }
     methods:  [GET, POST]
 
-ma_lrm_calendar_editTitle:
+ma_lrm_calendar_editEvent:
     path:     /accueil/calendar/edit/title
-    defaults: { _controller: MALrmBundle:Index:editTitle }
+    defaults: { _controller: MALrmBundle:Index:editEvent }
     methods:  [GET, POST]
 
 
