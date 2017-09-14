@@ -4,6 +4,7 @@ namespace MA\LrmBundle\Form;
 
 
 use Symfony\Component\Form\AbstractType;
+use MA\UserBundle\Repository\UserRepository;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -21,7 +22,7 @@ class ClientType extends AbstractType
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $etat = array( 'En cours' => 'En cours', 'Facturé' => 'Facturé', 'Annulé' => 'Annulé', 'Suspendu' => 'Suspendu', 'Autre' => 'Autre' );
+        $etat = array( 'En cours' => 'En cours', 'Facturé' => 'Facturé', 'Partiellement Facturé' => 'Partiellement Facturé', 'Annulé' => 'Annulé', 'Suspendu' => 'Suspendu', 'Autre' => 'Autre' );
         $typeClient = array( 'Prospect'=> 'Prospect', 'Client' => 'Client');
         $civilite = array('Mme.'=>'Madame', 'M.'=>'Monsieur');
         $partenaire = array('Oui'=>'Oui', 'Non'=>'Non');
@@ -44,13 +45,18 @@ class ClientType extends AbstractType
             ->add('pays', TextType::class, array(
                 'attr' => array('class'=> 'pays')))
 
-            ->add('civilite',  ChoiceType::class, array('choices' => $civilite))
+            ->add('civilite',  ChoiceType::class, array(
+                'choices' => $civilite,
+                'required' => false))
 
-            ->add('nomContact', TextType::class)
+            ->add('nomContact', TextType::class, array(
+                'required' => false))
 
-            ->add('prenomContact', TextType::class)
+            ->add('prenomContact', TextType::class, array(
+                'required' => false))
 
-            ->add('fonctionContact', TextType::class)
+            ->add('fonctionContact', TextType::class, array(
+                'required' => false))
 
             ->add('telephone', TextType::class)
 
@@ -66,10 +72,18 @@ class ClientType extends AbstractType
                 'choices' => $partenaire,
                 'attr' => array('class'=> 'partenaire')))
 
-            ->add('commentaire', TextareaType::class)
+            ->add('commentaire', TextareaType::class, array(
+                'required' => false))
 
             ->add('chargeRecrutement', EntityType::class, array(
                 'class' => 'MAUserBundle:User',
+                /*'query_builder' => function (UserRepository $ur) {
+                    $admin = 'admin';
+                    return $ur->createQueryBuilder('u')
+                        ->where('u.username != ?1')
+                        ->setParameter(1, $admin);
+
+                },*/
                 'placeholder' => 'Chargé de recutement',
                 'choice_label' => 'username',
                 'expanded' => false,

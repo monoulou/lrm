@@ -47,6 +47,7 @@ class Gestion
      * @var string
      *
      * @ORM\Column(name="date_integration", type="string", length=50)
+     * @Assert\NotBlank()
      */
     private $dateIntegration;
 

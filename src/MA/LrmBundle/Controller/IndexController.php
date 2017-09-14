@@ -5,6 +5,7 @@ namespace MA\LrmBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use MA\LrmBundle\Entity\CalendarEvent;
+use MA\UserBundle\Repository\UserRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,6 +16,11 @@ use Symfony\Component\Validator\Constraints\DateTime;
 
 class IndexController extends Controller
 {
+    /**
+     * Chargement des évenements.
+     * @param Request $request
+     * @return JsonResponse
+     */
     public function loadAction(Request $request)
     {
         //$user = $this->get('security.token_storage')->getToken()->getUser();
@@ -62,6 +68,11 @@ class IndexController extends Controller
         return new JsonResponse($events);
     }
     
+    /**
+     * Edite un evenement par redimensionement
+     * @param Request $request
+     * @return Response
+     */
     public function resizeEventAction(Request $request)
     {
       if ($request->isXmlHttpRequest())
@@ -78,6 +89,11 @@ class IndexController extends Controller
         return new Response("Erreur.");
     }
 
+    /**
+     * Edite un évenement par glissement
+     * @param Request $request
+     * @return Response
+     */
     public function dropEventAction(Request $request)
     {
         if ($request->isXmlHttpRequest())
@@ -94,6 +110,11 @@ class IndexController extends Controller
         return new Response("Erreur.");
     }
 
+    /**
+     * Suppression d'un évenement
+     * @param Request $request
+     * @return Response
+     */
     public function deleteEventAction(Request $request)
     {
         if ($request->isXmlHttpRequest())
@@ -108,6 +129,11 @@ class IndexController extends Controller
         return new Response("Erreur.");
     }
 
+    /**
+     * Edite un évenement par son titre et commentaire
+     * @param Request $request
+     * @return Response
+     */
     public function editEventAction(Request $request)
     {
         if ($request->isXmlHttpRequest())
@@ -124,6 +150,11 @@ class IndexController extends Controller
         return new Response("Erreur.");
     }
 
+    /**
+     * Selection d'un utilisateur pour affichage planning
+     * @param Request $request
+     * @return Response
+     */
     public function selectUserAction(Request $request)
     {
         if ($request->isXmlHttpRequest())
@@ -173,7 +204,7 @@ class IndexController extends Controller
                 'attr'=> array('class' => 'dateTimePicker')))
             ->add('endDate', TextType::class, array(
                 'attr'=> array('class' => 'dateTimePicker')))
-            ->add('commentaire', TextareaType::class)
+            ->add('commentaire', TextareaType::class, array('required' => false))
             ->add('allDay', ChoiceType::class, array('choices' => $allDay ))
             ->add('backgroundColor', ChoiceType::class, array('choices' => $color ))
 
@@ -212,6 +243,13 @@ class IndexController extends Controller
         $userForm = $this->createFormBuilder($userData)
             ->add('chargeRecrutement', EntityType::class, array(
                 'class' => 'MAUserBundle:User',
+                /*'query_builder' => function (UserRepository $ur) {
+                    $admin = 'admin';
+                    return $ur->createQueryBuilder('u')
+                        ->where('u.username != ?1')
+                        ->setParameter(1, $admin);
+
+                },*/
                 'placeholder' => 'Utilisateur',
                 'choice_label' => 'username',
                 'expanded' => false,
@@ -236,12 +274,15 @@ class IndexController extends Controller
 
         /** Affichage des clients a facturer */
         $today = date('d/m/Y');
+        //dump($today);die();
+
         $em = $this->getDoctrine()->getManager();
         $getGestion = $em->getRepository('MALrmBundle:Gestion')->findAll();
         $clientAfacturer = array();
 
         foreach ($getGestion as $index => $gestion)
         {
+
             if ($gestion->getDateIntegration() == $today)
             {
                 //dump($gestion);die();
@@ -249,14 +290,16 @@ class IndexController extends Controller
                 $getEmploi = $em->getRepository('MALrmBundle:Emploi')->findOneBy(array('id' => $gestion->getEmploi()->getId()));
                 $getClient = $em->getRepository('MALrmBundle:Client')->findOneBy(array('id' => $getEmploi->getClient()->getId()));
                 $getUser = $em->getRepository('MAUserBundle:User')->findOneBy(array('id' => $gestion->getChargeRecrutement()->getId()));
+                
 
-
-                $clientAfacturer[$getClient->getId().':'.$gestion->getCandidat()->getId()] = array(
-                    '1' =>$getClient->getDenomination(),
-                    '2' =>$getCandidat->getNom().' '.$getCandidat->getPrenom(),
-                    '3' =>$getUser->getUsername(),
-                    '4' => $getClient->getId());
-
+                if ($getClient->getEtat() == 'En cours' || $getClient->getEtat() == 'Partiellement Facturé')
+                {
+                    $clientAfacturer[$getClient->getId().':'.$gestion->getCandidat()->getId()] = array(
+                        '1' =>$getClient->getDenomination(),
+                        '2' =>$getCandidat->getNom().' '.$getCandidat->getPrenom(),
+                        '3' =>$getUser->getUsername(),
+                        '4' => $getClient->getId());
+                }
             }
 
         };

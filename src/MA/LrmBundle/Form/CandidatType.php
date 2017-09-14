@@ -2,6 +2,7 @@
 
 namespace MA\LrmBundle\Form;
 
+use MA\UserBundle\Repository\UserRepository;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -33,18 +34,24 @@ class CandidatType extends AbstractType
             ->add('prenom', TextType::class)
 
             ->add('dateAnniversaire', TextType::class, array(
+                'required' => false,
                 'attr'=> array(
                     'class' => 'datepicker',
                     'placeholder' => 'jj/mm/aaaa')))
 
             ->add('dateRelance', TextType::class, array(
+                'required' => false,
                 'attr'=> array(
                     'class' => 'datepicker',
                     'placeholder' => 'jj/mm/aaaa')))
 
-            ->add('age', TextType::class)
+            ->add('age', TextType::class, array(
+                'required' => false
+            ))
 
-            ->add('testPersonnalite', ChoiceType::class, array('choices' => $testPerso))
+            ->add('testPersonnalite', ChoiceType::class, array(
+                'choices' => $testPerso,
+                'required' => false))
 
             ->add('adresse', TextType::class)
 
@@ -59,20 +66,34 @@ class CandidatType extends AbstractType
 
             ->add('villeCodePostal', TextType::class, array(
                 'attr' => array('class'=> 'cp',
-                    'maxlength' => 5)))
+                                'maxlength' => 5)))
 
             ->add('telephone', TextType::class)
 
             ->add('email', EmailType::class)
 
-            ->add('cvCandidat', FileType::class, array('label' => 'cv (PDF, .doc)'))
+            ->add('cvCandidat', FileType::class, array(
+                'label' => 'cv (PDF, .doc)',
+                'required' => false))
 
-            ->add('commentaire', TextareaType::class)
+            ->add('commentaire', TextareaType::class, array(
+                'required' => false
+            ))
+
+            ->add('pretention', TextType::class, array(
+                'required' => false))
 
 //            ->add('dateCreation')
 
             ->add('chargeRecrutement', EntityType::class, array(
                 'class' => 'MAUserBundle:User',
+                /*'query_builder' => function (UserRepository $ur) {
+                    $admin = 'admin';
+                    return $ur->createQueryBuilder('u')
+                        ->where('u.username != ?1')
+                        ->setParameter(1, $admin);
+
+                },*/
                 'placeholder' => 'Chargé de recutement',
                 'choice_label' => 'username',
                 'expanded' => false,

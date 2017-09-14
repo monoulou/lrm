@@ -144,8 +144,6 @@ class EmploiController extends Controller
 
         $siteParution = implode(' - ', $emploi->getSiteParution());
         
-//        dump($emploi, $siteParution);die();
-
         return $this->render('MALrmBundle:Emploi:show.html.twig', array(
             'emploi' => $emploi,
             'delete_form' => $deleteForm->createView(),

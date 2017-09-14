@@ -5,6 +5,7 @@ namespace MA\LrmBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use MA\UserBundle\Repository\UserRepository;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
@@ -44,7 +45,14 @@ class GestionType extends AbstractType
             
             ->add('chargeRecrutement', EntityType::class, array(
                 'class' => 'MAUserBundle:User',
-                'placeholder' => 'charge RH',
+                /*'query_builder' => function (UserRepository $ur) {
+                    $admin = 'admin';
+                    return $ur->createQueryBuilder('u')
+                        ->where('u.username != ?1')
+                        ->setParameter(1, $admin);
+
+                },*/
+                'placeholder' => 'Chargé de recrutement',
                 'choice_label' => 'username',
                 'expanded' => false,
                 'multiple' => false

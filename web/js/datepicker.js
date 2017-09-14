@@ -58,7 +58,7 @@ $(document).ready(function(){
         dateFormat: 'dd/mm/yy',
         yearRange: '1920:c+10',
         changeMonth: true,
-        changeYear: true
+        changeYear: true,
     });
     
 

@@ -126,6 +126,13 @@ class Candidat
     private $email;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="pretention", type="string", length=255, nullable = true)
+     */
+    private $pretention;
+
+    /**
      * @ORM\ManyToOne(targetEntity="MA\UserBundle\Entity\User", cascade={"persist"})
      * @ORM\JoinColumn(nullable=true)
      * @Assert\NotBlank()
@@ -633,5 +640,29 @@ class Candidat
     public function getCvCandidat()
     {
         return $this->cvCandidat;
+    }
+
+    /**
+     * Set pretention
+     *
+     * @param string $pretention
+     *
+     * @return Candidat
+     */
+    public function setPretention($pretention)
+    {
+        $this->pretention = $pretention;
+
+        return $this;
+    }
+
+    /**
+     * Get pretention
+     *
+     * @return string
+     */
+    public function getPretention()
+    {
+        return $this->pretention;
     }
 }

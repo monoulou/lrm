@@ -78,16 +78,14 @@ class Client
     /**
      * @var string
      *
-     * @ORM\Column(name="nom_contact", type="string", length=255)
-     * @Assert\NotBlank()
+     * @ORM\Column(name="nom_contact", type="string", length=255, nullable = true)
      */
     private $nomContact;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="fonction_contact", type="string", length=255)
-     * @Assert\NotBlank()
+     * @ORM\Column(name="fonction_contact", type="string", length=255, nullable = true)
      */
     private $fonctionContact;
 
@@ -108,7 +106,7 @@ class Client
     /**
      * @var string
      *
-     * @ORM\Column(name="commentaire", type="string", length = 2000)
+     * @ORM\Column(name="commentaire", type="string", length = 2000, nullable = true)
      */
     private $commentaire;
 
@@ -136,14 +134,14 @@ class Client
     /**
      * @var string
      *
-     * @ORM\Column(name="civilite", type="string", length=255)
+     * @ORM\Column(name="civilite", type="string", length=255, nullable = true)
      */
     private $civilite;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="prenom_contact", type="string", length=255)
+     * @ORM\Column(name="prenom_contact", type="string", length=255, nullable = true)
      */
     private $prenomContact;
 

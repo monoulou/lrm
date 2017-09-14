@@ -15,11 +15,11 @@ class __TwigTemplate_0f833ad109cda9047c6a107dde077f01cd06ecd37593a6c0290ac2f1043
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f5386d6c78e55b7a3098dd0fc80985a9b720a698554ba8894fd25fc21292e467 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_f5386d6c78e55b7a3098dd0fc80985a9b720a698554ba8894fd25fc21292e467->enter($__internal_f5386d6c78e55b7a3098dd0fc80985a9b720a698554ba8894fd25fc21292e467_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "navbar.html.twig"));
+        $__internal_0eb017be9b1427a9ca403c00bd599f7420273288625cd31abf889eee9f83a749 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_0eb017be9b1427a9ca403c00bd599f7420273288625cd31abf889eee9f83a749->enter($__internal_0eb017be9b1427a9ca403c00bd599f7420273288625cd31abf889eee9f83a749_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "navbar.html.twig"));
 
-        $__internal_aa5e5c937d14b36e27ca8d4d80e0023bf2037a76f0cf7460634d67857494e26d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_aa5e5c937d14b36e27ca8d4d80e0023bf2037a76f0cf7460634d67857494e26d->enter($__internal_aa5e5c937d14b36e27ca8d4d80e0023bf2037a76f0cf7460634d67857494e26d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "navbar.html.twig"));
+        $__internal_8fa85648771f57ff97941d90aa875f549514d3403eedc243e11d65f4b15b84e0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8fa85648771f57ff97941d90aa875f549514d3403eedc243e11d65f4b15b84e0->enter($__internal_8fa85648771f57ff97941d90aa875f549514d3403eedc243e11d65f4b15b84e0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "navbar.html.twig"));
 
         // line 1
         echo "<nav class=\"navbar navbar-default\" style=\"margin-top: 5px\" role=\"navigation\">
@@ -43,9 +43,8 @@ class __TwigTemplate_0f833ad109cda9047c6a107dde077f01cd06ecd37593a6c0290ac2f1043
         // line 15
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_candidat_new");
         echo "\">Ajouter un candidat</a></li>
-                        <li><a href=\"#\">Prévoir un entretien</a></li>
                         <li><a href=\"";
-        // line 17
+        // line 16
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_candidat_index");
         echo "\">Liste des candidats</a></li>
                     </ul>
@@ -54,11 +53,11 @@ class __TwigTemplate_0f833ad109cda9047c6a107dde077f01cd06ecd37593a6c0290ac2f1043
                     <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Clients <b class=\"caret\"></b></a>
                     <ul class=\"dropdown-menu dropdown-menu-default\">
                         <li><a href=\"";
-        // line 23
+        // line 22
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_client_new");
         echo "\">Ajouter un client</a></li>
                         <li><a href=\"";
-        // line 24
+        // line 23
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_client_index");
         echo "\">Liste des clients</a></li>
                     </ul>
@@ -67,11 +66,11 @@ class __TwigTemplate_0f833ad109cda9047c6a107dde077f01cd06ecd37593a6c0290ac2f1043
                     <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Emploi <b class=\"caret\"></b></a>
                     <ul class=\"dropdown-menu dropdown-menu-default\">
                         <li><a href=\"";
-        // line 30
+        // line 29
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_emploi_new");
         echo "\">Ajouter une offre</a></li>
                         <li><a href=\"";
-        // line 31
+        // line 30
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_emploi_index");
         echo "\">Liste des offres</a></li>
                     </ul>
@@ -80,11 +79,11 @@ class __TwigTemplate_0f833ad109cda9047c6a107dde077f01cd06ecd37593a6c0290ac2f1043
                     <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Gestion <b class=\"caret\"></b></a>
                     <ul class=\"dropdown-menu dropdown-menu-default\">
                         <li><a href=\"";
-        // line 37
+        // line 36
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_gestion_new");
         echo "\">Pourvoir une offre</a></li>
                         <li><a href=\"";
-        // line 38
+        // line 37
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_gestion_index");
         echo "\">Suivre les offres</a></li>
                     </ul>
@@ -95,10 +94,10 @@ class __TwigTemplate_0f833ad109cda9047c6a107dde077f01cd06ecd37593a6c0290ac2f1043
 </nav>
 ";
         
-        $__internal_f5386d6c78e55b7a3098dd0fc80985a9b720a698554ba8894fd25fc21292e467->leave($__internal_f5386d6c78e55b7a3098dd0fc80985a9b720a698554ba8894fd25fc21292e467_prof);
+        $__internal_0eb017be9b1427a9ca403c00bd599f7420273288625cd31abf889eee9f83a749->leave($__internal_0eb017be9b1427a9ca403c00bd599f7420273288625cd31abf889eee9f83a749_prof);
 
         
-        $__internal_aa5e5c937d14b36e27ca8d4d80e0023bf2037a76f0cf7460634d67857494e26d->leave($__internal_aa5e5c937d14b36e27ca8d4d80e0023bf2037a76f0cf7460634d67857494e26d_prof);
+        $__internal_8fa85648771f57ff97941d90aa875f549514d3403eedc243e11d65f4b15b84e0->leave($__internal_8fa85648771f57ff97941d90aa875f549514d3403eedc243e11d65f4b15b84e0_prof);
 
     }
 
@@ -114,7 +113,7 @@ class __TwigTemplate_0f833ad109cda9047c6a107dde077f01cd06ecd37593a6c0290ac2f1043
 
     public function getDebugInfo()
     {
-        return array (  88 => 38,  84 => 37,  75 => 31,  71 => 30,  62 => 24,  58 => 23,  49 => 17,  44 => 15,  37 => 11,  25 => 1,);
+        return array (  87 => 37,  83 => 36,  74 => 30,  70 => 29,  61 => 23,  57 => 22,  48 => 16,  44 => 15,  37 => 11,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -142,7 +141,6 @@ class __TwigTemplate_0f833ad109cda9047c6a107dde077f01cd06ecd37593a6c0290ac2f1043
                     <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Candidats <b class=\"caret\"></b></a>
                     <ul class=\"dropdown-menu dropdown-menu-default\">
                         <li><a href=\"{{ path('ma_lrm_candidat_new') }}\">Ajouter un candidat</a></li>
-                        <li><a href=\"#\">Prévoir un entretien</a></li>
                         <li><a href=\"{{ path('ma_lrm_candidat_index') }}\">Liste des candidats</a></li>
                     </ul>
                 </li>

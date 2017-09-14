@@ -40,7 +40,7 @@ class Emploi
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string", length = 2000)
+     * @ORM\Column(name="description", type="string", length = 2000, nullable = true)
      */
     private $description;
 

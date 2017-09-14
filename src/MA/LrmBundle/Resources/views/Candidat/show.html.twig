@@ -60,7 +60,11 @@
             </tr>
             <tr>
                 <th>Age</th>
+                {% if candidat.age is not empty %}
                 <td>{{ candidat.age }} ans</td>
+                {% else %}
+                <td> -- </td>
+                {% endif %}
             </tr>
             <tr>
                 <th>Adresse</th>
@@ -73,6 +77,10 @@
             <tr>
                 <th>Email</th>
                 <td>{{ candidat.email }}</td>
+            </tr>
+            <tr>
+                <th>Prétentions salariales</th>
+                <td>{{ candidat.pretention }}</td>
             </tr>
             <tr>
                 <th>CV</th>

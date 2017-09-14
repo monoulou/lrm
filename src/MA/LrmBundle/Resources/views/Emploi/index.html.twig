@@ -89,7 +89,7 @@
                                     <td>{{ site }}</td>
                                 {% endif %}
                             {% endfor %}
-                            <td style="text-align: center"><a href="{{ path ('ma_lrm_emploi_edit', { 'id': emploi.id }) }}"><i class="material-icons" style="margin-left: 40px">mode_edit</i></a><a href="{{ path ('ma_lrm_emploi_delete', { 'id': emploi.id }) }}" onclick="return confirm('Souhaitez-vous confirmer la suppression de cette offre ?')";><i class="material-icons">delete</i></a></td>
+                            <td style="text-align: center"><a href="{{ path ('ma_lrm_emploi_edit', { 'id': emploi.id }) }}"><i class="material-icons" style="margin-left: 10px">mode_edit</i></a><a href="{{ path ('ma_lrm_emploi_delete', { 'id': emploi.id }) }}" onclick="return confirm('Souhaitez-vous confirmer la suppression de cette offre ?')";><i class="material-icons">delete</i></a></td>
                         </tr>
                     {% endif %}
                 {% endfor %}

@@ -15,11 +15,11 @@ class __TwigTemplate_4881fe4ec2c9963135bf7b6441d7c57ef66b1728fa7049b98234c968a5e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2bdbd718e5a9ab3c0a0fdd6dd7c40925901c6bcc9b6b0034c2829ef6325a4b76 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_2bdbd718e5a9ab3c0a0fdd6dd7c40925901c6bcc9b6b0034c2829ef6325a4b76->enter($__internal_2bdbd718e5a9ab3c0a0fdd6dd7c40925901c6bcc9b6b0034c2829ef6325a4b76_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "sidebar.html.twig"));
+        $__internal_66a0cf103ca8e67874c185f2dc3184673a13677a7f7dfa1fc31ac28d2ce580ee = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_66a0cf103ca8e67874c185f2dc3184673a13677a7f7dfa1fc31ac28d2ce580ee->enter($__internal_66a0cf103ca8e67874c185f2dc3184673a13677a7f7dfa1fc31ac28d2ce580ee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "sidebar.html.twig"));
 
-        $__internal_ca6ab41717b633f8b426882bf9287008af6b2cd90b951c012bc169fb344521ab = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ca6ab41717b633f8b426882bf9287008af6b2cd90b951c012bc169fb344521ab->enter($__internal_ca6ab41717b633f8b426882bf9287008af6b2cd90b951c012bc169fb344521ab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "sidebar.html.twig"));
+        $__internal_ee20eb0952292011ec7fd6b511355d8f7922614215b0ef30c94acecc31e175a3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ee20eb0952292011ec7fd6b511355d8f7922614215b0ef30c94acecc31e175a3->enter($__internal_ee20eb0952292011ec7fd6b511355d8f7922614215b0ef30c94acecc31e175a3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "sidebar.html.twig"));
 
         // line 1
         echo "<link href=\"";
@@ -27,14 +27,13 @@ class __TwigTemplate_4881fe4ec2c9963135bf7b6441d7c57ef66b1728fa7049b98234c968a5e
         echo "\" rel='stylesheet' type='text/css' />
 
 <div class=\"col-lg-2\" id=\"sideBar\">
-    <div class=\"row\" id=\"deco_top\"></div>
     <div class=\"row\" id=\"accesRapide\">
         <h5>ACCES RAPIDE</h5>
     </div>
     <div class=\"row\" style=\"padding: 5px\">
         <div class=\"btn-group btn-group-justified\">
             <a class=\"btn btn-default\" href=\"";
-        // line 10
+        // line 9
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_client_index");
         echo "\" style=\"background-color: #e7e7e7\">LISTE DES CLIENTS</a>
         </div>
@@ -42,7 +41,7 @@ class __TwigTemplate_4881fe4ec2c9963135bf7b6441d7c57ef66b1728fa7049b98234c968a5e
     <div class=\"row\" style=\"padding: 5px\">
         <div class=\"btn-group btn-group-justified\">
             <a class=\"btn btn-default\" href=\"";
-        // line 15
+        // line 14
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_emploi_index");
         echo "\" style=\"background-color: #e7e7e7\">LISTE DES OFFRES</a>
         </div>
@@ -50,11 +49,12 @@ class __TwigTemplate_4881fe4ec2c9963135bf7b6441d7c57ef66b1728fa7049b98234c968a5e
     <div class=\"row\" style=\"padding: 5px;\">
         <div class=\"btn-group btn-group-justified\">
             <a class=\"btn btn-default\" href=\"";
-        // line 20
+        // line 19
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_candidat_index");
         echo "\" style=\"background-color: #e7e7e7\">LISTE DES CANDIDATS</a>
         </div>
     </div>
+    <div class=\"row\" id=\"deco_top\"></div>
 </div>
 
 
@@ -63,10 +63,10 @@ class __TwigTemplate_4881fe4ec2c9963135bf7b6441d7c57ef66b1728fa7049b98234c968a5e
 
 ";
         
-        $__internal_2bdbd718e5a9ab3c0a0fdd6dd7c40925901c6bcc9b6b0034c2829ef6325a4b76->leave($__internal_2bdbd718e5a9ab3c0a0fdd6dd7c40925901c6bcc9b6b0034c2829ef6325a4b76_prof);
+        $__internal_66a0cf103ca8e67874c185f2dc3184673a13677a7f7dfa1fc31ac28d2ce580ee->leave($__internal_66a0cf103ca8e67874c185f2dc3184673a13677a7f7dfa1fc31ac28d2ce580ee_prof);
 
         
-        $__internal_ca6ab41717b633f8b426882bf9287008af6b2cd90b951c012bc169fb344521ab->leave($__internal_ca6ab41717b633f8b426882bf9287008af6b2cd90b951c012bc169fb344521ab_prof);
+        $__internal_ee20eb0952292011ec7fd6b511355d8f7922614215b0ef30c94acecc31e175a3->leave($__internal_ee20eb0952292011ec7fd6b511355d8f7922614215b0ef30c94acecc31e175a3_prof);
 
     }
 
@@ -82,7 +82,7 @@ class __TwigTemplate_4881fe4ec2c9963135bf7b6441d7c57ef66b1728fa7049b98234c968a5e
 
     public function getDebugInfo()
     {
-        return array (  54 => 20,  46 => 15,  38 => 10,  25 => 1,);
+        return array (  53 => 19,  45 => 14,  37 => 9,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -98,7 +98,6 @@ class __TwigTemplate_4881fe4ec2c9963135bf7b6441d7c57ef66b1728fa7049b98234c968a5e
         return new Twig_Source("<link href=\"{{ asset ('css/index.css') }}\" rel='stylesheet' type='text/css' />
 
 <div class=\"col-lg-2\" id=\"sideBar\">
-    <div class=\"row\" id=\"deco_top\"></div>
     <div class=\"row\" id=\"accesRapide\">
         <h5>ACCES RAPIDE</h5>
     </div>
@@ -117,6 +116,7 @@ class __TwigTemplate_4881fe4ec2c9963135bf7b6441d7c57ef66b1728fa7049b98234c968a5e
             <a class=\"btn btn-default\" href=\"{{ path('ma_lrm_candidat_index') }}\" style=\"background-color: #e7e7e7\">LISTE DES CANDIDATS</a>
         </div>
     </div>
+    <div class=\"row\" id=\"deco_top\"></div>
 </div>
 
 

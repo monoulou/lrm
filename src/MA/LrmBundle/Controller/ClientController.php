@@ -132,7 +132,7 @@ class ClientController extends Controller
         /** Force le retour à la ligne pour l'affichage du commentaire */
         $wrapCommentaire = wordwrap($client->getCommentaire(), 100, "\n", true);
         $client->setCommentaire($wrapCommentaire);
-        
+    
         return $this->render('MALrmBundle:Client:show.html.twig', array(
             'client' => $client,
             'delete_form' => $deleteForm->createView(),

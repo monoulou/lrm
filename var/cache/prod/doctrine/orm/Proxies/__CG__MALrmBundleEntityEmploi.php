@@ -64,10 +64,10 @@ class Emploi extends \MA\LrmBundle\Entity\Emploi implements \Doctrine\ORM\Proxy\
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'id', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'intitule', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'contrat', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'description', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'siteParution', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'lieuTravail', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'client', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'dateCreation'];
+            return ['__isInitialized__', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'id', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'intitule', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'contrat', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'description', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'siteParution', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'villeCodePostal', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'villeActivite', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'client', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'nombrePoste', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'dateCreation'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'id', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'intitule', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'contrat', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'description', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'siteParution', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'lieuTravail', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'client', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'dateCreation'];
+        return ['__isInitialized__', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'id', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'intitule', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'contrat', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'description', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'siteParution', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'villeCodePostal', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'villeActivite', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'client', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'nombrePoste', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'dateCreation'];
     }
 
     /**
@@ -242,28 +242,6 @@ class Emploi extends \MA\LrmBundle\Entity\Emploi implements \Doctrine\ORM\Proxy\
     /**
      * {@inheritDoc}
      */
-    public function setLieuTravail($lieuTravail)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLieuTravail', [$lieuTravail]);
-
-        return parent::setLieuTravail($lieuTravail);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getLieuTravail()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLieuTravail', []);
-
-        return parent::getLieuTravail();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function setDateCreation($dateCreation)
     {
 
@@ -340,6 +318,72 @@ class Emploi extends \MA\LrmBundle\Entity\Emploi implements \Doctrine\ORM\Proxy\
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSiteParution', []);
 
         return parent::getSiteParution();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setVilleCodePostal($villeCodePostal)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVilleCodePostal', [$villeCodePostal]);
+
+        return parent::setVilleCodePostal($villeCodePostal);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVilleCodePostal()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVilleCodePostal', []);
+
+        return parent::getVilleCodePostal();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setVilleActivite($villeActivite)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVilleActivite', [$villeActivite]);
+
+        return parent::setVilleActivite($villeActivite);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVilleActivite()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVilleActivite', []);
+
+        return parent::getVilleActivite();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setNombrePoste($nombrePoste)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNombrePoste', [$nombrePoste]);
+
+        return parent::setNombrePoste($nombrePoste);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getNombrePoste()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNombrePoste', []);
+
+        return parent::getNombrePoste();
     }
 
 }

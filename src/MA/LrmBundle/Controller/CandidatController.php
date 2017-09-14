@@ -127,28 +127,32 @@ class CandidatController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
 
             $file = $candidat->getCvCandidat();
-            /** encodage du nom du fichier uploadé */
-            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+            if (!empty($file))
+            {
+                /** encodage du nom du fichier uploadé */
+                $fileName = md5(uniqid()).'.'.$file->guessExtension();
 
-            /** Ré-ecriture du nom du cv du candidat */
-            $fileName = $candidat->getNom().'_'.$candidat->getPrenom().'_cv.'.explode('.',$fileName)[1];
-            $candidat->setCvCandidat($fileName);
+                /** Ré-ecriture du nom du cv du candidat */
+                $fileName = $candidat->getNom().'_'.$candidat->getPrenom().'_cv.'.explode('.',$fileName)[1];
+                $candidat->setCvCandidat($fileName);
 
-            //$uploadDirectory = $_SERVER['DOCUMENT_ROOT'].$path->serveurPath().'/web/uploads/declaratifs/';
-            $file->move(
-                $this->getParameter('cv_directory'),
-                $fileName
-            );
-
+                //$uploadDirectory = $_SERVER['DOCUMENT_ROOT'].$path->serveurPath().'/web/uploads/declaratifs/';
+                $file->move(
+                    $this->getParameter('cv_directory'),
+                    $fileName
+                );
+            }
+            
             /** Si relance candidat => ajout d'un evenement au calendrier */
             $dateRelance = $form->get('dateRelance')->getData();
             if (isset($dateRelance))
             {
                 $dateRelance = str_replace('/', '-', $form->get('dateRelance')->getData());
-                $title = 'Relance'.' '.$form->get('nom')->getData().' '.$form->get('prenom')->getData();
+                $title = $form->get('nom')->getData().' '.$form->get('prenom')->getData();
                 $start = new \DateTime($dateRelance);
                 $end = new \DateTime($dateRelance);
                 $user = $form->get('chargeRecrutement')->getData();
+                $commentaire = 'Relance candidat';
                 $duration = true;
                 $backgroundColor = '#9A939E';
 
@@ -156,6 +160,7 @@ class CandidatController extends Controller
                 $relanceCandidat->setStartDate($start);
                 $relanceCandidat->setEndDate($end);
                 $relanceCandidat->setAllDay($duration);
+                $relanceCandidat->setCommentaire($commentaire);
                 $relanceCandidat->setChargeRecrutement($user);
                 $relanceCandidat->setBackgroundColor($backgroundColor);
 
@@ -201,9 +206,14 @@ class CandidatController extends Controller
      */
     public function editAction(Request $request, Candidat $candidat)
     {
-        $candidat->setCvCandidat(
-            new File($this->getParameter('cv_directory').'/'.$candidat->getCvCandidat())
-        );
+        $cv = $candidat->getCvCandidat();
+        if (!empty($cv))
+        {
+            $candidat->setCvCandidat(
+                new File($this->getParameter('cv_directory').'/'.$candidat->getCvCandidat())
+            );
+        }
+
         $deleteForm = $this->createDeleteForm($candidat);
         $editForm = $this->createForm('MA\LrmBundle\Form\CandidatType', $candidat);
         $editForm->handleRequest($request);
@@ -211,20 +221,22 @@ class CandidatController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
 
             $file = $candidat->getCvCandidat();
-            /** encodage du nom du fichier uploadé */
-            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+            if (!empty($file))
+            {
+                /** encodage du nom du fichier uploadé */
+                $fileName = md5(uniqid()).'.'.$file->guessExtension();
 
-            /** Ré-ecriture du nom du cv du candidat */
-            $fileName = $candidat->getNom().'_'.$candidat->getPrenom().'_cv.'.explode('.',$fileName)[1];
-            $candidat->setCvCandidat($fileName);
+                /** Ré-ecriture du nom du cv du candidat */
+                $fileName = $candidat->getNom().'_'.$candidat->getPrenom().'_cv.'.explode('.',$fileName)[1];
+                $candidat->setCvCandidat($fileName);
 
-            //dump($candidat,$file);die();
-            //$uploadDirectory = $_SERVER['DOCUMENT_ROOT'].$path->serveurPath().'/web/uploads/declaratifs/';
-            $file->move(
-                $this->getParameter('cv_directory'),
-                $fileName
-            );
-
+                //dump($candidat,$file);die();
+                //$uploadDirectory = $_SERVER['DOCUMENT_ROOT'].$path->serveurPath().'/web/uploads/declaratifs/';
+                $file->move(
+                    $this->getParameter('cv_directory'),
+                    $fileName
+                );
+            }
             //$this->getDoctrine()->getManager()->flush();
             $em = $this->getDoctrine()->getManager();
             $em->persist($candidat);
@@ -251,7 +263,7 @@ class CandidatController extends Controller
     {
         /** Suppresion d'un evenement lié à une relance candidat */
         $em = $this->getDoctrine()->getManager();
-        $relanceEvent = $em->getRepository('MALrmBundle:CalendarEvent')->findOneBy(array('title' => 'Relance'.' '.$candidat->getNom().' '.$candidat->getPrenom()));
+        $relanceEvent = $em->getRepository('MALrmBundle:CalendarEvent')->findOneBy(array('title' => $candidat->getNom().' '.$candidat->getPrenom()));
 
         if (!empty($relanceEvent))
         {
