@@ -1,0 +1,4 @@
+ma_lrm_index:
+    path:     /
+    defaults:  { _controller: MALrmBundle:Index:redirectToLog }
+    methods:  [GET, POST]

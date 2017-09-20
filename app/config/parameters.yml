@@ -1,12 +1,18 @@
 # This file is auto-generated during the composer install
 parameters:
     database_host: 127.0.0.1
+#    database_host: mysql-lrm.alwaysdata.net
     database_port: null
+#    database_port: 3306
     database_name: ligne_rh
+#    database_name: lrm_db
     database_user: root
+#    database_user: lrm
     database_password: null
-    mailer_transport: smtp
+#    database_password: loul@1005
+#    mailer_transport: smtp
     mailer_host: 127.0.0.1
+    mailer_host: smtp.gmail.com
     mailer_user: mohamedabdelmoumen@gmail.com
     mailer_password: loul@1005
     secret: ThisTokenIsNotSoSecretChangeIt

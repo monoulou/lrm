@@ -15,11 +15,11 @@ class __TwigTemplate_0f833ad109cda9047c6a107dde077f01cd06ecd37593a6c0290ac2f1043
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0eb017be9b1427a9ca403c00bd599f7420273288625cd31abf889eee9f83a749 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_0eb017be9b1427a9ca403c00bd599f7420273288625cd31abf889eee9f83a749->enter($__internal_0eb017be9b1427a9ca403c00bd599f7420273288625cd31abf889eee9f83a749_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "navbar.html.twig"));
+        $__internal_43ac7d00989c0336c1bbd5ddba573546cb3608477d7e5c974ace36fd7d92c039 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_43ac7d00989c0336c1bbd5ddba573546cb3608477d7e5c974ace36fd7d92c039->enter($__internal_43ac7d00989c0336c1bbd5ddba573546cb3608477d7e5c974ace36fd7d92c039_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "navbar.html.twig"));
 
-        $__internal_8fa85648771f57ff97941d90aa875f549514d3403eedc243e11d65f4b15b84e0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8fa85648771f57ff97941d90aa875f549514d3403eedc243e11d65f4b15b84e0->enter($__internal_8fa85648771f57ff97941d90aa875f549514d3403eedc243e11d65f4b15b84e0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "navbar.html.twig"));
+        $__internal_c79cee0e4fffacd4f50ca74d8e5527f8a9d00f5bcf302c98209f1584fba2564c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c79cee0e4fffacd4f50ca74d8e5527f8a9d00f5bcf302c98209f1584fba2564c->enter($__internal_c79cee0e4fffacd4f50ca74d8e5527f8a9d00f5bcf302c98209f1584fba2564c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "navbar.html.twig"));
 
         // line 1
         echo "<nav class=\"navbar navbar-default\" style=\"margin-top: 5px\" role=\"navigation\">
@@ -28,7 +28,10 @@ class __TwigTemplate_0f833ad109cda9047c6a107dde077f01cd06ecd37593a6c0290ac2f1043
             <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-ex2-collapse\">
                 <span class=\"sr-only\">Toggle navigation</span>
             </button>
-            <a class=\"navbar-brand\" href=\"#\">LRM</a>
+            <a class=\"navbar-brand\" href=\"";
+        // line 7
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ma_lrm_accueil");
+        echo "\">LRM</a>
         </div>
         <div class=\"collapse navbar-collapse\">
             <ul class=\"nav navbar-nav\">
@@ -94,10 +97,10 @@ class __TwigTemplate_0f833ad109cda9047c6a107dde077f01cd06ecd37593a6c0290ac2f1043
 </nav>
 ";
         
-        $__internal_0eb017be9b1427a9ca403c00bd599f7420273288625cd31abf889eee9f83a749->leave($__internal_0eb017be9b1427a9ca403c00bd599f7420273288625cd31abf889eee9f83a749_prof);
+        $__internal_43ac7d00989c0336c1bbd5ddba573546cb3608477d7e5c974ace36fd7d92c039->leave($__internal_43ac7d00989c0336c1bbd5ddba573546cb3608477d7e5c974ace36fd7d92c039_prof);
 
         
-        $__internal_8fa85648771f57ff97941d90aa875f549514d3403eedc243e11d65f4b15b84e0->leave($__internal_8fa85648771f57ff97941d90aa875f549514d3403eedc243e11d65f4b15b84e0_prof);
+        $__internal_c79cee0e4fffacd4f50ca74d8e5527f8a9d00f5bcf302c98209f1584fba2564c->leave($__internal_c79cee0e4fffacd4f50ca74d8e5527f8a9d00f5bcf302c98209f1584fba2564c_prof);
 
     }
 
@@ -113,7 +116,7 @@ class __TwigTemplate_0f833ad109cda9047c6a107dde077f01cd06ecd37593a6c0290ac2f1043
 
     public function getDebugInfo()
     {
-        return array (  87 => 37,  83 => 36,  74 => 30,  70 => 29,  61 => 23,  57 => 22,  48 => 16,  44 => 15,  37 => 11,  25 => 1,);
+        return array (  90 => 37,  86 => 36,  77 => 30,  73 => 29,  64 => 23,  60 => 22,  51 => 16,  47 => 15,  40 => 11,  33 => 7,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -132,7 +135,7 @@ class __TwigTemplate_0f833ad109cda9047c6a107dde077f01cd06ecd37593a6c0290ac2f1043
             <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-ex2-collapse\">
                 <span class=\"sr-only\">Toggle navigation</span>
             </button>
-            <a class=\"navbar-brand\" href=\"#\">LRM</a>
+            <a class=\"navbar-brand\" href=\"{{ path('ma_lrm_accueil') }}\">LRM</a>
         </div>
         <div class=\"collapse navbar-collapse\">
             <ul class=\"nav navbar-nav\">

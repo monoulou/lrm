@@ -1,0 +1,24 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+<html>
+<head>
+    <meta charset="{{ _charset }}" />
+    <title>Erreur: {{ status_text }}</title>
+</head>
+
+
+<div class="row" style="margin-top:60px; margin-left: 25px">
+    <h1>Oops! Erreur </h1>
+    <h2>Une erreur serveur s'est produite.</h2>
+</div>
+
+<div class="row" style="margin-left: 25px">
+    <div>
+        Veuillez contacter l'administrateur. Merci
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -100,6 +100,21 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        // ma_lrm_index
+        if (rtrim($pathinfo, '/') === '') {
+            if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                goto not_ma_lrm_index;
+            }
+
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'ma_lrm_index');
+            }
+
+            return array (  '_controller' => 'MA\\LrmBundle\\Controller\\IndexController::redirectToLogAction',  '_route' => 'ma_lrm_index',);
+        }
+        not_ma_lrm_index:
+
         if (0 === strpos($pathinfo, '/log')) {
             if (0 === strpos($pathinfo, '/login')) {
                 // fos_user_security_login

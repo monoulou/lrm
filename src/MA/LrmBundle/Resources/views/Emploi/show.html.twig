@@ -10,13 +10,14 @@
 
     <div class="container-fluid" id="header_container">
         <div class="row">
-            <div class="col-lg-offset-10">
+            <div class="col-lg-2" style="margin-left: -120px">
                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                    <i class="material-icons">person</i> Bonjour, {{ app.user.username }}--<a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+                    <i class="material-icons">person</i> Bonjour, {{ app.user.username }}
                 {% else %}
                     <a href="{{ path('fos_user_security_login') }}">Connexion</a>
                 {% endif %}
             </div>
+            <div class="col-lg-offset-11" style="padding-top: 10px" id="logout"><a href="{{ path('fos_user_security_logout') }}"><i class="material-icons">input</i></a></div>
         </div>
     </div>
     <div class="container-fluid" id="main_container">
@@ -46,10 +47,6 @@
     <div class="row">
         <table class="table table-striped" id="show_client">
             <tbody>
-            <tr>
-                <th>Numéro de emploi</th>
-                <td>{{ emploi.id }}</td>
-            </tr>
             <tr>
                 <th>Entreprise</th>
                 <td>{{ emploi.client.denomination }}</td>

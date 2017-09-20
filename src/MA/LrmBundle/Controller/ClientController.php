@@ -3,6 +3,7 @@
 namespace MA\LrmBundle\Controller;
 
 use MA\LrmBundle\Entity\Client;
+use MA\LrmBundle\Entity\Emploi;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use MA\LrmBundle\MALrmBundle;
@@ -171,16 +172,45 @@ class ClientController extends Controller
      */
     public function deleteAction(Request $request, Client $client)
     {
-        /** ***************Suppression des offres liées aux clients***************************** */
+
+        /** ***************Suppression des offres d'emplois et des postes pourvus liés aux clients***************************** */
         $em = $this->getDoctrine()->getManager();
         $emplois = $em->getRepository('MALrmBundle:Emploi')->findBy(array('client'=>$client->getId()));
-
+        $listEmplois = $em->getRepository('MALrmBundle:Emploi')->findAll();
         foreach ($emplois as $index => $emploi)
         {
+
+            $em = $this->getDoctrine()->getManager();
+            $candidats = $em->getRepository('MALrmBundle:Candidat')->findAll();
+            foreach ($candidats as $key => $candidat)
+            {
+                if ($candidat->getEmploi()->getId() == $emploi->getId())
+                {
+                    foreach ($listEmplois as $k => $v)
+                    {
+                        if ($v->getId() == '16')
+                        {
+                            $em = $this->getDoctrine()->getManager();
+                            $em->persist($candidat->setEmploi($v));
+                            $em->flush();
+                        }
+                    }
+                }
+            }
+
+            $gestions = $em->getRepository('MALrmBundle:Gestion')->findBy(array('emploi'=>$emploi->getId()));
+            foreach ($gestions as $cle => $gestion)
+            {
+                $em = $this->getDoctrine()->getManager();
+                $em->remove($gestion);
+                $em->flush();
+            }
+
             $em = $this->getDoctrine()->getManager();
             $em->remove($emploi);
             $em->flush();
         }
+
         /** ********************************************************************************** */
 
         $em = $this->getDoctrine()->getManager();

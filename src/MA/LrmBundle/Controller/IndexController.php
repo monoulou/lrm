@@ -13,6 +13,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Validator\Constraints\DateTime;
+use FOS\UserBundle\FOSUserBundle;
 
 class IndexController extends Controller
 {
@@ -243,13 +244,13 @@ class IndexController extends Controller
         $userForm = $this->createFormBuilder($userData)
             ->add('chargeRecrutement', EntityType::class, array(
                 'class' => 'MAUserBundle:User',
-                /*'query_builder' => function (UserRepository $ur) {
+                'query_builder' => function (UserRepository $ur) {
                     $admin = 'admin';
                     return $ur->createQueryBuilder('u')
                         ->where('u.username != ?1')
                         ->setParameter(1, $admin);
 
-                },*/
+                },
                 'placeholder' => 'Utilisateur',
                 'choice_label' => 'username',
                 'expanded' => false,
@@ -314,6 +315,17 @@ class IndexController extends Controller
                 'clientAfacturer' => $clientAfacturer,
             ));
 
+    }
+
+    /**
+     * Renvoi vers vers la page de login sur le serveur en prod
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function redirectToLogAction()
+    {
+        //return $this->redirect('http://lrm.alwaysdata.net/login');
+        //return $this->redirect('http://localhost/ligne_rh/web/app.php/login');
+        return $this->redirect('http://localhost/ligne_rh/web/app_dev.php/login');
     }
     
     

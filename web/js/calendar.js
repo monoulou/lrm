@@ -3,6 +3,8 @@
  */
 
 $(document).ready(function() {
+
+
     $('#calendar').fullCalendar({
         header: {
             left: 'prev, next',
@@ -26,8 +28,9 @@ $(document).ready(function() {
         },*/
         editable: true,
         eventDurationEditable: true,
-        //events: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar',
-        events: 'http://localhost/ligne_rh/web/admin/accueil/calendar',
+        events: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar',
+        //events: 'http://localhost/ligne_rh/web/admin/accueil/calendar',
+        //events: 'https://lrm.alwaysdata.net/admin/accueil/calendar',
 
         eventResize: function(event) {
             console.log("Entrée dans : eventResize");
@@ -35,8 +38,9 @@ $(document).ready(function() {
             var end1 = event.end.format("YYYY-MM-DD HH:mm:ss");
             var xhr = $.ajax({
                 type: "POST",
-                //url: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar/resize',
-                url: 'http://localhost/ligne_rh/web/admin/accueil/calendar/resize',
+                url: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar/resize',
+                //url: 'http://localhost/ligne_rh/web/admin/accueil/calendar/resize',
+                //url: 'https://lrm.alwaysdata.net/admin/accueil/calendar/resize',
                 data: 'action=update&title=' + event.title + '&start=' + start1 + '&end=' + end1 + '&id=' + event.id,
                 success: function(data) {
                     console.log(data);
@@ -48,14 +52,18 @@ $(document).ready(function() {
             });
         },
 
+
+
         eventDrop: function(event){
             console.log("Entrée dans : eventDrop");
             console.log(event);
             var start1 = event.start.format("YYYY-MM-DD HH:mm:ss");
             var end1 = event.end.format("YYYY-MM-DD HH:mm:ss");
+
             var xhr = $.ajax({
-                //url: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar/drop',
-                url: 'http://localhost/ligne_rh/web/admin/accueil/calendar/drop',
+                url: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar/drop',
+                //url: 'http://localhost/ligne_rh/web/admin/accueil/calendar/drop',
+                //url: 'https://lrm.alwaysdata.net/admin/accueil/calendar/drop',
                 data: 'action=update&title=' + event.title+'&start=' + start1 +'&end=' + end1 + '&id=' + event.id ,
                 type: "POST",
                 success: function(data) {
@@ -101,8 +109,9 @@ $(document).ready(function() {
         $("#calendarModal").modal('hide');
         var eventID = $('#eventID').val();
         $.ajax({
-            //url: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar/delete',
-            url: 'http://localhost/ligne_rh/web/admin/accueil/calendar/delete',
+            url: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar/delete',
+            //url: 'http://localhost/ligne_rh/web/admin/accueil/calendar/delete',
+            //url: 'https://lrm.alwaysdata.net/admin/accueil/calendar/delete',
             data: 'action=delete&id='+eventID,
             type: "POST",
             success: function(json) {
@@ -125,8 +134,9 @@ $(document).ready(function() {
         if($(this).val() != null)
         {
             $.ajax({
-                //url: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar/select/user',
-                url: 'http://localhost/ligne_rh/web/admin/accueil/calendar/select/user',
+                url: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar/select/user',
+                //url: 'http://localhost/ligne_rh/web/admin/accueil/calendar/select/user',
+                //url: 'https://lrm.alwaysdata.net/admin/accueil/calendar/select/user',
                 data: 'action=selectUser&id='+idUser,
                 type: "POST",
                 //dataType : 'json'
@@ -152,8 +162,9 @@ $(document).ready(function() {
             var newComm = $('.input_edit_comm').val();
             console.log(newTitle);
             $.ajax({
-                //url: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar/edit/title',
-                url: 'http://localhost/ligne_rh/web/admin/accueil/calendar/edit/title',
+                url: 'http://localhost/ligne_rh/web/app_dev.php/admin/accueil/calendar/edit/title',
+                //url: 'http://localhost/ligne_rh/web/admin/accueil/calendar/edit/title',
+                //url: 'https://lrm.alwaysdata.net/admin/accueil/calendar/edit/title',
                 data: 'action=editTitle&id='+eventID+ '&new title=' + newTitle+ '&new comm=' + newComm,
                 type: "POST",
                 //dataType : 'json'

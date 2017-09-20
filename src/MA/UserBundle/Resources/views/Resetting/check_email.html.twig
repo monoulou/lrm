@@ -8,14 +8,11 @@
 
 {% block fos_user_content %}
     <div class="container-fluid" id="check_email_container">
-        <div class="row">
-            <div class="col-lg-offset-9 col-lg-3">
-                <a href="{{ path('fos_user_security_login') }}">Retourner vers la page de connexion</a>
-            </div>
+        <div class="row" style="margin-right: 15px">
+            <div class="col-lg-5"><h3 id="check_email_title">RE-INITIALISATION DU MOT DE PASSE</h3></div>
+            <div class="col-lg-offset-11" style="margin-top: 35px;"> <a href="{{ path('fos_user_security_login') }}">Page de connexion</a></div>
         </div>
-        <div class="row">
-            <h3 id="check_email_title">RE-INITIALISATION DU MOT DE PASSE</h3><hr style="border: 1px solid darkgray; margin-left: 25px; margin-right: 25px ">
-        </div>
+        <div class="row"><hr style="border: 1px solid darkgray; margin-left: 25px; margin-right: 25px "></div>
         <div class="row" id="message_check_email">
             {{ 'resetting.check_email'|trans({'%tokenLifetime%': tokenLifetime})|nl2br }}
         </div>

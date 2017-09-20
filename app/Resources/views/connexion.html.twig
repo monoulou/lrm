@@ -1,25 +1,36 @@
 <div class="row">
     {% if register == true %}
-    <div class="col-lg-offset-10">
         {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-        <i class="material-icons">person</i> Bonjour, {{ app.user.username }}--<a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
-    </div>
-    <div class=" row">
-        <div class="col-lg-offset-10">
-            <i class="material-icons">person_add</i><a href="{{ path('ma_lrm_register') }}"> Créer un compte </a>
-        </div>
-    </div>
-{% else %}
-    <a href="{{ path('fos_user_security_login') }}">Connexion</a>
-    {% endif %}
-</div>
-{% else %}
-    <div class="col-lg-offset-10">
-        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-            <i class="material-icons">person</i>Bonjour, {{ app.user.username }}--<a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+            <div class="col-lg-2" style="margin-left: -120px"><i class="material-icons">perm_identity</i>Bonjour, {{ app.user.username }}</div>
+            <div class="col-lg-offset-11" style="padding-top: 10px" id="logout"><a href="{{ path('fos_user_security_logout') }}"><i class="material-icons">input</i></a></div>
+            <div class=" row">
+                <div class="col-lg-2" style="margin-left: -120px">
+                    <i class="material-icons">person_add</i><a href="{{ path('ma_lrm_register') }}"> Créer un compte </a>
+                </div>
+            </div>
         {% else %}
-            <a href="{{ path('fos_user_security_login') }}">Connexion</a>
+            <div class="col-lg-offset-11" style="padding-top: 10px"><a href="{{ path('fos_user_security_login') }}">Connexion</a></div>
         {% endif %}
-    </div>
+    {% else %}
+        <div class="row">
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <div class="col-lg-2" style="margin-left: -120px"><i class="material-icons">perm_identity</i>Bonjour, {{ app.user.username }}</div>
+                <div class="col-lg-offset-11" style="padding-top: 10px"><a href="{{ path('fos_user_security_logout') }}"><i class="material-icons">input</i></a></div>
+            {% else %}
+                <a href="{{ path('fos_user_security_login') }}">Connexion</a>
+            {% endif %}
+        </div>
     {% endif %}
 </div>
+
+{#
+<script>
+    $(document).ready(function () {
+        $("#logout").mouseover(function(){
+            $( this ).append( $( "<span>Déconnexion</span>" ) );
+        });
+        $("#logout").mouseout(function(){
+
+        });
+    })
+</script>#}

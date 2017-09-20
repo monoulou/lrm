@@ -87,13 +87,13 @@ class CandidatType extends AbstractType
 
             ->add('chargeRecrutement', EntityType::class, array(
                 'class' => 'MAUserBundle:User',
-                /*'query_builder' => function (UserRepository $ur) {
+                'query_builder' => function (UserRepository $ur) {
                     $admin = 'admin';
                     return $ur->createQueryBuilder('u')
                         ->where('u.username != ?1')
                         ->setParameter(1, $admin);
 
-                },*/
+                },
                 'placeholder' => 'Chargé de recutement',
                 'choice_label' => 'username',
                 'expanded' => false,

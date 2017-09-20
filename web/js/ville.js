@@ -7,8 +7,9 @@
             if($(this).val().length === 5){
                 $.ajax({
                     type: 'get',
-                    //url:'http://localhost/ligne_rh/web/app_dev.php/admin/client/new/ville/' + $(this).val(),
-                    url:'http://localhost/ligne_rh/web/admin/client/new/ville/' + $(this).val(),
+                    url:'http://localhost/ligne_rh/web/app_dev.php/admin/client/new/ville/' + $(this).val(),
+                    //url:'http://localhost/ligne_rh/web/admin/client/new/ville/' + $(this).val(),
+                    //url:'https://lrm.alwaysdata.net/admin/client/new/ville/' + $(this).val(),
                     beforeSend: function () {
                     },
                     success: function (data) {

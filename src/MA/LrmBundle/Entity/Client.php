@@ -99,7 +99,6 @@ class Client
     /**
      * @ORM\ManyToOne(targetEntity="MA\UserBundle\Entity\User", cascade={"persist"})
      * @ORM\JoinColumn(nullable=true)
-     * @Assert\NotBlank()
      */
     private $chargeRecrutement;
 

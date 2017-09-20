@@ -274,7 +274,6 @@ class CandidatController extends Controller
         /** ************************************************* */
         
         $em = $this->getDoctrine()->getManager();
-        $em->remove($relanceEvent);
         $em->remove($candidat);
         $em->flush();
         

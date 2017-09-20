@@ -1,3 +1,6 @@
+ma_lrm_index:
+    resource: "@MALrmBundle/Resources/config/routing/index/index.yml"
+    prefix: /
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"

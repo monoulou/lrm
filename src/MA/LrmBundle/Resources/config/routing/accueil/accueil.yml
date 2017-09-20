@@ -1,3 +1,4 @@
+
 ma_lrm_accueil:
     path:     /accueil
     defaults:  { _controller: MALrmBundle:Index:index }
