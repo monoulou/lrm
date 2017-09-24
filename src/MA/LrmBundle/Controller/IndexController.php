@@ -284,6 +284,30 @@ class IndexController extends Controller
         foreach ($getGestion as $index => $gestion)
         {
 
+            //dump($today, $gestion->getDateIntegration());die();
+            /*$jourNow = explode('/', $today)[0];
+            $moisNow = explode('/', $today)[1];
+            $jourIntegration = explode('/',$gestion->getDateIntegration())[0];
+            $moisIntegration = explode('/',$gestion->getDateIntegration())[1];
+
+            if ($jourNow >= $jourIntegration && $moisNow == $moisIntegration)
+            {
+                $getCandidat = $em->getRepository('MALrmBundle:Candidat')->findOneBy(array('id' => $gestion->getCandidat()->getId()));
+                $getEmploi = $em->getRepository('MALrmBundle:Emploi')->findOneBy(array('id' => $gestion->getEmploi()->getId()));
+                $getClient = $em->getRepository('MALrmBundle:Client')->findOneBy(array('id' => $getEmploi->getClient()->getId()));
+                $getUser = $em->getRepository('MAUserBundle:User')->findOneBy(array('id' => $gestion->getChargeRecrutement()->getId()));
+
+
+                if ($getClient->getEtat() == 'En cours' || $getClient->getEtat() == 'Partiellement Facturé')
+                {
+                    $clientAfacturer[$getClient->getId().':'.$gestion->getCandidat()->getId()] = array(
+                        '1' =>$getClient->getDenomination(),
+                        '2' =>$getCandidat->getNom().' '.$getCandidat->getPrenom(),
+                        '3' =>$getUser->getUsername(),
+                        '4' => $getClient->getId());
+                }
+            }*/
+
             if ($gestion->getDateIntegration() == $today)
             {
                 //dump($gestion);die();

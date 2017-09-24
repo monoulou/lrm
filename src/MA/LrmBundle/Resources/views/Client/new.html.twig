@@ -35,7 +35,7 @@
             <h3>AJOUTER UNE ENTREPRISE</h3><hr style="border: 1px solid darkgray;">
         </div>
         <div class="row" id="head_row">
-            <h5>INTERFACE DE CREATION D'UNE NOUVELLE ENTREPRISE:</h5>
+            <h5>INTERFACE DE CREATION D'UNE NOUVELLE ENTREPRISE</h5>
         </div>
         <!-- BEGIN FORM -->
         <div class="row" id="form_row">
@@ -75,76 +75,25 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-4">
                         <div class="form-group">
                             <label class="control-label">Ville <span class="star">*</span></label>
                             {{ form_errors(form.ville)}}
                             {{ form_widget(form.ville) }}
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-4">
                         <div class="form-group">
                             <label class="control-label">Département <span class="star">*</span></label>
                             {{ form_errors(form.departement)}}
                             {{ form_widget(form.departement) }}
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-4">
                         <div class="form-group">
                             <label class="control-label">Pays <span class="star">*</span></label>
                             {{ form_errors(form.pays)}}
                             {{ form_widget(form.pays) }}
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="form-group">
-                            <label class="control-label">Téléphone <span class="star">*</span></label>
-                            {{ form_errors(form.telephone)}}
-                            {{ form_widget(form.telephone) }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6" id="block_right_client">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="form-group">
-                            <label class="control-label">Civilite</label>
-                            {{ form_errors(form.civilite)}}
-                            {{ form_widget(form.civilite) }}
-                        </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="form-group">
-                            <label class="control-label">Nom</label>
-                            {{ form_errors(form.nomContact)}}
-                            {{ form_widget(form.nomContact) }}
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="form-group">
-                            <label class="control-label">Prénom</label>
-                            {{ form_errors(form.prenomContact)}}
-                            {{ form_widget(form.prenomContact) }}
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-lg-5">
-                        <div class="form-group">
-                            <label class="control-label">Fonction du Contact</label>
-                            {{ form_errors(form.fonctionContact)}}
-                            {{ form_widget(form.fonctionContact) }}
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="form-group">
-                            <label class="control-label">Email <span class="star">*</span></label>
-                            {{ form_errors(form.email)}}
-                            {{ form_widget(form.email) }}
                         </div>
                     </div>
                 </div>
@@ -182,14 +131,164 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="col-lg-6" id="block_right_client">
                 <div class="row">
-                    <div class="col-lg-offset-7 col-lg-5">
-                        <button type="submit" style="width: 100%" class="btn  btn-default"><i class="fa fa-check"></i>Enregister</button>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label class="control-label">Civilite</label>
+                            {{ form_errors(form.civilite)}}
+                            {{ form_widget(form.civilite) }}
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="form-group">
+                            <label class="control-label">Nom</label>
+                            {{ form_errors(form.nomContact)}}
+                            {{ form_widget(form.nomContact) }}
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="control-label">Prénom</label>
+                            {{ form_errors(form.prenomContact)}}
+                            {{ form_widget(form.prenomContact) }}
+                        </div>
                     </div>
                 </div>
-                {{ form_end(form) }}
-                <!-- END FORM-->
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="form-group">
+                            <label class="control-label">Fonction du Contact</label>
+                            {{ form_errors(form.fonctionContact)}}
+                            {{ form_widget(form.fonctionContact) }}
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="form-group">
+                            <label class="control-label">Email <span class="star">*</span></label>
+                            {{ form_errors(form.email)}}
+                            {{ form_widget(form.email) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="control-label">Téléphone<span class="star">*</span></label>
+                            {{ form_errors(form.telephone)}}
+                            {{ form_widget(form.telephone) }}
+                        </div>
+                    </div>
+                </div>
+                <hr style="border: 1px solid darkgray;">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label class="control-label">Civilite</label>
+                            {{ form_errors(form.civilite2)}}
+                            {{ form_widget(form.civilite2) }}
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="form-group">
+                            <label class="control-label">Nom</label>
+                            {{ form_errors(form.nomContact2)}}
+                            {{ form_widget(form.nomContact2) }}
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="control-label">Prénom</label>
+                            {{ form_errors(form.prenomContact2)}}
+                            {{ form_widget(form.prenomContact2) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="form-group">
+                            <label class="control-label">Fonction du Contact</label>
+                            {{ form_errors(form.fonctionContact2)}}
+                            {{ form_widget(form.fonctionContact2) }}
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="form-group">
+                            <label class="control-label">Email</label>
+                            {{ form_errors(form.email2)}}
+                            {{ form_widget(form.email2) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="control-label">Téléphone</label>
+                            {{ form_errors(form.telephone2)}}
+                            {{ form_widget(form.telephone2) }}
+                        </div>
+                    </div>
+                </div>
+                <hr style="border: 1px solid darkgray;">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label class="control-label">Civilite</label>
+                            {{ form_errors(form.civilite3)}}
+                            {{ form_widget(form.civilite3) }}
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="form-group">
+                            <label class="control-label">Nom</label>
+                            {{ form_errors(form.nomContact3)}}
+                            {{ form_widget(form.nomContact3) }}
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="control-label">Prénom</label>
+                            {{ form_errors(form.prenomContact3)}}
+                            {{ form_widget(form.prenomContact3) }}
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="form-group">
+                            <label class="control-label">Fonction du Contact</label>
+                            {{ form_errors(form.fonctionContact3)}}
+                            {{ form_widget(form.fonctionContact3) }}
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="form-group">
+                            <label class="control-label">Email</label>
+                            {{ form_errors(form.email3)}}
+                            {{ form_widget(form.email3) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="control-label">Téléphone</label>
+                            {{ form_errors(form.telephone3)}}
+                            {{ form_widget(form.telephone3) }}
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="row">
+                <div class="col-lg-offset-9 col-lg-3" style="margin-top: 30px">
+                    <button type="submit" style="width: 100%" class="btn  btn-default"><i class="fa fa-check"></i>Enregister</button>
+                </div>
+            </div>
+            {{ form_end(form) }}
+            <!-- END FORM-->
         </div>
     </div>
 

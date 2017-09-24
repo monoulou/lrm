@@ -38,7 +38,7 @@ class GestionType extends AbstractType
             ->add('emploi', EntityType::class, array(
             'class' => 'MALrmBundle:Emploi',
             'placeholder' => 'offre',
-            'choice_label' => 'intitule',
+            'choice_label' => 'intituleDenomination',
             'expanded' => false,
             'multiple' => false
         ))

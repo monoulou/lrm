@@ -40,7 +40,7 @@
             <h3>LISTE DES ENTREPRISES</h3><hr style="border: 1px solid darkgray;">
         </div>
         <div class="row" id="head_row">
-            <h5>INTERFACE DE VISUALISATION DES ENTREPRISES EXISTANTES:</h5>
+            <h5>INTERFACE DE VISUALISATION DES ENTREPRISES EXISTANTES</h5>
         </div>
 
         {% for flash_message in app.session.flashBag.get('notice') %}
@@ -52,10 +52,8 @@
                 <thead>
                 <tr>
                     <th>Denomination</th>
-                    <th>Adresse</th>
-                    <th>Nom du contact</th>
-                    <th>Fonction</th>
-                    <th>Téléphone</th>
+                    <th>Date de création</th>
+                    <th>Créer par</th>
                     <th>Type client</th>
                     <th>Partenaire</th>
                     <th>Status</th>
@@ -65,10 +63,8 @@
                 <tfoot>
                 <tr>
                     <th>Denomination</th>
-                    <th>Adresse</th>
-                    <th>Nom du contact</th>
-                    <th>Fonction</th>
-                    <th>Téléphone</th>
+                    <th>Date de création</th>
+                    <th>Créer par</th>
                     <th>Type client</th>
                     <th>Partenaire</th>
                     <th>Status</th>
@@ -80,10 +76,8 @@
                     {% if client.id != '13' %}
                         <tr>
                             <td><a href="{{ path('ma_lrm_client_show', { 'id': client.id }) }}">{{ client.denomination }}</a></td>
-                            <td>{{ client.adresse }}-{{ client.villeCodePostal }} {{ client.ville }}</td>
-                            <td>{{ client.nomContact }}</td>
-                            <td>{{ client.fonctionContact }}</td>
-                            <td>{{ client.telephone }}</td>
+                            <td>{{ client.dateCreation|date("d/m/Y") }}</td>
+                            <td>{{ client.chargeRecrutement.username }}</td>
                             <td>{{ client.typeClient }}</td>
                             {% if client.typeClient == 'Prospect' %}
                                 <td> -- </td>

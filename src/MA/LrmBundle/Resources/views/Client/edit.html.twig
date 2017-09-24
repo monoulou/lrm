@@ -34,10 +34,10 @@
         <h3>MISE A JOUR CLIENT</h3><hr style="border: 1px solid darkgray;">
     </div>
     <div class="row" id="head_row">
-        <h5>INTERFACE DE MISE A JOUR D'UN PROFIL CLIENT:</h5>
+        <h5>INTERFACE DE MISE A JOUR D'UN PROFIL CLIENT</h5>
     </div>
 
-    <!-- BEGIN FORM -->
+    <!-- BEGIN edit_form -->
     <div class="row" id="form_edit_row">
         <h1>{{ client.denomination|upper }}</h1>
     </div>
@@ -84,76 +84,25 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div class="form-group">
                         <label class="control-label">Ville <span class="star">*</span></label>
                         {{ form_errors(edit_form.ville)}}
                         {{ form_widget(edit_form.ville) }}
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div class="form-group">
                         <label class="control-label">Département <span class="star">*</span></label>
                         {{ form_errors(edit_form.departement)}}
                         {{ form_widget(edit_form.departement) }}
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div class="form-group">
                         <label class="control-label">Pays <span class="star">*</span></label>
                         {{ form_errors(edit_form.pays)}}
                         {{ form_widget(edit_form.pays) }}
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="form-group">
-                        <label class="control-label">Téléphone <span class="star">*</span></label>
-                        {{ form_errors(edit_form.telephone)}}
-                        {{ form_widget(edit_form.telephone) }}
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-6" id="block_right_client">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="form-group">
-                        <label class="control-label">Civilite</label>
-                        {{ form_errors(edit_form.civilite)}}
-                        {{ form_widget(edit_form.civilite) }}
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="form-group">
-                        <label class="control-label">Nom</label>
-                        {{ form_errors(edit_form.nomContact)}}
-                        {{ form_widget(edit_form.nomContact) }}
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="form-group">
-                        <label class="control-label">Prénom</label>
-                        {{ form_errors(edit_form.prenomContact)}}
-                        {{ form_widget(edit_form.prenomContact) }}
-                    </div>
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="form-group">
-                        <label class="control-label">Fonction du Contact</label>
-                        {{ form_errors(edit_form.fonctionContact)}}
-                        {{ form_widget(edit_form.fonctionContact) }}
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="form-group">
-                        <label class="control-label">Email <span class="star">*</span></label>
-                        {{ form_errors(edit_form.email)}}
-                        {{ form_widget(edit_form.email) }}
                     </div>
                 </div>
             </div>
@@ -191,14 +140,164 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="col-lg-6" id="block_right_client">
             <div class="row">
-                <div class="col-lg-offset-7 col-lg-5">
-                    <button type="submit" style="width: 100%" class="btn  btn-default"><i class="fa fa-check"></i>Enregister</button>
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label class="control-label">Civilite</label>
+                        {{ form_errors(edit_form.civilite)}}
+                        {{ form_widget(edit_form.civilite) }}
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="form-group">
+                        <label class="control-label">Nom</label>
+                        {{ form_errors(edit_form.nomContact)}}
+                        {{ form_widget(edit_form.nomContact) }}
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="control-label">Prénom</label>
+                        {{ form_errors(edit_form.prenomContact)}}
+                        {{ form_widget(edit_form.prenomContact) }}
+                    </div>
                 </div>
             </div>
-            {{ form_end(edit_form) }}
-            <!-- END FORM-->
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="form-group">
+                        <label class="control-label">Fonction du Contact</label>
+                        {{ form_errors(edit_form.fonctionContact)}}
+                        {{ form_widget(edit_form.fonctionContact) }}
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="form-group">
+                        <label class="control-label">Email <span class="star">*</span></label>
+                        {{ form_errors(edit_form.email)}}
+                        {{ form_widget(edit_form.email) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="control-label">Téléphone<span class="star">*</span></label>
+                        {{ form_errors(edit_form.telephone)}}
+                        {{ form_widget(edit_form.telephone) }}
+                    </div>
+                </div>
+            </div>
+            <hr style="border: 1px solid darkgray;">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label class="control-label">Civilite</label>
+                        {{ form_errors(edit_form.civilite2)}}
+                        {{ form_widget(edit_form.civilite2) }}
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="form-group">
+                        <label class="control-label">Nom</label>
+                        {{ form_errors(edit_form.nomContact2)}}
+                        {{ form_widget(edit_form.nomContact2) }}
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="control-label">Prénom</label>
+                        {{ form_errors(edit_form.prenomContact2)}}
+                        {{ form_widget(edit_form.prenomContact2) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="form-group">
+                        <label class="control-label">Fonction du Contact</label>
+                        {{ form_errors(edit_form.fonctionContact2)}}
+                        {{ form_widget(edit_form.fonctionContact2) }}
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="form-group">
+                        <label class="control-label">Email</label>
+                        {{ form_errors(edit_form.email2)}}
+                        {{ form_widget(edit_form.email2) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="control-label">Téléphone</label>
+                        {{ form_errors(edit_form.telephone2)}}
+                        {{ form_widget(edit_form.telephone2) }}
+                    </div>
+                </div>
+            </div>
+            <hr style="border: 1px solid darkgray;">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label class="control-label">Civilite</label>
+                        {{ form_errors(edit_form.civilite3)}}
+                        {{ form_widget(edit_form.civilite3) }}
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="form-group">
+                        <label class="control-label">Nom</label>
+                        {{ form_errors(edit_form.nomContact3)}}
+                        {{ form_widget(edit_form.nomContact3) }}
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label class="control-label">Prénom</label>
+                        {{ form_errors(edit_form.prenomContact3)}}
+                        {{ form_widget(edit_form.prenomContact3) }}
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="form-group">
+                        <label class="control-label">Fonction du Contact</label>
+                        {{ form_errors(edit_form.fonctionContact3)}}
+                        {{ form_widget(edit_form.fonctionContact3) }}
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="form-group">
+                        <label class="control-label">Email</label>
+                        {{ form_errors(edit_form.email3)}}
+                        {{ form_widget(edit_form.email3) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="control-label">Téléphone</label>
+                        {{ form_errors(edit_form.telephone3)}}
+                        {{ form_widget(edit_form.telephone3) }}
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="row">
+            <div class="col-lg-offset-9 col-lg-3" style="margin-top: 30px">
+                <button type="submit" style="width: 100%" class="btn  btn-default"><i class="fa fa-check"></i>Enregister</button>
+            </div>
+        </div>
+        {{ form_end(edit_form) }}
+        <!-- END FORM-->
     </div>
 
 {% endblock %}

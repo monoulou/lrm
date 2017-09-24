@@ -103,10 +103,6 @@ class CandidatController extends Controller
             $nomClient[$emploi->getId()] = $client->getDenomination();
         }
 
-
-
-
-        //dump($candidats, $nomClient);die();
         return $this->render('MALrmBundle:Candidat:index.html.twig', array(
             'candidats' => $candidats,
             'nomClient' => $nomClient,
@@ -135,8 +131,7 @@ class CandidatController extends Controller
                 /** Ré-ecriture du nom du cv du candidat */
                 $fileName = $candidat->getNom().'_'.$candidat->getPrenom().'_cv.'.explode('.',$fileName)[1];
                 $candidat->setCvCandidat($fileName);
-
-                //$uploadDirectory = $_SERVER['DOCUMENT_ROOT'].$path->serveurPath().'/web/uploads/declaratifs/';
+                
                 $file->move(
                     $this->getParameter('cv_directory'),
                     $fileName
@@ -229,9 +224,7 @@ class CandidatController extends Controller
                 /** Ré-ecriture du nom du cv du candidat */
                 $fileName = $candidat->getNom().'_'.$candidat->getPrenom().'_cv.'.explode('.',$fileName)[1];
                 $candidat->setCvCandidat($fileName);
-
-                //dump($candidat,$file);die();
-                //$uploadDirectory = $_SERVER['DOCUMENT_ROOT'].$path->serveurPath().'/web/uploads/declaratifs/';
+                
                 $file->move(
                     $this->getParameter('cv_directory'),
                     $fileName
@@ -272,7 +265,22 @@ class CandidatController extends Controller
             $em->flush();
         }
         /** ************************************************* */
-        
+
+        /** Suppression de l'emploi pourvu par le client */
+        $em = $this->getDoctrine()->getManager();
+        $gestions = $em->getRepository('MALrmBundle:Gestion')->findBy(array('candidat' => $candidat->getId()));
+        if (!empty($gestions))
+        {
+            foreach ($gestions as $index => $gestion)
+            {
+
+                $em = $this->getDoctrine()->getManager();
+                $em->remove($gestion);
+                $em->flush();
+            }
+        }
+        /** ************************************************* */
+
         $em = $this->getDoctrine()->getManager();
         $em->remove($candidat);
         $em->flush();

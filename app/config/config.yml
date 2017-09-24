@@ -7,7 +7,7 @@ imports:
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
-    cv_directory: 'C:\wamp64\www\ligne_rh\web\uploads\cvtheque'
+    cv_directory: '%kernel.root_dir%/../web/uploads/cvtheque'
 
 framework:
     #esi: ~

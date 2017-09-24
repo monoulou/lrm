@@ -116,6 +116,11 @@ class EmploiController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $client = $form->get('client')->getData();
+            $denominationClient = $client->getDenomination();
+            $intituleDenomination = $form->get('intitule')->getData().'-'.$denominationClient;
+            $emploi->setIntituleDenomination($intituleDenomination);
             $em = $this->getDoctrine()->getManager();
             $em->persist($emploi);
             $em->flush();
@@ -162,8 +167,12 @@ class EmploiController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
+            /*$client = $editForm->get('client')->getData();
+            $denominationClient = $client->getDenomination();
+            $intituleDenomination = $editForm->get('intitule')->getData().'-'.$denominationClient;
+            $emploi->setIntituleDenomination($intituleDenomination);*/
 
+            $this->getDoctrine()->getManager()->flush();
             //Message flash.
             $this->addFlash('notice', 'La mofication a correctement été effectué');
 
@@ -187,22 +196,39 @@ class EmploiController extends Controller
         $em = $this->getDoctrine()->getManager();
         $candidats = $em->getRepository('MALrmBundle:Candidat')->findBy(array('emploi'=>$emploi->getId()));
         $emplois = $em->getRepository('MALrmBundle:Emploi')->findAll();
-        
-        foreach ($candidats as $index => $candidat)
-        {
-            foreach ($emplois as $index => $emploi)
-            {
-                if ($emploi->getId()== 16)
-                {
-                    $em = $this->getDoctrine()->getManager();
-                    $em->persist($candidat->setEmploi($emploi));
-                    $em->flush();
-                }
-            }
 
+        if (!empty($candidats))
+        {
+            foreach ($candidats as $index => $candidat)
+            {
+                foreach ($emplois as $index => $emploi)
+                {
+                    if ($emploi->getId()== 16)
+                    {
+                        $em = $this->getDoctrine()->getManager();
+                        $em->persist($candidat->setEmploi($emploi));
+                        $em->flush();
+                    }
+                }
+
+            }
         }
-        
         /** *********************************************************************************** */
+
+        /** *****************Suppression d'une offre pourvue pour un emploi supprimé ************/
+        $em = $this->getDoctrine()->getManager();
+        $gestions = $em->getRepository('MALrmBundle:Gestion')->findBy(array('emploi' => $emploi->getId()));
+        if (!empty($gestions))
+        {
+            foreach ($gestions as $index => $gestion)
+            {
+
+                $em = $this->getDoctrine()->getManager();
+                $em->remove($gestion);
+                $em->flush();
+            }
+        }
+        /** ************************************************************************************* */
 
         $em = $this->getDoctrine()->getManager();
         $em->remove($emploi);

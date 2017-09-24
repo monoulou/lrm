@@ -18,4 +18,17 @@ class GestionRepository extends \Doctrine\ORM\EntityRepository
         
         return $results;
     }
+
+    public function editEtat($idClient, $etat)
+    {
+        return $this
+            ->createQueryBuilder('c')
+            ->update('MALrmBundle:Client', 'e')
+            ->set('e.etat', '?1')
+            ->where('e.id = ?2')
+            ->setParameter(1, $etat)
+            ->setParameter(2, $idClient)
+            ->getQuery()
+            ->getResult();
+    }
 }

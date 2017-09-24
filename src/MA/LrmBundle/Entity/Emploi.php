@@ -83,6 +83,15 @@ class Emploi
     private $nombrePoste;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="intitule_denomination", type="string", length=255, nullable=true)
+     */
+    private $intituleDenomination;
+
+    
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="date_creation", type="date")
@@ -320,5 +329,29 @@ class Emploi
     public function getNombrePoste()
     {
         return $this->nombrePoste;
+    }
+
+    /**
+     * Set intituleDenomination
+     *
+     * @param string $intituleDenomination
+     *
+     * @return Emploi
+     */
+    public function setIntituleDenomination($intituleDenomination)
+    {
+        $this->intituleDenomination = $intituleDenomination;
+
+        return $this;
+    }
+
+    /**
+     * Get intituleDenomination
+     *
+     * @return string
+     */
+    public function getIntituleDenomination()
+    {
+        return $this->intituleDenomination;
     }
 }

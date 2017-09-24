@@ -30,14 +30,14 @@
 
     <div class="col-lg-9" style="margin-left: 10px;">
     <div class="row">
-        <h3>PROFIL CANDIDAT</h3><hr style="border: 1px solid darkgray;">
+        <h3>PROFIL CANDIDAT RECRUTE</h3><hr style="border: 1px solid darkgray;">
     </div>
     <div class="row" id="head_row">
-        <h5>INTERFACE DE VISUALISATION D'UN CANDIDAT:</h5>
+        <h5>INTERFACE DE VISUALISATION D'UN CANDIDAT</h5>
     </div>
     <div class="row">
         <div class=" col-lg-5">
-            <h1>{{ candidat.nom|upper }} {{ candidat.prenom }}</h1>
+            <a href="{{ path ('ma_lrm_candidat_edit', { 'id': candidat.id }) }}"><h1>{{ candidat.nom|upper }} {{ candidat.prenom }}</h1></a>
         </div>
 
         <div class="col-lg-offset-4 col-lg-3" id="edit">
@@ -51,10 +51,6 @@
         <table class="table table-striped" id="show_client">
             <tbody>
             <tr>
-                <th>Numéro de candidat</th>
-                <td>{{ candidat.id }}</td>
-            </tr>
-            <tr>
                 <th>Nom</th>
                 <td>{{ candidat.nom }}</td>
             </tr>
@@ -64,7 +60,11 @@
             </tr>
             <tr>
                 <th>Age</th>
-                <td>{{ candidat.age }} ans</td>
+                {% if candidat.age is not empty %}
+                    <td>{{ candidat.age }} ans</td>
+                {% else %}
+                    <td> -- </td>
+                {% endif %}
             </tr>
             <tr>
                 <th>Adresse</th>
@@ -83,6 +83,25 @@
                 <td><a href="{{ asset('uploads/cvtheque/' ~ candidat.cvCandidat) }}">{{ candidat.cvCandidat }}</a></td>
                 {#<td><iframe src ="{{ asset('uploads/cvtheque/' ~ candidat.cvCandidat) }}">{{ candidat.cvCandidat }}</iframe></td>#}
             </tr>
+            {% if positif == true %}
+                <tr>
+                    <th>Nbre jours depuis l'embauche</th>
+                    {% if differenceJour == 1 %}
+                        <td>{{ differenceJour }} jour</td>
+                        {% else %}
+                            <td>{{ differenceJour }} jours</td>
+                    {% endif %}
+                </tr>
+            {% else %}
+                <tr>
+                    <th> Nbre de jours avant l'embauche</th>
+                    {% if differenceJour == -1 or differenceJour == 0 %}
+                        <td>{{ differenceJour }} jour</td>
+                    {% else %}
+                        <td>{{ differenceJour }} jours</td>
+                    {% endif %}
+                    {% endif %}
+                </tr>
             <tr>
                 <th>Commentaires</th>
                 <td>{{ candidat.commentaire }}</td>
@@ -93,7 +112,11 @@
 
     <div class="row">
         <div class="col-lg-offset-11">
-            <a href="{{ path('ma_lrm_gestion_resume', { 'id': candidat.emploi.id }) }}"><i class="material-icons" id="previous">skip_previous</i></a>
+            {% for gestion in gestions %}
+                {% if gestion.candidat.id == candidat.id %}
+                    <a href="{{ path('ma_lrm_gestion_resume', { 'id': gestion.emploi.id }) }}"><i class="material-icons" id="previous">skip_previous</i></a>
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

@@ -9,6 +9,8 @@ use Symfony\Component\HttpFoundation\Response;
 use MA\LrmBundle\MALrmBundle;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Validator\Constraints\DateTime;
+use DateTimeZone;
 
 /**
  * Gestion controller.
@@ -47,7 +49,7 @@ class GestionController extends Controller
                     '5'=>$nbrPoste - count($postePourvu));
         }
         /** ************************************************************************************************************ */
-       //
+       //dump($suiviOffre);die();
         return $this->render('MALrmBundle:Gestion:index.html.twig', array(
             'gestions' => $gestions,
             'suiviOffre' => $suiviOffre,
@@ -60,17 +62,54 @@ class GestionController extends Controller
      */
     public function newAction(Request $request)
     {
-
         $gestion = new Gestion();
         $form = $this->createForm('MA\LrmBundle\Form\GestionType', $gestion);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($gestion);
-            $em->flush();
 
-            return $this->redirectToRoute('ma_lrm_gestion_show', array('id' => $gestion->getId()));
+            $idCandidat = $gestion->getCandidat()->getId();
+            $em = $this->getDoctrine()->getManager();
+            $gestions = $em->getRepository('MALrmBundle:Gestion')->findAll();
+
+            if (!empty($gestions))
+            {
+                foreach ($gestions as $key => $getGestion)
+                {
+                    if ($getGestion->getCandidat()->getId() != $idCandidat)//Vérifie si le candidat n'occupe pas déjà un poste.
+                    {
+                        $stop = self::allPostCompleted($gestion);//Vérifie si des postes sont encore dispo pour une offre.
+
+                        if ($stop == true)
+                        {
+                            $em = $this->getDoctrine()->getManager();
+                            $em->persist($gestion);
+                            $em->flush();
+
+                            return $this->redirectToRoute('ma_lrm_gestion_show', array('id' => $gestion->getId()));
+                        }
+                        else
+                        {
+                            //Message flash.
+                            $this->addFlash('notice', 'L\'ensemble des postes pour cette offre sont pourvus');
+                            return $this->redirectToRoute('ma_lrm_gestion_index');
+                        }
+                    }else
+                    {
+                        //Message flash.
+                        $this->addFlash('notice', 'Ce candidat occupe un déjà poste');
+                        return $this->redirectToRoute('ma_lrm_gestion_index');
+                    }
+                }
+            }else
+            {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($gestion);
+                $em->flush();
+
+                return $this->redirectToRoute('ma_lrm_gestion_show', array('id' => $gestion->getId()));
+            }
+
         }
 
         return $this->render('MALrmBundle:Gestion:new.html.twig', array(
@@ -126,6 +165,11 @@ class GestionController extends Controller
 
         $resumeByPoste[$getEmploi->getId()] =  $arrayCandidat;
 
+        /** Mise en session des infos liés au poste */
+        $session = $this->get("session");
+        $session->set('arrayPoste', $arrayPoste);
+        $session->set('resumeByPoste', $resumeByPoste);
+        
         return $this->render('MALrmBundle:Gestion:resume.html.twig', array(
             'arrayPoste' => $arrayPoste,
             'resumeByPoste' => $resumeByPoste,
@@ -139,20 +183,41 @@ class GestionController extends Controller
         $em = $this->getDoctrine()->getManager();
         $gestions = $em->getRepository('MALrmBundle:Gestion')->findAll();
 
+        $positif=  true;
         $arrCandidat = array();
 
+        $today = new \DateTime('now');
         foreach ($gestions as $key => $gestion)
         {
             if ($gestion->getCandidat()->getId() == $candidat->getId())
             {
                 $arrCandidat[$candidat->getId()] = $gestion->getId();
+                /** Calcul le nombre de jours avant/apres embauche */
+                $dateIntegration = str_replace('/', '-',$gestion->getDateIntegration());
+                $integration = new \DateTime($dateIntegration);
+                $differenceJour = $integration->diff($today);
+                $differenceJour = $differenceJour->format('%r%a');
+                
+                if (substr($differenceJour, 0,1) == '-')
+                {
+                   $positif = false;
+                }
             }
         }
         
+        /** Récupération des infos liées au poste */
+        $session = $this->get("session");
+        $arrayPoste = $session->get('arrayPoste');
+        $resumeByPoste = $session->get('resumeByPoste');
+        
         return $this->render('MALrmBundle:Gestion:detail.html.twig', array(
             'arrCandidat' => $arrCandidat,
+            'arrayPoste' => $arrayPoste,
+            'resumePoste' => $resumeByPoste,
             'candidat' => $candidat,
             'gestions' => $gestions,
+            'differenceJour' => $differenceJour,
+            'positif' => $positif,
         ));
     }
 
@@ -206,6 +271,38 @@ class GestionController extends Controller
             ->setMethod('DELETE')
             ->getForm()
             ;
+    }
+
+    /**
+     * @param $gestion
+     * @return bool
+     * Stop le recrutement si L'ensemble des postes à pourvoir sont pourvus pour une offre
+     */
+    public function allPostCompleted($gestion)
+    {
+        $stop = true;
+        $idCandidat = $gestion->getCandidat()->getId();
+        $idEmploi = $gestion->getEmploi()->getId();
+        $nbrePoste = $gestion->getEmploi()->getNombrePoste();
+
+        $compteur = 0;
+        $em = $this->getDoctrine()->getManager();
+        $gestions = $em->getRepository('MALrmBundle:Gestion')->findAll();
+
+        foreach ($gestions as $key => $getGestion)
+        {
+            if ($getGestion->getEmploi()->getId() == $idEmploi)
+            {
+                $compteur++;
+            }
+        }
+
+        if ($compteur > $nbrePoste || $compteur == $nbrePoste)
+        {
+            $stop = false;
+        }
+        
+        return $stop;
     }
 
 }

@@ -103,7 +103,13 @@ class CandidatType extends AbstractType
             ->add('emploi', EntityType::class, array(
                 'class' => 'MALrmBundle:Emploi',
                 'placeholder' => 'Offre d\'emploi',
-                'choice_label' => 'intitule',
+                /*'query_builder' => function (UserRepository $er) {
+                    return $er->createQueryBuilder('e')
+                        ->select('e.intitule')
+                        ->select('e.client.denomination');
+
+                },*/
+                'choice_label' => 'intituleDenomination',
                 'expanded' => false,
                 'multiple' => false
             ));

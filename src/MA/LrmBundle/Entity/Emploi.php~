@@ -40,7 +40,7 @@ class Emploi
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string", length = 2000)
+     * @ORM\Column(name="description", type="string", length = 2000, nullable = true)
      */
     private $description;
 
@@ -81,6 +81,21 @@ class Emploi
      * @Assert\NotBlank()
      */
     private $nombrePoste;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="intitule_denomination", type="string", length=255, nullable=true)
+     */
+    private $intituleDenomination;
+
+    public function __toString(){
+
+        $em = $this->getDoctrine()->getManager();
+        $client = $em->getRepository('MALrmBundle:Client')->findOneBy(array('id' => $this->getClient()->getId()));
+        return $intituleDenomination = $this->intitule.' '.$client->getDenomination();
+    }
+
 
     /**
      * @var \DateTime
@@ -297,4 +312,28 @@ class Emploi
         return $this->villeActivite;
     }
     
+
+    /**
+     * Set nombrePoste
+     *
+     * @param integer $nombrePoste
+     *
+     * @return Emploi
+     */
+    public function setNombrePoste($nombrePoste)
+    {
+        $this->nombrePoste = $nombrePoste;
+
+        return $this;
+    }
+
+    /**
+     * Get nombrePoste
+     *
+     * @return integer
+     */
+    public function getNombrePoste()
+    {
+        return $this->nombrePoste;
+    }
 }

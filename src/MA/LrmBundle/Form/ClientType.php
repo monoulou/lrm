@@ -61,6 +61,44 @@ class ClientType extends AbstractType
             ->add('telephone', TextType::class)
 
             ->add('email', EmailType::class)
+
+            ->add('civilite2',  ChoiceType::class, array(
+                'choices' => $civilite,
+                'required' => false))
+
+            ->add('nomContact2', TextType::class, array(
+                'required' => false))
+
+            ->add('prenomContact2', TextType::class, array(
+                'required' => false))
+
+            ->add('fonctionContact2', TextType::class, array(
+                'required' => false))
+
+            ->add('telephone2', TextType::class, array(
+                'required' => false))
+
+            ->add('email2', EmailType::class, array(
+                'required' => false))
+
+            ->add('civilite3',  ChoiceType::class, array(
+                'choices' => $civilite,
+                'required' => false))
+
+            ->add('nomContact3', TextType::class, array(
+                'required' => false))
+
+            ->add('prenomContact3', TextType::class, array(
+                'required' => false))
+
+            ->add('fonctionContact3', TextType::class, array(
+                'required' => false))
+
+            ->add('telephone3', TextType::class, array(
+                'required' => false))
+
+            ->add('email3', EmailType::class, array(
+                'required' => false))
             
             ->add('etat', ChoiceType::class, array('choices' => $etat))
 

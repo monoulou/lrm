@@ -64,10 +64,10 @@ class Emploi extends \MA\LrmBundle\Entity\Emploi implements \Doctrine\ORM\Proxy\
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'id', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'intitule', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'contrat', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'description', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'siteParution', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'villeCodePostal', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'villeActivite', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'client', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'nombrePoste', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'dateCreation'];
+            return ['__isInitialized__', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'id', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'intitule', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'contrat', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'description', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'siteParution', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'villeCodePostal', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'villeActivite', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'client', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'nombrePoste', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'intituleDenomination', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'dateCreation'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'id', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'intitule', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'contrat', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'description', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'siteParution', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'villeCodePostal', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'villeActivite', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'client', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'nombrePoste', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'dateCreation'];
+        return ['__isInitialized__', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'id', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'intitule', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'contrat', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'description', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'siteParution', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'villeCodePostal', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'villeActivite', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'client', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'nombrePoste', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'intituleDenomination', '' . "\0" . 'MA\\LrmBundle\\Entity\\Emploi' . "\0" . 'dateCreation'];
     }
 
     /**
@@ -384,6 +384,28 @@ class Emploi extends \MA\LrmBundle\Entity\Emploi implements \Doctrine\ORM\Proxy\
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNombrePoste', []);
 
         return parent::getNombrePoste();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setIntituleDenomination($intituleDenomination)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIntituleDenomination', [$intituleDenomination]);
+
+        return parent::setIntituleDenomination($intituleDenomination);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getIntituleDenomination()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIntituleDenomination', []);
+
+        return parent::getIntituleDenomination();
     }
 
 }

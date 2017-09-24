@@ -78,9 +78,23 @@ class Client
     /**
      * @var string
      *
+     * @ORM\Column(name="civilite", type="string", length=255, nullable = true)
+     */
+    private $civilite;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="nom_contact", type="string", length=255, nullable = true)
      */
     private $nomContact;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom_contact", type="string", length=255, nullable = true)
+     */
+    private $prenomContact;
 
     /**
      * @var string
@@ -89,6 +103,97 @@ class Client
      */
     private $fonctionContact;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email_adresse", type="string", length=255)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="civilite2", type="string", length=255, nullable = true)
+     */
+    private $civilite2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom_contact2", type="string", length=255, nullable = true)
+     */
+    private $nomContact2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom_contact2", type="string", length=255, nullable = true)
+     */
+    private $prenomContact2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="fonction_contact2", type="string", length=255, nullable = true)
+     */
+    private $fonctionContact2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telephone2", type="string", length=255, nullable = true)
+     */
+    private $telephone2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email_adresse2", type="string", length=255,  nullable = true)
+     */
+    private $email2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="civilite3", type="string", length=255, nullable = true)
+     */
+    private $civilite3;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom_contact3", type="string", length=255, nullable = true)
+     */
+    private $nomContact3;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom_contact3", type="string", length=255, nullable = true)
+     */
+    private $prenomContact3;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="fonction_contact3", type="string", length=255, nullable = true)
+     */
+    private $fonctionContact3;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telephone3", type="string", length=255, nullable = true)
+     */
+    private $telephone3;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email_adresse3", type="string", length=255,  nullable = true)
+     */
+    private $email3;
+    
     /**
      * @var string
      *
@@ -122,27 +227,6 @@ class Client
      * @ORM\Column(name="partenaire", type="string", length=255)
      */
     private $partenaire;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="email_adresse", type="string", length=255)
-     */
-    private $email;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="civilite", type="string", length=255, nullable = true)
-     */
-    private $civilite;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="prenom_contact", type="string", length=255, nullable = true)
-     */
-    private $prenomContact;
 
 
     /**
@@ -597,5 +681,293 @@ class Client
     public function getPartenaire()
     {
         return $this->partenaire;
+    }
+
+    /**
+     * Set nomContact2
+     *
+     * @param string $nomContact2
+     *
+     * @return Client
+     */
+    public function setNomContact2($nomContact2)
+    {
+        $this->nomContact2 = $nomContact2;
+
+        return $this;
+    }
+
+    /**
+     * Get nomContact2
+     *
+     * @return string
+     */
+    public function getNomContact2()
+    {
+        return $this->nomContact2;
+    }
+
+    /**
+     * Set fonctionContact2
+     *
+     * @param string $fonctionContact2
+     *
+     * @return Client
+     */
+    public function setFonctionContact2($fonctionContact2)
+    {
+        $this->fonctionContact2 = $fonctionContact2;
+
+        return $this;
+    }
+
+    /**
+     * Get fonctionContact2
+     *
+     * @return string
+     */
+    public function getFonctionContact2()
+    {
+        return $this->fonctionContact2;
+    }
+
+    /**
+     * Set telephone2
+     *
+     * @param string $telephone2
+     *
+     * @return Client
+     */
+    public function setTelephone2($telephone2)
+    {
+        $this->telephone2 = $telephone2;
+
+        return $this;
+    }
+
+    /**
+     * Get telephone2
+     *
+     * @return string
+     */
+    public function getTelephone2()
+    {
+        return $this->telephone2;
+    }
+
+    /**
+     * Set nomContact3
+     *
+     * @param string $nomContact3
+     *
+     * @return Client
+     */
+    public function setNomContact3($nomContact3)
+    {
+        $this->nomContact3 = $nomContact3;
+
+        return $this;
+    }
+
+    /**
+     * Get nomContact3
+     *
+     * @return string
+     */
+    public function getNomContact3()
+    {
+        return $this->nomContact3;
+    }
+
+    /**
+     * Set fonctionContact3
+     *
+     * @param string $fonctionContact3
+     *
+     * @return Client
+     */
+    public function setFonctionContact3($fonctionContact3)
+    {
+        $this->fonctionContact3 = $fonctionContact3;
+
+        return $this;
+    }
+
+    /**
+     * Get fonctionContact3
+     *
+     * @return string
+     */
+    public function getFonctionContact3()
+    {
+        return $this->fonctionContact3;
+    }
+
+    /**
+     * Set telephone3
+     *
+     * @param string $telephone3
+     *
+     * @return Client
+     */
+    public function setTelephone3($telephone3)
+    {
+        $this->telephone3 = $telephone3;
+
+        return $this;
+    }
+
+    /**
+     * Get telephone3
+     *
+     * @return string
+     */
+    public function getTelephone3()
+    {
+        return $this->telephone3;
+    }
+
+    /**
+     * Set prenomContact2
+     *
+     * @param string $prenomContact2
+     *
+     * @return Client
+     */
+    public function setPrenomContact2($prenomContact2)
+    {
+        $this->prenomContact2 = $prenomContact2;
+
+        return $this;
+    }
+
+    /**
+     * Get prenomContact2
+     *
+     * @return string
+     */
+    public function getPrenomContact2()
+    {
+        return $this->prenomContact2;
+    }
+
+    /**
+     * Set prenomContact3
+     *
+     * @param string $prenomContact3
+     *
+     * @return Client
+     */
+    public function setPrenomContact3($prenomContact3)
+    {
+        $this->prenomContact3 = $prenomContact3;
+
+        return $this;
+    }
+
+    /**
+     * Get prenomContact3
+     *
+     * @return string
+     */
+    public function getPrenomContact3()
+    {
+        return $this->prenomContact3;
+    }
+
+    /**
+     * Set civilite2
+     *
+     * @param string $civilite2
+     *
+     * @return Client
+     */
+    public function setCivilite2($civilite2)
+    {
+        $this->civilite2 = $civilite2;
+
+        return $this;
+    }
+
+    /**
+     * Get civilite2
+     *
+     * @return string
+     */
+    public function getCivilite2()
+    {
+        return $this->civilite2;
+    }
+
+    /**
+     * Set civilite3
+     *
+     * @param string $civilite3
+     *
+     * @return Client
+     */
+    public function setCivilite3($civilite3)
+    {
+        $this->civilite3 = $civilite3;
+
+        return $this;
+    }
+
+    /**
+     * Get civilite3
+     *
+     * @return string
+     */
+    public function getCivilite3()
+    {
+        return $this->civilite3;
+    }
+
+    /**
+     * Set email2
+     *
+     * @param string $email2
+     *
+     * @return Client
+     */
+    public function setEmail2($email2)
+    {
+        $this->email2 = $email2;
+
+        return $this;
+    }
+
+    /**
+     * Get email2
+     *
+     * @return string
+     */
+    public function getEmail2()
+    {
+        return $this->email2;
+    }
+
+    /**
+     * Set email3
+     *
+     * @param string $email3
+     *
+     * @return Client
+     */
+    public function setEmail3($email3)
+    {
+        $this->email3 = $email3;
+
+        return $this;
+    }
+
+    /**
+     * Get email3
+     *
+     * @return string
+     */
+    public function getEmail3()
+    {
+        return $this->email3;
     }
 }
