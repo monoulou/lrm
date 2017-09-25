@@ -28,7 +28,10 @@ class GestionController extends Controller
         $gestions = $em->getRepository('MALrmBundle:Gestion')->findAll();
 
         $suiviOffre = array();
+        $today = date('d/m/Y');
 
+        $factureMois = self::clientsFactureMois($gestions, $today);
+        
         /** *************************Permet le suivi des postes pourvus et restant à pourvoir**************************** */
         foreach ($gestions as $index => $gestion)
         {
@@ -53,6 +56,7 @@ class GestionController extends Controller
         return $this->render('MALrmBundle:Gestion:index.html.twig', array(
             'gestions' => $gestions,
             'suiviOffre' => $suiviOffre,
+            'factureMois' => $factureMois,
         ));
     }
 
@@ -303,6 +307,44 @@ class GestionController extends Controller
         }
         
         return $stop;
+    }
+    
+    public function clientsFactureMois($gestions, $today)
+    {
+        $factureClients = array();
+        
+        foreach ($gestions as $index => $gestion)
+        {
+
+            $jourNow = explode('/', $today)[0];
+            $moisNow = explode('/', $today)[1];
+            $anneeNow = explode('/', $today)[2];
+            $jourIntegration = explode('/',$gestion->getDateIntegration())[0];
+            $moisIntegration = explode('/',$gestion->getDateIntegration())[1];
+            $anneeIntegration = explode('/',$gestion->getDateIntegration())[2];
+
+            $em = $this->getDoctrine()->getManager();
+            $client = $em->getRepository('MALrmBundle:Client')->findOneBy(array('id'=>$gestion->getEmploi()->getClient()->getId()));
+            $candidat = $em->getRepository('MALrmBundle:Candidat')->findOneBy(array('id'=>$gestion->getCandidat()->getId()));
+            $user = $em->getRepository('MAUserBundle:User')->findOneBy(array('id'=>$gestion->getChargeRecrutement()->getId()));
+            //dump($candidat);die();
+            if ($moisNow == $moisIntegration && $anneeNow == $anneeIntegration)
+            {
+                if ($jourNow >= $jourIntegration)
+                {
+                    $factureClients[$gestion->getId().':'.$gestion->getCandidat()->getId()] = array(
+                        '1' => $client->getDenomination(),
+                        '2' => $candidat->getNom().' '.$candidat->getPrenom(),
+                        '3' => $user->getUsername(),
+                        '4' => $client->getId(),
+                        '5' => $gestion->getDateIntegration()
+                    );
+
+                }
+            }
+        }
+
+        return $factureClients;
     }
 
 }
